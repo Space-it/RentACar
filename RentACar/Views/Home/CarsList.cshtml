@@ -1,0 +1,21 @@
+﻿@model IEnumerable<RentACar.Car>
+
+@foreach (var item in Model)
+{
+<div class="avto">
+    <p>@Html.DisplayFor(modelItem => item.ModelName)</p>
+    <div class="avto_img">
+        <img src="@Html.DisplayFor(modelItem => item.ImageUrl)" alt="">
+    </div>
+</div>
+<div class="charact">
+    <p class="charact_name">Характеристика</p>
+    <div class="charact_list">
+        <p>Тип трансмиссии:@Html.DisplayFor(modelItem => item.TransmissionType)</p>
+        <p>Количество дверей:@Html.DisplayFor(modelItem => item.NumberOfDoors)</p>
+        <p>Количество пассажирова:@Html.DisplayFor(modelItem => item.NumberOfPassengers)</p>
+        <p>Объем багажника:@Html.DisplayFor(modelItem => item.TrunkVolume)</p>
+        <p>Объем двигателя:@Html.DisplayFor(modelItem => item.EngineCapacity)</p>
+    </div>
+</div>
+}

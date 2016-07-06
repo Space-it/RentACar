@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Автопарк";
+}
+@model IEnumerable<RentACar.Car>
+<section class="avtopark">
+    <h1>Наш Автопарк</h1>
+
+    @Html.Partial("CarsList",Model)
+
+</section>

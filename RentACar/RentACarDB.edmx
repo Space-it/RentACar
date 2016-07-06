@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="rentacarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Car">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="TransmissionType" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NumberOfDoors" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NumberOfPassengers" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrunkVolume" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="EngineCapacity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ImageUrl" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="ModelName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CarId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Adress" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" Nullable="false" />
+          <Property Name="StartTime" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="EndTime" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Order_Car">
+          <End Role="Car" Type="Self.Car" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Car">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="rentacarModelStoreContainer">
+          <EntitySet Name="Car" EntityType="Self.Car" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Order_Car" Association="Self.FK_Order_Car">
+            <End Role="Car" EntitySet="Car" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="rentacarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Car">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="TransmissionType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumberOfDoors" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NumberOfPassengers" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrunkVolume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EngineCapacity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="ImageUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_Order_Car" FromRole="Car" ToRole="Order" />
+          <Property Name="ModelName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="Int32" Nullable="false" />
+          <Property Name="CarId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Adress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="StartTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EndTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Car" Relationship="Self.FK_Order_Car" FromRole="Order" ToRole="Car" />
+        </EntityType>
+        <Association Name="FK_Order_Car">
+          <End Role="Car" Type="Self.Car" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Car">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="rentacarEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cars" EntityType="Self.Car" />
+          <EntitySet Name="Orders" EntityType="Self.Order" />
+          <AssociationSet Name="FK_Order_Car" Association="Self.FK_Order_Car">
+            <End Role="Car" EntitySet="Cars" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="rentacarModelStoreContainer" CdmEntityContainer="rentacarEntities">
+          <EntitySetMapping Name="Cars">
+            <EntityTypeMapping TypeName="rentacarModel.Car">
+              <MappingFragment StoreEntitySet="Car">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+                <ScalarProperty Name="TransmissionType" ColumnName="TransmissionType" />
+                <ScalarProperty Name="NumberOfDoors" ColumnName="NumberOfDoors" />
+                <ScalarProperty Name="NumberOfPassengers" ColumnName="NumberOfPassengers" />
+                <ScalarProperty Name="TrunkVolume" ColumnName="TrunkVolume" />
+                <ScalarProperty Name="EngineCapacity" ColumnName="EngineCapacity" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="rentacarModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="CarId" ColumnName="CarId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

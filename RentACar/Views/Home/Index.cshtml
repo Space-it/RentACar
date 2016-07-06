@@ -2,30 +2,171 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<section class="header">
+    <div class="booking">
+        <div class="book_name">
+            <p>Бронирование:</p>
+        </div>
+        <form action="">
+            <p>Место подбора:</p>
+            <input type="text" class="city" value="Введите или выберите адрес">
+            <div class="choose_city">
+                <ul>
+                    <li>г.Запорожье, пр-т Ленина 135 гостиница Интурист</li>
+                    <li>Аэропорт Запорожья</li>
+                </ul>
+            </div>
+            <p>Начало аренды:</p>
+            <input type="text" class="date" id="begin_datepicker" value="Дата">
+            <input type="text" class="time begin_time" value="Время">
+            <div class="choose_time">
+                <ul>
+                    <li>6:00</li>
+                    <li>6:30</li>
+                    <li>7:00</li>
+                    <li>7:30</li>
+                    <li>8:00</li>
+                    <li>8:30</li>
+                    <li>9:00</li>
+                    <li>9:30</li>
+                    <li>10:00</li>
+                    <li>10:30</li>
+                    <li>11:00</li>
+                    <li>11:30</li>
+                    <li>12:00</li>
+                    <li>12:30</li>
+                    <li>13:00</li>
+                    <li>13:30</li>
+                    <li>14:00</li>
+                    <li>14:30</li>
+                    <li>15:00</li>
+                    <li>15:30</li>
+                    <li>16:00</li>
+                    <li>16:30</li>
+                    <li>17:00</li>
+                    <li>17:30</li>
+                    <li>18:00</li>
+                    <li>18:30</li>
+                    <li>19:00</li>
+                    <li>19:30</li>
+                    <li>20:00</li>
+                    <li>20:30</li>
+                    <li>21:00</li>
+                    <li>21:30</li>
+                    <li>22:00</li>
+                    <li>22:30</li>
+                    <li>23:00</li>
+                    <li>23:30</li>
+                    <li>24:00</li>
+                    <li>24:30</li>
+                    <li>1:00</li>
+                    <li>1:30</li>
+                    <li>2:00</li>
+                    <li>2:30</li>
+                    <li>3:00</li>
+                    <li>3:30</li>
+                    <li>4:00</li>
+                    <li>4:30</li>
+                    <li>5:00</li>
+                    <li>5:30</li>
+                </ul>
+            </div>
+            <p>Конец аренды:</p>
+            <input type="text" class="date" id="end_datepicker2" value="Дата">
+            <input type="text" class="time end_time" value="Дата">
+            <div class="choose_time2">
+                <ul>
+                    <li>6:00</li>
+                    <li>6:30</li>
+                    <li>7:00</li>
+                    <li>7:30</li>
+                    <li>8:00</li>
+                    <li>8:30</li>
+                    <li>9:00</li>
+                    <li>9:30</li>
+                    <li>10:00</li>
+                    <li>10:30</li>
+                    <li>11:00</li>
+                    <li>11:30</li>
+                    <li>12:00</li>
+                    <li>12:30</li>
+                    <li>13:00</li>
+                    <li>13:30</li>
+                    <li>14:00</li>
+                    <li>14:30</li>
+                    <li>15:00</li>
+                    <li>15:30</li>
+                    <li>16:00</li>
+                    <li>16:30</li>
+                    <li>17:00</li>
+                    <li>17:30</li>
+                    <li>18:00</li>
+                    <li>18:30</li>
+                    <li>19:00</li>
+                    <li>19:30</li>
+                    <li>20:00</li>
+                    <li>20:30</li>
+                    <li>21:00</li>
+                    <li>21:30</li>
+                    <li>22:00</li>
+                    <li>22:30</li>
+                    <li>23:00</li>
+                    <li>23:30</li>
+                    <li>24:00</li>
+                    <li>24:30</li>
+                    <li>1:00</li>
+                    <li>1:30</li>
+                    <li>2:00</li>
+                    <li>2:30</li>
+                    <li>3:00</li>
+                    <li>3:30</li>
+                    <li>4:00</li>
+                    <li>4:30</li>
+                    <li>5:00</li>
+                    <li>5:30</li>
+                </ul>
+            </div>
+            <button>Отправить</button>
+        </form>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
+    </div>
+    <div class="header_welcome">
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Добро пожаловать на веб-сайт компании ZP rent a car, предоставляющей услуги проката и трансфера авто
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <button>Узнать больше</button>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+</section>
+
+<section class="rent_car">
+    <div class="rent_condition">
+
+        <div class="rent_head">
+            <h1>Условия проката авто</h1>
+        </div>
+        <div class="rent_img">
+            <img src="/Content/img/family.jpg" alt="">
+        </div>
+        <div class="condition">
+            <p>Необходимые условия и документы:</p>
+            <ol>
+                <li>Паспорт.</li>
+                <li>Водительское удостворение и стаж вождения не меньше двух лет.</li>
+                <li>Идентификационный код для граждан Украины.</li>
+                <li>Банковская карта.</li>
+                <li>Возраст - от 21 года.</li>
+            </ol>
+        </div>
+        <div class="condition">
+            <p>Оплата:</p>
+            <p class="card_condition">Оплата за услуги по прокату автомобиля осуществляется с помощью банковских карт Visa или MasterCard.</p>
+        </div>
+
+
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+</section>
+
+<section class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1339.005515915556!2d35.137348534532165!3d47.839379637567724!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d1d9c87be1cfb1%3A0x428c5fd38ffb8591!2z0JjQvdGC0YPRgNC40YHRgg!5e0!3m2!1sru!2sua!4v1467034854816" frameborder="0" allowfullscreen></iframe>
+
+</section>

@@ -1,0 +1,1368 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
+/*------------------ Section Menu ----------*/
+/* line 25, ../sass/_grids.scss */
+.head_menu {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #000;
+  border-bottom: 2px solid #85db18;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.head_menu:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 30, ../sass/_grids.scss */
+.head_menu .logo {
+  width: 19.26606%;
+  float: left;
+  margin-right: 0.91743%;
+  font-family: 'Lobster';
+}
+
+/* line 34, ../sass/_grids.scss */
+.logo p {
+  margin-left: 20.95238%;
+  width: 73.80952%;
+  float: left;
+  margin-right: 4.7619%;
+  color: #85db18;
+  font-size: 2.5em;
+  transform: skewY(-15deg);
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* line 44, ../sass/_grids.scss */
+.logo h1 {
+  margin-left: 20.95238%;
+  width: 73.80952%;
+  float: left;
+  margin-right: 4.7619%;
+  text-align: center;
+  color: #fff;
+  font-size: 2.3em;
+  margin-top: -7px;
+  margin-bottom: 0;
+}
+
+/*----- Mobile Menu -----*/
+/* line 56, ../sass/_grids.scss */
+.toggle_nav {
+  display: none;
+}
+
+/*----- Menu -----*/
+/* line 62, ../sass/_grids.scss */
+.navigation {
+  width: 74.77064%;
+  float: right;
+  margin-right: 0;
+  margin-top: 15px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* line 69, ../sass/_grids.scss */
+.navigation ul {
+  display: inline-block;
+  width: 100%;
+  float: right;
+  margin-right: 0;
+}
+
+/* line 74, ../sass/_grids.scss */
+.navigation li {
+  margin-right: 5.52147%;
+  float: left;
+  list-style: none;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* line 82, ../sass/_grids.scss */
+.navigation a {
+  color: #fff;
+  transition: color linear 0.15s;
+  text-decoration: none;
+}
+
+/* line 88, ../sass/_grids.scss */
+.navigation a:hover, .navigation .current-item a {
+  color: #85db18;
+}
+
+/*------------------ Section Header ----------*/
+/* line 96, ../sass/_grids.scss */
+.header {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: url("/Content/img/index_bg.jpg");
+  background-size: cover;
+  background-position: 100% 34%;
+  height: 700px;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.header:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 103, ../sass/_grids.scss */
+.booking {
+  margin-left: 10.09174%;
+  width: 24.31193%;
+  float: left;
+  margin-right: 0.91743%;
+  background: rgba(200, 200, 194, 0.8);
+  margin-top: 4.5283%;
+  padding-bottom: 4.5283%;
+  font-family: Calibri,Arial;
+}
+
+/* line 111, ../sass/_grids.scss */
+.booking .book_name {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background: #aadf3f;
+  border-bottom: 2px solid #696155;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+/* line 118, ../sass/_grids.scss */
+.booking .book_name p {
+  margin: 7px;
+}
+
+/* line 121, ../sass/_grids.scss */
+.booking form {
+  margin-left: 8.30189%;
+  width: 83.39623%;
+  float: left;
+  margin-right: 3.77358%;
+  margin-top: 15px;
+  font-size: 1.1em;
+}
+
+/* line 128, ../sass/_grids.scss */
+.booking form input {
+  height: 30px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  padding: 3px 0 3px 5px;
+  border: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  color: #505050;
+}
+
+/* line 137, ../sass/_grids.scss */
+.booking form .city {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background-image: url("/Content/img/location2.png");
+  background-repeat: no-repeat;
+  background-position: 96%;
+}
+
+/* line 145, ../sass/_grids.scss */
+.booking form .date {
+  background-image: url("/Content/img/date2.png");
+  width: 45.24887%;
+  float: left;
+  margin-right: 4.52489%;
+  margin-right: 0.45249%;
+  background-repeat: no-repeat;
+  background-position: 96%;
+  color: #000;
+}
+
+/* line 154, ../sass/_grids.scss */
+.booking form .time {
+  background-image: url("/Content/img/time2.png");
+  width: 45.24887%;
+  float: right;
+  margin-right: 0;
+  background-repeat: no-repeat;
+  background-position: 96%;
+  color: #000;
+}
+
+/* line 162, ../sass/_grids.scss */
+.booking form .choose_time, .choose_time2, .choose_city {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  overflow-y: scroll;
+  height: 150px;
+  margin-top: -18px;
+  z-index: 1;
+  background: #fff;
+  display: none;
+}
+
+/* line 172, ../sass/_grids.scss */
+.choose_time ul, .choose_time2 ul, .choose_city ul {
+  text-align: center;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+/* line 178, ../sass/_grids.scss */
+.choose_time ul li, .choose_time2 ul li, .choose_city ul li {
+  list-style: none;
+  border-bottom: 1px solid #85db18;
+  padding-bottom: 3px;
+}
+
+/* line 183, ../sass/_grids.scss */
+.choose_time ul li:hover, .choose_time2 ul li:hover, .choose_city ul li:hover {
+  background: #85db18;
+}
+
+/* line 187, ../sass/_grids.scss */
+.booking form button {
+  background: #85db18;
+  border: none;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 7px;
+  width: 50.22624%;
+  float: right;
+  margin-right: 0;
+  margin-top: 15px;
+}
+
+/* line 197, ../sass/_grids.scss */
+.header_welcome {
+  margin-left: 10.09174%;
+  width: 39.44954%;
+  float: left;
+  margin-right: 0.91743%;
+  margin-top: 12%;
+}
+
+/* line 202, ../sass/_grids.scss */
+.header_welcome p {
+  font-family: Arial;
+  color: #fff;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+/* line 210, ../sass/_grids.scss */
+.header_welcome button {
+  margin-left: 31.97674%;
+  width: 36.04651%;
+  float: left;
+  margin-right: 2.32558%;
+  background: #85db18;
+  border: none;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 7px;
+}
+
+/*------------------ Section Rent a Car ----------*/
+/* line 221, ../sass/_grids.scss */
+.rent_car {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.rent_car:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 225, ../sass/_grids.scss */
+.rent_car .rent_condition {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background: #edebeb;
+  padding-top: 4.12844%;
+  padding-bottom: 4.12844%;
+  font-family: Calibri,Arial;
+}
+
+/* line 232, ../sass/_grids.scss */
+.rent_car .rent_condition .rent_head {
+  margin-left: 5.04587%;
+  width: 44.49541%;
+  float: left;
+  margin-right: 0.91743%;
+  border-bottom: 1px solid #d2d0d0;
+  text-align: center;
+}
+
+/* line 238, ../sass/_grids.scss */
+.rent_car .rent_condition .condition {
+  margin-left: 5.04587%;
+  width: 44.49541%;
+  float: left;
+  margin-right: 0.91743%;
+  border-bottom: 1px solid #d2d0d0;
+  padding-bottom: 1.10092%;
+  font-size: 1.1em;
+}
+
+/* line 246, ../sass/_grids.scss */
+.rent_car .rent_condition .condition .card_condition {
+  padding-left: 40px;
+}
+
+/* line 250, ../sass/_grids.scss */
+.rent_car .rent_condition :last-child {
+  border: none;
+}
+
+/* line 254, ../sass/_grids.scss */
+.rent_car .rent_condition .rent_img {
+  width: 39.44954%;
+  float: right;
+  margin-right: 0;
+}
+
+/* line 260, ../sass/_grids.scss */
+.rent_car .rent_condition .rent_img img {
+  width: 100%;
+}
+
+/*------------------ Section Map ----------*/
+/* line 265, ../sass/_grids.scss */
+.map {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.map:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 268, ../sass/_grids.scss */
+.map iframe {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  height: 350px;
+  border: 0;
+}
+
+/*------------------ Section Footer ----------*/
+/* line 274, ../sass/_grids.scss */
+.footer {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #000;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.footer:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 279, ../sass/_grids.scss */
+footer {
+  margin-left: 10.09174%;
+  width: 79.81651%;
+  float: left;
+  margin-right: 0.91743%;
+  padding-top: 1.37931%;
+}
+
+/* line 285, ../sass/_grids.scss */
+footer .footer_menu {
+  width: 24.13793%;
+  float: left;
+  margin-right: 1.14943%;
+  font-size: 1.2em;
+  font-family: Arial;
+}
+
+/* line 291, ../sass/_grids.scss */
+footer .footer_menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* line 295, ../sass/_grids.scss */
+footer .footer_menu ul li {
+  padding-bottom: 10px;
+}
+
+/* line 298, ../sass/_grids.scss */
+footer .footer_menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 302, ../sass/_grids.scss */
+footer .footer_name {
+  width: 49.42529%;
+  float: left;
+  margin-right: 1.14943%;
+  text-align: center;
+}
+
+/* line 307, ../sass/_grids.scss */
+footer .footer_name :first-child {
+  color: #fff;
+  font-family: 'Lobster';
+  font-size: 3em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 314, ../sass/_grids.scss */
+footer .footer_name :nth-child(2) {
+  color: #85db18;
+  font-size: 2.5em;
+  transform: translateY(-13px) skewY(-13deg);
+  font-family: 'Lobster';
+  margin-top: 0;
+}
+
+/* line 322, ../sass/_grids.scss */
+footer .footer_name :last-child {
+  color: #fff;
+  font-family: Arial;
+  margin-top: 30.45977%;
+  margin-bottom: 5.17241%;
+  font-size: 1.2em;
+}
+
+/* line 329, ../sass/_grids.scss */
+footer .footer_contacts {
+  width: 24.13793%;
+  float: right;
+  margin-right: 0;
+  text-align: right;
+  color: #85db18;
+  font-family: 'Lobster';
+}
+
+/* line 336, ../sass/_grids.scss */
+footer .footer_contacts p {
+  font-size: 1.4em;
+}
+
+/* line 339, ../sass/_grids.scss */
+footer .footer_contacts :first-child {
+  margin-top: 5px;
+}
+
+/* line 342, ../sass/_grids.scss */
+footer .footer_contacts :last-child {
+  margin-top: 68.3908%;
+  margin-bottom: 5.17241%;
+  color: #585858;
+  font-size: 1.2em;
+}
+
+/* line 348, ../sass/_grids.scss */
+footer .footer_contacts a {
+  text-decoration: none;
+}
+
+/*------------------ Autopark page ----------*/
+/* line 359, ../sass/_grids.scss */
+.avtopark {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  font-family: Arial;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.avtopark:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 364, ../sass/_grids.scss */
+.avtopark h1 {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* line 372, ../sass/_grids.scss */
+.avtopark .avto {
+  margin-left: 10.09174%;
+  width: 39.44954%;
+  float: left;
+  margin-right: 0.91743%;
+  text-align: center;
+  background: #f4f4f4;
+  margin-bottom: 40px;
+  margin-right: 20px;
+}
+
+/* line 382, ../sass/_grids.scss */
+.avtopark .avto p {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background: #85db18;
+  margin-top: 0;
+}
+
+/* line 389, ../sass/_grids.scss */
+.avtopark .avto .avto_img {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+/* line 395, ../sass/_grids.scss */
+.avtopark .avto .avto_img img {
+  max-width: 97.44186%;
+  height: 300px;
+  height: initial;
+}
+
+/* line 401, ../sass/_grids.scss */
+.avtopark .charact {
+  width: 39.44954%;
+  float: left;
+  margin-right: 0.91743%;
+  margin-bottom: 40px;
+}
+
+/* line 406, ../sass/_grids.scss */
+.avtopark .charact .charact_name {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  background: #85db18;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 417, ../sass/_grids.scss */
+.avtopark .charact .charact_list {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 10px;
+  height: 360px;
+  background: #f4f4f4;
+  padding-top: 10px;
+}
+
+/* line 425, ../sass/_grids.scss */
+.avtopark .charact .charact_list p {
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+/*------------------ Transfer page ----------*/
+/* line 435, ../sass/_grids.scss */
+.transfer {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.transfer:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 438, ../sass/_grids.scss */
+.transfer .transfer_div {
+  margin-left: 10.09174%;
+  width: 79.81651%;
+  float: left;
+  margin-right: 0.91743%;
+  margin-top: 20px;
+}
+
+/* line 445, ../sass/_grids.scss */
+.transfer .transfer_div :first-child {
+  margin-left: 25.28736%;
+  width: 49.42529%;
+  float: left;
+  margin-right: 1.14943%;
+  text-align: center;
+  font-family: Arial;
+}
+
+/* line 452, ../sass/_grids.scss */
+.transfer .transfer_div .transfer_img {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* line 458, ../sass/_grids.scss */
+.transfer .transfer_div .transfer_img img {
+  width: 100%;
+  height: initial;
+}
+
+/* line 462, ../sass/_grids.scss */
+.transfer .transfer_div :last-child {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  font-family: Arial;
+  margin-bottom: 50px;
+}
+
+/*----- Responsive -----*/
+@media screen and (max-width: 1250px) {
+  /* line 471, ../sass/_grids.scss */
+  .booking {
+    margin-left: 10.09174%;
+    width: 26.33028%;
+    float: left;
+    margin-right: 0.91743%;
+    margin-top: 2.26481%;
+    padding-bottom: 2.26481%;
+  }
+}
+/*!!!!!!!!!!!!!!!!!!!   1122  !!!!!!!!!!!!!!!!*/
+@media screen and (max-width: 1122px) {
+  /* line 480, ../sass/_grids.scss */
+  .navigation li {
+    margin-right: 4.17178%;
+    font-size: 1.1em;
+  }
+
+  /* line 484, ../sass/_grids.scss */
+  .booking {
+    margin-left: 10.09174%;
+    width: 29.3578%;
+    float: left;
+    margin-right: 0.91743%;
+    margin-top: 2.03125%;
+    padding-bottom: 2.03125%;
+  }
+}
+/*!!!!!!!!!!!!!!!!!!!   981  !!!!!!!!!!!!!!!!*/
+@media screen and (max-width: 981px) {
+  /* line 495, ../sass/_grids.scss */
+  .head_menu .logo {
+    width: 39.44954%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 499, ../sass/_grids.scss */
+  .logo p {
+    margin-left: 7.67442%;
+    width: 10.46512%;
+    float: left;
+    margin-right: 2.32558%;
+    font-size: 2em;
+    transform: none;
+    margin-top: 0;
+    text-align: left;
+    margin-bottom: 0;
+    padding-top: 20px;
+  }
+
+  /* line 509, ../sass/_grids.scss */
+  .logo h1 {
+    margin-left: 2.55814%;
+    width: 48.83721%;
+    float: left;
+    margin-right: 2.32558%;
+    text-align: left;
+    font-size: 2em;
+    margin-top: 0;
+    padding-top: 20px;
+  }
+
+  /* line 517, ../sass/_grids.scss */
+  .navigation {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+    display: inline-block;
+  }
+
+  /* line 523, ../sass/_grids.scss */
+  .navigation ul.active {
+    display: none;
+  }
+
+  /* line 527, ../sass/_grids.scss */
+  .navigation ul {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-right: 0;
+    width: 100%;
+    border-top: 2px solid #85db18;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    background: #000;
+    margin-top: 2px;
+    padding-left: 0;
+  }
+
+  /* line 538, ../sass/_grids.scss */
+  .navigation li {
+    float: none;
+    display: block;
+  }
+
+  /* line 543, ../sass/_grids.scss */
+  .navigation a {
+    display: block;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  /* line 549, ../sass/_grids.scss */
+  .toggle_nav {
+    width: 9.17431%;
+    float: right;
+    margin-right: 0;
+    padding-top: 20px;
+    display: inline-block;
+    color: #fff;
+    font-size: 30px;
+    transition: color linear 0.15s;
+    right: 0;
+    text-decoration: none;
+  }
+
+  /* line 560, ../sass/_grids.scss */
+  .toggle_nav:hover, .toggle-nav.active {
+    text-decoration: none;
+    color: #85db18;
+  }
+
+  /* line 564, ../sass/_grids.scss */
+  .booking {
+    margin-left: 10.09174%;
+    width: 32.38532%;
+    float: left;
+    margin-right: 0.91743%;
+    margin-top: 1.84136%;
+    padding-bottom: 1.84136%;
+  }
+
+  /* line 571, ../sass/_grids.scss */
+  footer .footer_menu {
+    font-size: 1em;
+  }
+
+  /* line 574, ../sass/_grids.scss */
+  footer .footer_contacts p {
+    font-size: 1.2em;
+  }
+
+  /* line 577, ../sass/_grids.scss */
+  footer .footer_name :first-child {
+    font-size: 2.5em;
+  }
+
+  /* line 580, ../sass/_grids.scss */
+  footer .footer_name :nth-child(2) {
+    font-size: 2em;
+  }
+
+  /* line 584, ../sass/_grids.scss */
+  footer .footer_name :last-child {
+    font-size: 1em;
+  }
+
+  /* line 588, ../sass/_grids.scss */
+  footer .footer_contacts :last-child {
+    margin-top: 68.3908%;
+    font-size: 1em;
+  }
+
+  /*----- Autopark -----*/
+  /* line 595, ../sass/_grids.scss */
+  .avtopark .avto {
+    margin-left: 10.09174%;
+    width: 79.81651%;
+    float: left;
+    margin-right: 0.91743%;
+    margin-bottom: 0;
+  }
+
+  /* line 601, ../sass/_grids.scss */
+  .avtopark .avto .avto_img img {
+    height: initial;
+  }
+
+  /* line 604, ../sass/_grids.scss */
+  .avtopark .charact {
+    margin-left: 10.09174%;
+    width: 79.81651%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 609, ../sass/_grids.scss */
+  .avtopark .charact .charact_list {
+    height: 150px;
+  }
+}
+/*!!!!!!!!!!!!!!!!!!!   860  !!!!!!!!!!!!!!!!*/
+@media screen and (max-width: 860px) {
+  /* line 616, ../sass/_grids.scss */
+  .header {
+    min-height: 600px;
+  }
+
+  /* line 620, ../sass/_grids.scss */
+  .booking {
+    margin-top: 50px;
+    margin-left: 20.18349%;
+    width: 59.63303%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 625, ../sass/_grids.scss */
+  .header_welcome {
+    display: none;
+  }
+
+  /* line 628, ../sass/_grids.scss */
+  .rent_car .rent_condition {
+    padding-top: 4.12844%;
+  }
+
+  /* line 632, ../sass/_grids.scss */
+  .rent_car .rent_condition .rent_head {
+    margin-left: 10.09174%;
+    width: 79.81651%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 637, ../sass/_grids.scss */
+  .rent_car .rent_condition .condition {
+    margin-left: 10.09174%;
+    width: 79.81651%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 641, ../sass/_grids.scss */
+  .rent_car .rent_condition .rent_img {
+    display: none;
+  }
+
+  /* line 645, ../sass/_grids.scss */
+  footer .footer_menu {
+    display: none;
+  }
+
+  /* line 649, ../sass/_grids.scss */
+  footer .footer_name {
+    width: 30.45977%;
+    float: left;
+    margin-right: 1.14943%;
+  }
+
+  /* line 652, ../sass/_grids.scss */
+  footer .footer_name :first-child {
+    font-size: 2em;
+  }
+
+  /* line 656, ../sass/_grids.scss */
+  footer .footer_name :nth-child(2) {
+    font-size: 1.5em;
+    transform: translateY(-9px) skewY(-13deg);
+  }
+
+  /* line 662, ../sass/_grids.scss */
+  footer .footer_name :last-child {
+    margin-top: 67.12644%;
+    margin-bottom: 11.49425%;
+    font-size: 0.8em;
+  }
+
+  /* line 668, ../sass/_grids.scss */
+  footer .footer_contacts {
+    width: 49.42529%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 671, ../sass/_grids.scss */
+  footer .footer_contacts p {
+    font-size: 1.3em;
+  }
+
+  /* line 675, ../sass/_grids.scss */
+  footer .footer_contacts :last-child {
+    margin-top: 36.78161%;
+    margin-bottom: 11.49425%;
+    font-size: 1em;
+  }
+
+  /* line 680, ../sass/_grids.scss */
+  .transfer .transfer_div {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 686, ../sass/_grids.scss */
+  .transfer .transfer_div :first-child {
+    margin-left: 20.18349%;
+    width: 59.63303%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 691, ../sass/_grids.scss */
+  .transfer .transfer_div .transfer_img {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  /* line 698, ../sass/_grids.scss */
+  .transfer .transfer_div .transfer_img img {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* line 703, ../sass/_grids.scss */
+  .transfer .transfer_div :last-child {
+    margin-left: 10.09174%;
+    width: 79.81651%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+}
+/*!!!!!!!!!!!!!!!!!!!   669  !!!!!!!!!!!!!!!!*/
+@media screen and (max-width: 669px) {
+  /* line 712, ../sass/_grids.scss */
+  .head_menu .logo {
+    width: 59.63303%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 716, ../sass/_grids.scss */
+  .logo p {
+    margin-left: 6.76923%;
+    width: 8.61538%;
+    float: left;
+    margin-right: 1.53846%;
+  }
+
+  /* line 721, ../sass/_grids.scss */
+  .logo h1 {
+    margin-left: 5.07692%;
+    width: 49.23077%;
+    float: left;
+    margin-right: 1.53846%;
+  }
+
+  /* line 727, ../sass/_grids.scss */
+  .booking {
+    margin-left: 10.09174%;
+    width: 79.81651%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 733, ../sass/_grids.scss */
+  footer .footer_name {
+    width: 36.78161%;
+    float: left;
+    margin-right: 1.14943%;
+  }
+
+  /* line 737, ../sass/_grids.scss */
+  footer .footer_name :last-child {
+    margin-top: 57.01149%;
+  }
+
+  /* line 742, ../sass/_grids.scss */
+  .transfer .transfer_div :first-child {
+    margin-left: 10.09174%;
+    width: 79.81651%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+}
+/*!!!!!!!!!!!!!!!!!!!   450  !!!!!!!!!!!!!!!!*/
+@media screen and (max-width: 450px) {
+  /* line 750, ../sass/_grids.scss */
+  .head_menu .logo {
+    width: 79.81651%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 754, ../sass/_grids.scss */
+  .logo p {
+    margin-left: 5.05747%;
+    width: 8.96552%;
+    float: left;
+    margin-right: 1.14943%;
+  }
+
+  /* line 760, ../sass/_grids.scss */
+  .logo h1 {
+    margin-left: 3.7931%;
+    width: 49.42529%;
+    float: left;
+    margin-right: 1.14943%;
+  }
+}
+/* line 45, ../sass/_normalizer.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 61, ../sass/_normalizer.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 74, ../sass/_normalizer.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 84, ../sass/_normalizer.scss */
+[hidden], template {
+  display: none;
+}
+
+/* line 97, ../sass/_normalizer.scss */
+html {
+  background: #fff;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 109, ../sass/_normalizer.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/* line 119, ../sass/_normalizer.scss */
+body {
+  margin: 0;
+}
+
+/* line 132, ../sass/_normalizer.scss */
+a {
+  background: transparent;
+}
+/* line 139, ../sass/_normalizer.scss */
+a:focus {
+  outline: thin dotted;
+}
+/* line 145, ../sass/_normalizer.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* line 159, ../sass/_normalizer.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 164, ../sass/_normalizer.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 169, ../sass/_normalizer.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 174, ../sass/_normalizer.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 179, ../sass/_normalizer.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 184, ../sass/_normalizer.scss */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/* line 192, ../sass/_normalizer.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 198, ../sass/_normalizer.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 211, ../sass/_normalizer.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 217, ../sass/_normalizer.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 233, ../sass/_normalizer.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 246, ../sass/_normalizer.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 254, ../sass/_normalizer.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 270, ../sass/_normalizer.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 279, ../sass/_normalizer.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 286, ../sass/_normalizer.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 294, ../sass/_normalizer.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 298, ../sass/_normalizer.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 350, ../sass/_normalizer.scss */
+img {
+  border: 0;
+}
+
+/* line 359, ../sass/_normalizer.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 369, ../sass/_normalizer.scss */
+figure {
+  margin: 0;
+}
+
+/* line 386, ../sass/_normalizer.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 397, ../sass/_normalizer.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+/* line 411, ../sass/_normalizer.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+/* line 426, ../sass/_normalizer.scss */
+button, input {
+  line-height: normal;
+}
+
+/* line 435, ../sass/_normalizer.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 448, ../sass/_normalizer.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 461, ../sass/_normalizer.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* line 470, ../sass/_normalizer.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 479, ../sass/_normalizer.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 490, ../sass/_normalizer.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 498, ../sass/_normalizer.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* line 506, ../sass/_normalizer.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/* line 516, ../sass/_normalizer.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 1, ../sass/_jquery.scss */
+.ui-datepicker .ui-datepicker-header {
+  background: #85db18;
+  font-family: 'Lobster';
+}
+
+/* line 6, ../sass/_jquery.scss */
+.ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border: 1px solid #85db18;
+  color: #000;
+  border-radius: 2px;
+}
+
+/* line 14, ../sass/_jquery.scss */
+.ui-widget-header .ui-icon {
+  background-image: url("/Content/img/ui-icons_444444_256x240.png");
+}
+
+/* line 19, ../sass/_jquery.scss */
+.ui-widget-header .ui-state-hover, .ui-widget-header .ui-state-focus {
+  background: #85db18;
+}

@@ -12,19 +12,27 @@ namespace RentACar.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
+        public ActionResult Cars()
         {
-            ViewBag.Message = "Your application description page.";
-
+            rentacarEntities db = new rentacarEntities();
+            db.Cars.Add(new Car()
+            {
+                EngineCapacity = "3",
+                ImageUrl = "test",
+                ModelName = "shkoda",
+                NumberOfDoors = "4",
+                NumberOfPassengers = "3",
+                Price = "200",
+                TransmissionType = "Автомат",
+                TrunkVolume = "3сумки"
+            });
+            db.SaveChanges();
+            return View(db.Cars);
+        }
+        public ActionResult Transfer()
+        {
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }
