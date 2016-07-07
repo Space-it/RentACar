@@ -19,6 +19,9 @@ namespace RentACar
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/css/jquery-ui.min.css",
                       "~/Content/css/style.css"));
+            bundles.Add(new StyleBundle("~/Content/cssAdmin").Include(
+                "~/Content/css/jquery-ui.min.css",
+                      "~/Content/css/styleAdmin.css"));
         }
     }
 }

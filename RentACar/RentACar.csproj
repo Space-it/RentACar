@@ -133,6 +133,7 @@
     <Compile Include="Car.cs">
       <DependentUpon>RentACarDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -160,6 +161,7 @@
   <ItemGroup>
     <Content Include="Content\css\jquery-ui.min.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\styleAdmin.css" />
     <Content Include="Content\img\arrow-right.png" />
     <Content Include="Content\img\cars.png" />
     <Content Include="Content\img\date.png" />
@@ -231,6 +233,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Transfer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout_Admin.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

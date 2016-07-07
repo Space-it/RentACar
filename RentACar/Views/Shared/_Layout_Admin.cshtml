@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Rent A Car Zaporozhye</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/cssAdmin")
+</head>
+<body>
+    <section class="head_menu">
+        <div class="logo">
+
+            <p>ZP</p>
+            <h1>rent a car</h1>
+        </div>
+
+        <a class="toggle_nav" href="#">&#9776;</a>
+        <nav class="navigation">
+            <ul class="active">
+                <li class="current-item">@Html.ActionLink("Главная", "Index")</li>
+                <li><a href="#">О нас</a></li>
+                <li>@Html.ActionLink("Автомобили","Cars")</li>
+                <li>@Html.ActionLink("Трансфер", "Transfer")</li>
+                <li><a href="#">Бронирование</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    @RenderBody()
+    @Scripts.Render("~/bundles/scripts")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
