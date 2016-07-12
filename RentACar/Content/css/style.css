@@ -60,9 +60,9 @@
 /*----- Menu -----*/
 /* line 62, ../sass/_grids.scss */
 .navigation {
-  width: 74.77064%;
-  float: right;
-  margin-right: 0;
+  width: 76.78899%;
+  float: left;
+  margin-right: 0.91743%;
   margin-top: 15px;
   font-family: 'Roboto Condensed', sans-serif;
 }
@@ -71,33 +71,80 @@
 .navigation ul {
   display: inline-block;
   width: 100%;
-  float: right;
+  float: left;
+  margin-left: 0;
   margin-right: 0;
 }
 
-/* line 74, ../sass/_grids.scss */
+/* line 75, ../sass/_grids.scss */
 .navigation li {
   margin-right: 5.52147%;
   float: left;
   list-style: none;
   font-size: 1.2em;
   text-align: center;
+  color: #fff;
 }
 
-/* line 82, ../sass/_grids.scss */
+/* line 83, ../sass/_grids.scss */
+.navigation ul :nth-child(6) {
+  margin-right: 9.57055%;
+}
+
+/* line 86, ../sass/_grids.scss */
+.navigation ul :nth-child(7) {
+  margin-right: 0;
+}
+
+/* line 90, ../sass/_grids.scss */
 .navigation a {
   color: #fff;
   transition: color linear 0.15s;
   text-decoration: none;
 }
 
-/* line 88, ../sass/_grids.scss */
+/* line 96, ../sass/_grids.scss */
 .navigation a:hover, .navigation .current-item a {
   color: #85db18;
 }
 
+/* line 101, ../sass/_grids.scss */
+.arrow {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 106, ../sass/_grids.scss */
+.dropdown ul {
+  display: none;
+  position: absolute;
+  padding-left: 0;
+  font-size: 0.85em;
+}
+
+/* line 113, ../sass/_grids.scss */
+.dropdown ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 118, ../sass/_grids.scss */
+.dropdown ul li a:hover {
+  color: #aadf3f;
+}
+
+/* line 121, ../sass/_grids.scss */
+.navigation .language {
+  border: none;
+  box-shadow: none;
+  width: 98%;
+  text-align: center;
+  background: none;
+  margin-top: -5px;
+}
+
 /*------------------ Section Header ----------*/
-/* line 96, ../sass/_grids.scss */
+/* line 132, ../sass/_grids.scss */
 .header {
   max-width: 100%;
   margin-left: auto;
@@ -114,7 +161,7 @@
   clear: both;
 }
 
-/* line 103, ../sass/_grids.scss */
+/* line 139, ../sass/_grids.scss */
 .booking {
   margin-left: 10.09174%;
   width: 24.31193%;
@@ -123,10 +170,10 @@
   background: rgba(200, 200, 194, 0.8);
   margin-top: 4.5283%;
   padding-bottom: 4.5283%;
-  font-family: Calibri,Arial;
+  font-family: 'Roboto Condensed',Arial;
 }
 
-/* line 111, ../sass/_grids.scss */
+/* line 147, ../sass/_grids.scss */
 .booking .book_name {
   width: 100%;
   float: left;
@@ -138,23 +185,64 @@
   text-align: center;
 }
 
-/* line 118, ../sass/_grids.scss */
+/* line 154, ../sass/_grids.scss */
 .booking .book_name p {
   margin: 7px;
 }
 
-/* line 121, ../sass/_grids.scss */
+/* line 157, ../sass/_grids.scss */
 .booking form {
   margin-left: 8.30189%;
   width: 83.39623%;
   float: left;
   margin-right: 3.77358%;
   margin-top: 15px;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
-/* line 128, ../sass/_grids.scss */
-.booking form input {
+/* line 163, ../sass/_grids.scss */
+.booking form .city_div {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  height: 30px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  border: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  background: #fff;
+  position: relative;
+}
+
+/* line 173, ../sass/_grids.scss */
+.booking form .city_div .city {
+  width: 85.06787%;
+  float: left;
+  margin-right: 4.52489%;
+  margin-right: 0;
+  border: none;
+  height: 27px;
+  padding-bottom: 2px;
+  padding-left: 3px;
+  padding-right: 38px;
+}
+
+/* line 183, ../sass/_grids.scss */
+.booking form .city_div .city_logo {
+  width: 7.91855%;
+  float: right;
+  margin-right: 0;
+  background: url("/Content/img/location2.png");
+  background-repeat: no-repeat;
+  height: 25px;
+  margin-top: 2px;
+  position: absolute;
+  right: 0;
+}
+
+/* line 193, ../sass/_grids.scss */
+.booking form .date, .booking form .time {
   height: 30px;
   margin-bottom: 20px;
   margin-top: 5px;
@@ -164,18 +252,7 @@
   color: #505050;
 }
 
-/* line 137, ../sass/_grids.scss */
-.booking form .city {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-  background-image: url("/Content/img/location2.png");
-  background-repeat: no-repeat;
-  background-position: 96%;
-}
-
-/* line 145, ../sass/_grids.scss */
+/* line 204, ../sass/_grids.scss */
 .booking form .date {
   background-image: url("/Content/img/date2.png");
   width: 45.24887%;
@@ -187,7 +264,7 @@
   color: #000;
 }
 
-/* line 154, ../sass/_grids.scss */
+/* line 213, ../sass/_grids.scss */
 .booking form .time {
   background-image: url("/Content/img/time2.png");
   width: 45.24887%;
@@ -198,8 +275,8 @@
   color: #000;
 }
 
-/* line 162, ../sass/_grids.scss */
-.booking form .choose_time, .choose_time2, .choose_city {
+/* line 221, ../sass/_grids.scss */
+.booking form .choose_time, .choose_time2 {
   width: 100%;
   float: left;
   margin-left: 0;
@@ -212,26 +289,27 @@
   display: none;
 }
 
-/* line 172, ../sass/_grids.scss */
-.choose_time ul, .choose_time2 ul, .choose_city ul {
+/* line 232, ../sass/_grids.scss */
+.choose_time ul, .choose_time2 ul, .choose_city ul, .choose_avto ul {
   text-align: center;
   padding-left: 0;
   margin-top: 0;
 }
 
-/* line 178, ../sass/_grids.scss */
-.choose_time ul li, .choose_time2 ul li, .choose_city ul li {
+/* line 238, ../sass/_grids.scss */
+.choose_time ul li, .choose_time2 ul li, .choose_city ul li, .choose_avto ul li {
   list-style: none;
   border-bottom: 1px solid #85db18;
   padding-bottom: 3px;
+  padding-bottom: 6px;
 }
 
-/* line 183, ../sass/_grids.scss */
-.choose_time ul li:hover, .choose_time2 ul li:hover, .choose_city ul li:hover {
+/* line 244, ../sass/_grids.scss */
+.choose_time ul li:hover, .choose_time2 ul li:hover, .choose_city ul li:hover, .choose_avto ul li:hover {
   background: #85db18;
 }
 
-/* line 187, ../sass/_grids.scss */
+/* line 248, ../sass/_grids.scss */
 .booking form button {
   background: #85db18;
   border: none;
@@ -244,24 +322,25 @@
   margin-top: 15px;
 }
 
-/* line 197, ../sass/_grids.scss */
+/* line 258, ../sass/_grids.scss */
 .header_welcome {
   margin-left: 10.09174%;
   width: 39.44954%;
   float: left;
   margin-right: 0.91743%;
   margin-top: 12%;
+  font-family: 'Roboto Condensed',Arial;
 }
 
-/* line 202, ../sass/_grids.scss */
+/* line 264, ../sass/_grids.scss */
 .header_welcome p {
-  font-family: Arial;
   color: #fff;
   text-align: center;
   font-size: 1.3em;
+  font-family: 'Roboto Condensed',Arial;
 }
 
-/* line 210, ../sass/_grids.scss */
+/* line 272, ../sass/_grids.scss */
 .header_welcome button {
   margin-left: 31.97674%;
   width: 36.04651%;
@@ -274,8 +353,14 @@
   padding: 7px;
 }
 
+/* line 282, ../sass/_grids.scss */
+.header_welcome button a {
+  color: #fff;
+  text-decoration: none;
+}
+
 /*------------------ Section Rent a Car ----------*/
-/* line 221, ../sass/_grids.scss */
+/* line 287, ../sass/_grids.scss */
 .rent_car {
   max-width: 100%;
   margin-left: auto;
@@ -289,7 +374,7 @@
   clear: both;
 }
 
-/* line 225, ../sass/_grids.scss */
+/* line 291, ../sass/_grids.scss */
 .rent_car .rent_condition {
   width: 100%;
   float: left;
@@ -298,10 +383,9 @@
   background: #edebeb;
   padding-top: 4.12844%;
   padding-bottom: 4.12844%;
-  font-family: Calibri,Arial;
 }
 
-/* line 232, ../sass/_grids.scss */
+/* line 298, ../sass/_grids.scss */
 .rent_car .rent_condition .rent_head {
   margin-left: 5.04587%;
   width: 44.49541%;
@@ -309,9 +393,10 @@
   margin-right: 0.91743%;
   border-bottom: 1px solid #d2d0d0;
   text-align: center;
+  font-family: 'Roboto Condensed',Arial;
 }
 
-/* line 238, ../sass/_grids.scss */
+/* line 305, ../sass/_grids.scss */
 .rent_car .rent_condition .condition {
   margin-left: 5.04587%;
   width: 44.49541%;
@@ -322,30 +407,30 @@
   font-size: 1.1em;
 }
 
-/* line 246, ../sass/_grids.scss */
+/* line 313, ../sass/_grids.scss */
 .rent_car .rent_condition .condition .card_condition {
   padding-left: 40px;
 }
 
-/* line 250, ../sass/_grids.scss */
+/* line 317, ../sass/_grids.scss */
 .rent_car .rent_condition :last-child {
   border: none;
 }
 
-/* line 254, ../sass/_grids.scss */
+/* line 321, ../sass/_grids.scss */
 .rent_car .rent_condition .rent_img {
   width: 39.44954%;
   float: right;
   margin-right: 0;
 }
 
-/* line 260, ../sass/_grids.scss */
+/* line 327, ../sass/_grids.scss */
 .rent_car .rent_condition .rent_img img {
   width: 100%;
 }
 
 /*------------------ Section Map ----------*/
-/* line 265, ../sass/_grids.scss */
+/* line 332, ../sass/_grids.scss */
 .map {
   max-width: 100%;
   margin-left: auto;
@@ -358,7 +443,7 @@
   clear: both;
 }
 
-/* line 268, ../sass/_grids.scss */
+/* line 335, ../sass/_grids.scss */
 .map iframe {
   width: 100%;
   float: left;
@@ -369,7 +454,7 @@
 }
 
 /*------------------ Section Footer ----------*/
-/* line 274, ../sass/_grids.scss */
+/* line 341, ../sass/_grids.scss */
 .footer {
   max-width: 100%;
   margin-left: auto;
@@ -383,7 +468,7 @@
   clear: both;
 }
 
-/* line 279, ../sass/_grids.scss */
+/* line 346, ../sass/_grids.scss */
 footer {
   margin-left: 10.09174%;
   width: 79.81651%;
@@ -392,33 +477,33 @@ footer {
   padding-top: 1.37931%;
 }
 
-/* line 285, ../sass/_grids.scss */
+/* line 352, ../sass/_grids.scss */
 footer .footer_menu {
   width: 24.13793%;
   float: left;
   margin-right: 1.14943%;
   font-size: 1.2em;
-  font-family: Arial;
+  font-family: 'Roboto Condensed',Arial;
 }
 
-/* line 291, ../sass/_grids.scss */
+/* line 358, ../sass/_grids.scss */
 footer .footer_menu ul {
   list-style: none;
   padding-left: 0;
 }
 
-/* line 295, ../sass/_grids.scss */
+/* line 362, ../sass/_grids.scss */
 footer .footer_menu ul li {
   padding-bottom: 10px;
 }
 
-/* line 298, ../sass/_grids.scss */
+/* line 365, ../sass/_grids.scss */
 footer .footer_menu ul li a {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 302, ../sass/_grids.scss */
+/* line 369, ../sass/_grids.scss */
 footer .footer_name {
   width: 49.42529%;
   float: left;
@@ -426,7 +511,7 @@ footer .footer_name {
   text-align: center;
 }
 
-/* line 307, ../sass/_grids.scss */
+/* line 374, ../sass/_grids.scss */
 footer .footer_name :first-child {
   color: #fff;
   font-family: 'Lobster';
@@ -435,7 +520,7 @@ footer .footer_name :first-child {
   margin-bottom: 0;
 }
 
-/* line 314, ../sass/_grids.scss */
+/* line 381, ../sass/_grids.scss */
 footer .footer_name :nth-child(2) {
   color: #85db18;
   font-size: 2.5em;
@@ -444,16 +529,16 @@ footer .footer_name :nth-child(2) {
   margin-top: 0;
 }
 
-/* line 322, ../sass/_grids.scss */
+/* line 389, ../sass/_grids.scss */
 footer .footer_name :last-child {
   color: #fff;
-  font-family: Arial;
   margin-top: 30.45977%;
   margin-bottom: 5.17241%;
   font-size: 1.2em;
+  font-family: 'Roboto Condensed',Arial;
 }
 
-/* line 329, ../sass/_grids.scss */
+/* line 397, ../sass/_grids.scss */
 footer .footer_contacts {
   width: 24.13793%;
   float: right;
@@ -463,17 +548,17 @@ footer .footer_contacts {
   font-family: 'Lobster';
 }
 
-/* line 336, ../sass/_grids.scss */
+/* line 404, ../sass/_grids.scss */
 footer .footer_contacts p {
   font-size: 1.4em;
 }
 
-/* line 339, ../sass/_grids.scss */
+/* line 407, ../sass/_grids.scss */
 footer .footer_contacts :first-child {
   margin-top: 5px;
 }
 
-/* line 342, ../sass/_grids.scss */
+/* line 410, ../sass/_grids.scss */
 footer .footer_contacts :last-child {
   margin-top: 68.3908%;
   margin-bottom: 5.17241%;
@@ -481,19 +566,18 @@ footer .footer_contacts :last-child {
   font-size: 1.2em;
 }
 
-/* line 348, ../sass/_grids.scss */
+/* line 416, ../sass/_grids.scss */
 footer .footer_contacts a {
   text-decoration: none;
 }
 
 /*------------------ Autopark page ----------*/
-/* line 359, ../sass/_grids.scss */
+/* line 427, ../sass/_grids.scss */
 .avtopark {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   background: #fff;
-  font-family: Arial;
 }
 /* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
 .avtopark:after {
@@ -502,7 +586,7 @@ footer .footer_contacts a {
   clear: both;
 }
 
-/* line 364, ../sass/_grids.scss */
+/* line 432, ../sass/_grids.scss */
 .avtopark h1 {
   width: 100%;
   float: left;
@@ -511,9 +595,10 @@ footer .footer_contacts a {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-family: 'Roboto Condensed',Arial;
 }
 
-/* line 372, ../sass/_grids.scss */
+/* line 441, ../sass/_grids.scss */
 .avtopark .avto {
   margin-left: 10.09174%;
   width: 39.44954%;
@@ -523,9 +608,10 @@ footer .footer_contacts a {
   background: #f4f4f4;
   margin-bottom: 40px;
   margin-right: 20px;
+  font-family: 'Roboto Condensed',Arial;
 }
 
-/* line 382, ../sass/_grids.scss */
+/* line 451, ../sass/_grids.scss */
 .avtopark .avto p {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -535,9 +621,11 @@ footer .footer_contacts a {
   margin-right: 0;
   background: #85db18;
   margin-top: 0;
+  font-family: 'Roboto Condensed',Arial;
+  font-weight: bold;
 }
 
-/* line 389, ../sass/_grids.scss */
+/* line 460, ../sass/_grids.scss */
 .avtopark .avto .avto_img {
   width: 100%;
   float: left;
@@ -545,24 +633,25 @@ footer .footer_contacts a {
   margin-right: 0;
   padding-top: 20px;
   padding-bottom: 30px;
+  height: 300px;
 }
 
-/* line 395, ../sass/_grids.scss */
+/* line 467, ../sass/_grids.scss */
 .avtopark .avto .avto_img img {
   max-width: 97.44186%;
-  height: 300px;
-  height: initial;
+  max-height: 300px;
 }
 
-/* line 401, ../sass/_grids.scss */
+/* line 473, ../sass/_grids.scss */
 .avtopark .charact {
   width: 39.44954%;
   float: left;
   margin-right: 0.91743%;
   margin-bottom: 40px;
+  font-family: 'Roboto Condensed',Arial;
 }
 
-/* line 406, ../sass/_grids.scss */
+/* line 478, ../sass/_grids.scss */
 .avtopark .charact .charact_name {
   width: 100%;
   float: left;
@@ -575,28 +664,30 @@ footer .footer_contacts a {
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
+  font-weight: bold;
 }
 
-/* line 417, ../sass/_grids.scss */
+/* line 490, ../sass/_grids.scss */
 .avtopark .charact .charact_list {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
   padding-left: 10px;
-  height: 360px;
+  height: 355px;
   background: #f4f4f4;
   padding-top: 10px;
+  font-size: 1.2em;
 }
 
-/* line 425, ../sass/_grids.scss */
+/* line 499, ../sass/_grids.scss */
 .avtopark .charact .charact_list p {
   margin-bottom: 5px;
   margin-top: 0;
 }
 
 /*------------------ Transfer page ----------*/
-/* line 435, ../sass/_grids.scss */
+/* line 509, ../sass/_grids.scss */
 .transfer {
   max-width: 100%;
   margin-left: auto;
@@ -609,26 +700,27 @@ footer .footer_contacts a {
   clear: both;
 }
 
-/* line 438, ../sass/_grids.scss */
+/* line 512, ../sass/_grids.scss */
 .transfer .transfer_div {
   margin-left: 10.09174%;
   width: 79.81651%;
   float: left;
   margin-right: 0.91743%;
   margin-top: 20px;
+  font-family: 'Roboto Condensed',Arial;
+  font-size: 1.2em;
 }
 
-/* line 445, ../sass/_grids.scss */
+/* line 521, ../sass/_grids.scss */
 .transfer .transfer_div :first-child {
   margin-left: 25.28736%;
   width: 49.42529%;
   float: left;
   margin-right: 1.14943%;
   text-align: center;
-  font-family: Arial;
 }
 
-/* line 452, ../sass/_grids.scss */
+/* line 528, ../sass/_grids.scss */
 .transfer .transfer_div .transfer_img {
   width: 100%;
   float: left;
@@ -638,26 +730,567 @@ footer .footer_contacts a {
   margin-bottom: 50px;
 }
 
-/* line 458, ../sass/_grids.scss */
+/* line 534, ../sass/_grids.scss */
 .transfer .transfer_div .transfer_img img {
   width: 100%;
   height: initial;
 }
 
-/* line 462, ../sass/_grids.scss */
+/* line 538, ../sass/_grids.scss */
 .transfer .transfer_div :last-child {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
   text-align: center;
-  font-family: Arial;
   margin-bottom: 50px;
+}
+
+/*------------------ Booking page ----------*/
+/* line 545, ../sass/_grids.scss */
+.booking_car {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: url("/Content/img/keys2.jpg") no-repeat;
+  background-position: 56% 51%;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.booking_car:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 550, ../sass/_grids.scss */
+.booking_car .booking_car_div {
+  margin-left: 10.09174%;
+  width: 79.81651%;
+  float: left;
+  margin-right: 0.91743%;
+  background: rgba(18, 18, 18, 0.6);
+  margin-top: 40px;
+  border-radius: 5px;
+  border: 1px solid rgba(18, 18, 18, 0.5);
+  margin-bottom: 40px;
+}
+
+/* line 562, ../sass/_grids.scss */
+.booking_car .booking_car_div .car_name {
+  font-family: 'Lobster';
+  text-align: center;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+/* line 570, ../sass/_grids.scss */
+.booking_car .booking_car_div form {
+  margin-left: 6.32184%;
+  width: 87.35632%;
+  float: left;
+  margin-right: 1.14943%;
+  font-family: 'Roboto Condensed',Arial;
+}
+
+/* line 575, ../sass/_grids.scss */
+.booking_car .booking_car_div form p {
+  color: #fff;
+  font-size: 1.2em;
+  margin-bottom: 2px;
+}
+
+/* line 580, ../sass/_grids.scss */
+.booking_car .booking_car_div form .left_form {
+  width: 42.10526%;
+  float: left;
+  margin-right: 1.31579%;
+  margin-right: 0;
+}
+
+/* line 584, ../sass/_grids.scss */
+.left_form .city_div {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  height: 38px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  border: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  background: #fff;
+  position: relative;
+}
+
+/* line 594, ../sass/_grids.scss */
+.left_form .city_div .city {
+  width: 89.6875%;
+  float: left;
+  margin-right: 3.125%;
+  margin-right: 0;
+  border: none;
+  height: 35px;
+  padding-bottom: 2px;
+  padding-left: 3px;
+  padding-right: 38px;
+}
+
+/* line 604, ../sass/_grids.scss */
+.left_form .city_div .city_logo {
+  width: 5.46875%;
+  float: right;
+  margin-right: 0;
+  background: url("/Content/img/location2.png");
+  background-repeat: no-repeat;
+  height: 25px;
+  margin-top: 6px;
+  position: absolute;
+  right: 0;
+}
+
+/* line 614, ../sass/_grids.scss */
+.left_form .date, .left_form .time {
+  height: 38px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  padding: 3px 0 3px 5px;
+  border: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  color: #505050;
+}
+
+/* line 625, ../sass/_grids.scss */
+.left_form .date {
+  background-image: url("/Content/img/date2.png");
+  width: 45%;
+  float: left;
+  margin-right: 3.125%;
+  margin-right: 3.75%;
+  background-repeat: no-repeat;
+  background-position: 96%;
+  color: #000;
+}
+
+/* line 634, ../sass/_grids.scss */
+.left_form .time {
+  background-image: url("/Content/img/time2.png");
+  width: 45%;
+  float: right;
+  margin-right: 0;
+  background-repeat: no-repeat;
+  background-position: 96%;
+  color: #000;
+}
+
+/* line 642, ../sass/_grids.scss */
+.left_form .choose_time, .choose_time2 {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  overflow-y: scroll;
+  height: 150px;
+  margin-top: -18px;
+  z-index: 1;
+  background: #fff;
+  display: none;
+}
+
+/* line 652, ../sass/_grids.scss */
+.choose_city {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  overflow-y: scroll;
+  height: 75px;
+  margin-top: -18px;
+  z-index: 1;
+  background: #fff;
+  display: none;
+}
+
+/* line 662, ../sass/_grids.scss */
+.left_form .wish {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  height: 38px;
+  border: none;
+  padding-left: 3px;
+}
+
+/* line 668, ../sass/_grids.scss */
+.choose_avto {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  overflow-y: scroll;
+  height: 100px;
+  margin-top: 2px;
+  z-index: 1;
+  background: #fff;
+  display: none;
+  padding-right: 3px;
+}
+
+/* line 678, ../sass/_grids.scss */
+.booking_car .booking_car_div form .right_form {
+  width: 42.10526%;
+  float: right;
+  margin-right: 0;
+}
+
+/* line 681, ../sass/_grids.scss */
+.right_form input {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  height: 38px;
+  padding-left: 3px;
+  margin-bottom: 20px;
+  border: none;
+  margin-top: 5px;
+}
+
+/* line 689, ../sass/_grids.scss */
+.show_avto {
+  margin-left: 7.23684%;
+  width: 85.52632%;
+  float: left;
+  margin-right: 1.31579%;
+  margin-top: 10px;
+  display: none;
+}
+
+/* line 695, ../sass/_grids.scss */
+.show_avto_img {
+  width: 49.23077%;
+  float: left;
+  margin-right: 1.53846%;
+}
+
+/* line 699, ../sass/_grids.scss */
+.show_avto_img img {
+  width: 96.5625%;
+  float: left;
+  margin-right: 3.125%;
+  height: initial;
+}
+
+/* line 704, ../sass/_grids.scss */
+.show_avto_charact {
+  width: 49.23077%;
+  float: right;
+  margin-right: 0;
+}
+
+/* line 707, ../sass/_grids.scss */
+.show_avto_charact p {
+  color: #fff;
+}
+
+/* line 710, ../sass/_grids.scss */
+.sum {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 40px;
+}
+
+/* line 715, ../sass/_grids.scss */
+.sum p {
+  width: 42.10526%;
+  float: right;
+  margin-right: 0;
+  text-align: left;
+}
+
+/* line 719, ../sass/_grids.scss */
+.booking_car .booking_car_div form button {
+  margin-left: 36.18421%;
+  width: 27.63158%;
+  float: left;
+  margin-right: 1.31579%;
+  background: #85db18;
+  border: none;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 7px;
+  margin-top: 60px;
+  height: 38px;
+  margin-bottom: 60px;
+}
+
+/*------------------ Contacts page ----------*/
+/* line 732, ../sass/_grids.scss */
+.location {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #000;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.location:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 736, ../sass/_grids.scss */
+.location .location_info {
+  width: 49.54128%;
+  float: left;
+  margin-right: 0.91743%;
+  width: 50%;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  font-family: 'Roboto Condensed',Arial;
+  padding-top: 20px;
+  margin-right: 0;
+  font-size: 1.5em;
+}
+
+/* line 748, ../sass/_grids.scss */
+.location .location_info :nth-child(2) {
+  margin-left: 10.18519%;
+  width: 79.62963%;
+  float: left;
+  margin-right: 1.85185%;
+}
+
+/* line 752, ../sass/_grids.scss */
+.location .ofice {
+  width: 49.54128%;
+  float: right;
+  margin-right: 0;
+  width: 50%;
+}
+
+/* line 758, ../sass/_grids.scss */
+.location .ofice img {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+}
+
+/* line 761, ../sass/_grids.scss */
+.feedback {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #000;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.feedback:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 766, ../sass/_grids.scss */
+.feedback .intourist {
+  width: 49.54128%;
+  float: left;
+  margin-right: 0.91743%;
+  width: 50%;
+  margin-right: 0;
+}
+
+/* line 771, ../sass/_grids.scss */
+.feedback .intourist img {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 775, ../sass/_grids.scss */
+.feedback .feedback_form {
+  width: 49.54128%;
+  float: right;
+  margin-right: 0;
+  width: 50%;
+}
+
+/* line 779, ../sass/_grids.scss */
+.feedback .feedback_form p {
+  font-family: 'Roboto Condensed',Arial;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5em;
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* line 787, ../sass/_grids.scss */
+.feedback .feedback_form form {
+  margin-left: 10.18519%;
+  width: 79.62963%;
+  float: left;
+  margin-right: 1.85185%;
+  margin-right: 0;
+}
+
+/* line 792, ../sass/_grids.scss */
+.feedback .feedback_form form input {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 23px;
+  padding-left: 3px;
+}
+
+/* line 801, ../sass/_grids.scss */
+.feedback .feedback_form form textarea {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 23px;
+  height: 180px;
+}
+
+/* line 808, ../sass/_grids.scss */
+.feedback .feedback_form form button {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background: #63bb4d;
+  height: 35px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+  border: none;
+  color: #fff;
+}
+
+/*------------------ About Us page ----------*/
+/* line 822, ../sass/_grids.scss */
+.about_header {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: url("/Content/img/zp.jpg");
+  height: 400px;
+  background-position: 100% 50%;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.about_header:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 829, ../sass/_grids.scss */
+.about_header div {
+  margin-left: 10.09174%;
+  width: 79.81651%;
+  float: left;
+  margin-right: 0.91743%;
+  color: #fff;
+}
+
+/* line 835, ../sass/_grids.scss */
+.about_header div :first-child {
+  width: 32.98851%;
+  float: left;
+  margin-right: 1.14943%;
+  font-family: 'Lobster';
+  font-size: 4em;
+  margin-top: 115px;
+}
+
+/* line 842, ../sass/_grids.scss */
+.about_header div :last-child {
+  width: 62.06897%;
+  float: left;
+  margin-right: 1.14943%;
+  font-family: 'Roboto',Arial;
+  font-size: 1.5em;
+  margin-top: 150px;
+  margin-right: 0;
+}
+
+/* line 849, ../sass/_grids.scss */
+.about_main {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.about_main:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 853, ../sass/_grids.scss */
+.about_main div {
+  margin-left: 20.18349%;
+  width: 59.63303%;
+  float: left;
+  margin-right: 0.91743%;
+  text-align: left;
+  font-family: 'Roboto',Arial;
+  padding-top: 50px;
+  font-size: 1.2em;
+  padding-bottom: 50px;
+}
+
+/* line 867, ../sass/_grids.scss */
+.about_location {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: url("/Content/img/intourist.jpg");
+  height: 400px;
+  background-position: 60% 60%;
+  font-family: 'Roboto',Arial;
+  color: #fff;
+}
+/* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
+.about_location:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 875, ../sass/_grids.scss */
+.about_location :first-child {
+  text-align: center;
+  font-size: 2.5em;
+  padding-top: 69px;
+}
+
+/* line 880, ../sass/_grids.scss */
+.about_location :last-child {
+  margin-left: 10.09174%;
+  width: 79.81651%;
+  float: left;
+  margin-right: 0.91743%;
+  font-size: 1.5em;
+  text-align: center;
+  padding-top: 40px;
 }
 
 /*----- Responsive -----*/
 @media screen and (max-width: 1250px) {
-  /* line 471, ../sass/_grids.scss */
+  /* line 891, ../sass/_grids.scss */
   .booking {
     margin-left: 10.09174%;
     width: 26.33028%;
@@ -666,16 +1299,21 @@ footer .footer_contacts a {
     margin-top: 2.26481%;
     padding-bottom: 2.26481%;
   }
+
+  /* line 897, ../sass/_grids.scss */
+  .about_header div :first-child {
+    font-size: 3.5em;
+  }
 }
 /*!!!!!!!!!!!!!!!!!!!   1122  !!!!!!!!!!!!!!!!*/
 @media screen and (max-width: 1122px) {
-  /* line 480, ../sass/_grids.scss */
+  /* line 906, ../sass/_grids.scss */
   .navigation li {
     margin-right: 4.17178%;
     font-size: 1.1em;
   }
 
-  /* line 484, ../sass/_grids.scss */
+  /* line 910, ../sass/_grids.scss */
   .booking {
     margin-left: 10.09174%;
     width: 29.3578%;
@@ -684,17 +1322,51 @@ footer .footer_contacts a {
     margin-top: 2.03125%;
     padding-bottom: 2.03125%;
   }
+
+  /* line 916, ../sass/_grids.scss */
+  .location .location_info {
+    font-size: 1.2em;
+  }
+
+  /* line 920, ../sass/_grids.scss */
+  .feedback .feedback_form p {
+    padding-top: 0;
+    margin-bottom: 13px;
+  }
+
+  /* line 926, ../sass/_grids.scss */
+  .feedback .feedback_form form input {
+    height: 33px;
+    margin-bottom: 20px;
+  }
+
+  /* line 931, ../sass/_grids.scss */
+  .feedback .feedback_form form textarea {
+    margin-bottom: 20px;
+    height: 160px;
+  }
+
+  /* line 935, ../sass/_grids.scss */
+  .about_header div :first-child {
+    font-size: 3em;
+  }
+
+  /* line 941, ../sass/_grids.scss */
+  .about_header div :last-child {
+    font-size: 1.3em;
+    margin-top: 145px;
+  }
 }
 /*!!!!!!!!!!!!!!!!!!!   981  !!!!!!!!!!!!!!!!*/
 @media screen and (max-width: 981px) {
-  /* line 495, ../sass/_grids.scss */
+  /* line 949, ../sass/_grids.scss */
   .head_menu .logo {
     width: 39.44954%;
     float: left;
     margin-right: 0.91743%;
   }
 
-  /* line 499, ../sass/_grids.scss */
+  /* line 953, ../sass/_grids.scss */
   .logo p {
     margin-left: 7.67442%;
     width: 10.46512%;
@@ -708,7 +1380,7 @@ footer .footer_contacts a {
     padding-top: 20px;
   }
 
-  /* line 509, ../sass/_grids.scss */
+  /* line 963, ../sass/_grids.scss */
   .logo h1 {
     margin-left: 2.55814%;
     width: 48.83721%;
@@ -720,7 +1392,7 @@ footer .footer_contacts a {
     padding-top: 20px;
   }
 
-  /* line 517, ../sass/_grids.scss */
+  /* line 971, ../sass/_grids.scss */
   .navigation {
     width: 100%;
     float: left;
@@ -730,12 +1402,12 @@ footer .footer_contacts a {
     display: inline-block;
   }
 
-  /* line 523, ../sass/_grids.scss */
+  /* line 977, ../sass/_grids.scss */
   .navigation ul.active {
     display: none;
   }
 
-  /* line 527, ../sass/_grids.scss */
+  /* line 981, ../sass/_grids.scss */
   .navigation ul {
     width: 100%;
     float: left;
@@ -751,20 +1423,36 @@ footer .footer_contacts a {
     padding-left: 0;
   }
 
-  /* line 538, ../sass/_grids.scss */
+  /* line 992, ../sass/_grids.scss */
   .navigation li {
     float: none;
     display: block;
-  }
-
-  /* line 543, ../sass/_grids.scss */
-  .navigation a {
-    display: block;
     padding-top: 10px;
     padding-left: 10px;
+    margin-right: 0;
   }
 
-  /* line 549, ../sass/_grids.scss */
+  /* line 1001, ../sass/_grids.scss */
+  .navigation ul :nth-child(6) {
+    margin-right: 0;
+  }
+
+  /* line 1004, ../sass/_grids.scss */
+  .navigation ul :last-child {
+    padding-top: 0;
+  }
+
+  /* line 1007, ../sass/_grids.scss */
+  .dropdown {
+    margin-top: -10px;
+  }
+
+  /* line 1010, ../sass/_grids.scss */
+  .navigation .language li {
+    padding-left: 5px;
+  }
+
+  /* line 1015, ../sass/_grids.scss */
   .toggle_nav {
     width: 9.17431%;
     float: right;
@@ -778,13 +1466,13 @@ footer .footer_contacts a {
     text-decoration: none;
   }
 
-  /* line 560, ../sass/_grids.scss */
+  /* line 1026, ../sass/_grids.scss */
   .toggle_nav:hover, .toggle-nav.active {
     text-decoration: none;
     color: #85db18;
   }
 
-  /* line 564, ../sass/_grids.scss */
+  /* line 1030, ../sass/_grids.scss */
   .booking {
     margin-left: 10.09174%;
     width: 32.38532%;
@@ -794,39 +1482,39 @@ footer .footer_contacts a {
     padding-bottom: 1.84136%;
   }
 
-  /* line 571, ../sass/_grids.scss */
+  /* line 1037, ../sass/_grids.scss */
   footer .footer_menu {
     font-size: 1em;
   }
 
-  /* line 574, ../sass/_grids.scss */
+  /* line 1040, ../sass/_grids.scss */
   footer .footer_contacts p {
     font-size: 1.2em;
   }
 
-  /* line 577, ../sass/_grids.scss */
+  /* line 1043, ../sass/_grids.scss */
   footer .footer_name :first-child {
     font-size: 2.5em;
   }
 
-  /* line 580, ../sass/_grids.scss */
+  /* line 1046, ../sass/_grids.scss */
   footer .footer_name :nth-child(2) {
     font-size: 2em;
   }
 
-  /* line 584, ../sass/_grids.scss */
+  /* line 1050, ../sass/_grids.scss */
   footer .footer_name :last-child {
     font-size: 1em;
   }
 
-  /* line 588, ../sass/_grids.scss */
+  /* line 1054, ../sass/_grids.scss */
   footer .footer_contacts :last-child {
     margin-top: 68.3908%;
     font-size: 1em;
   }
 
   /*----- Autopark -----*/
-  /* line 595, ../sass/_grids.scss */
+  /* line 1061, ../sass/_grids.scss */
   .avtopark .avto {
     margin-left: 10.09174%;
     width: 79.81651%;
@@ -835,12 +1523,19 @@ footer .footer_contacts a {
     margin-bottom: 0;
   }
 
-  /* line 601, ../sass/_grids.scss */
+  /* line 1067, ../sass/_grids.scss */
+  .avtopark .avto .avto_img {
+    padding-bottom: 10px;
+    height: inherit;
+    max-height: 300px;
+  }
+
+  /* line 1073, ../sass/_grids.scss */
   .avtopark .avto .avto_img img {
     height: initial;
   }
 
-  /* line 604, ../sass/_grids.scss */
+  /* line 1076, ../sass/_grids.scss */
   .avtopark .charact {
     margin-left: 10.09174%;
     width: 79.81651%;
@@ -848,19 +1543,50 @@ footer .footer_contacts a {
     margin-right: 0.91743%;
   }
 
-  /* line 609, ../sass/_grids.scss */
+  /* line 1081, ../sass/_grids.scss */
   .avtopark .charact .charact_list {
     height: 150px;
+  }
+
+  /* line 1084, ../sass/_grids.scss */
+  .location .location_info {
+    font-size: 1em;
+  }
+
+  /* line 1087, ../sass/_grids.scss */
+  .feedback .feedback_form p {
+    font-size: 1.2em;
+  }
+
+  /* line 1093, ../sass/_grids.scss */
+  .feedback .feedback_form form input {
+    margin-bottom: 10px;
+  }
+
+  /* line 1097, ../sass/_grids.scss */
+  .about_header {
+    height: 350px;
+  }
+
+  /* line 1100, ../sass/_grids.scss */
+  .about_header div :first-child {
+    font-size: 2.7em;
+  }
+
+  /* line 1106, ../sass/_grids.scss */
+  .about_header div :last-child {
+    font-size: 1.2em;
+    margin-top: 135px;
   }
 }
 /*!!!!!!!!!!!!!!!!!!!   860  !!!!!!!!!!!!!!!!*/
 @media screen and (max-width: 860px) {
-  /* line 616, ../sass/_grids.scss */
+  /* line 1114, ../sass/_grids.scss */
   .header {
     min-height: 600px;
   }
 
-  /* line 620, ../sass/_grids.scss */
+  /* line 1118, ../sass/_grids.scss */
   .booking {
     margin-top: 50px;
     margin-left: 20.18349%;
@@ -869,17 +1595,17 @@ footer .footer_contacts a {
     margin-right: 0.91743%;
   }
 
-  /* line 625, ../sass/_grids.scss */
+  /* line 1123, ../sass/_grids.scss */
   .header_welcome {
     display: none;
   }
 
-  /* line 628, ../sass/_grids.scss */
+  /* line 1126, ../sass/_grids.scss */
   .rent_car .rent_condition {
     padding-top: 4.12844%;
   }
 
-  /* line 632, ../sass/_grids.scss */
+  /* line 1130, ../sass/_grids.scss */
   .rent_car .rent_condition .rent_head {
     margin-left: 10.09174%;
     width: 79.81651%;
@@ -887,7 +1613,7 @@ footer .footer_contacts a {
     margin-right: 0.91743%;
   }
 
-  /* line 637, ../sass/_grids.scss */
+  /* line 1135, ../sass/_grids.scss */
   .rent_car .rent_condition .condition {
     margin-left: 10.09174%;
     width: 79.81651%;
@@ -895,61 +1621,61 @@ footer .footer_contacts a {
     margin-right: 0.91743%;
   }
 
-  /* line 641, ../sass/_grids.scss */
+  /* line 1139, ../sass/_grids.scss */
   .rent_car .rent_condition .rent_img {
     display: none;
   }
 
-  /* line 645, ../sass/_grids.scss */
+  /* line 1143, ../sass/_grids.scss */
   footer .footer_menu {
     display: none;
   }
 
-  /* line 649, ../sass/_grids.scss */
+  /* line 1147, ../sass/_grids.scss */
   footer .footer_name {
     width: 30.45977%;
     float: left;
     margin-right: 1.14943%;
   }
 
-  /* line 652, ../sass/_grids.scss */
+  /* line 1150, ../sass/_grids.scss */
   footer .footer_name :first-child {
     font-size: 2em;
   }
 
-  /* line 656, ../sass/_grids.scss */
+  /* line 1154, ../sass/_grids.scss */
   footer .footer_name :nth-child(2) {
     font-size: 1.5em;
     transform: translateY(-9px) skewY(-13deg);
   }
 
-  /* line 662, ../sass/_grids.scss */
+  /* line 1160, ../sass/_grids.scss */
   footer .footer_name :last-child {
     margin-top: 67.12644%;
     margin-bottom: 11.49425%;
     font-size: 0.8em;
   }
 
-  /* line 668, ../sass/_grids.scss */
+  /* line 1166, ../sass/_grids.scss */
   footer .footer_contacts {
     width: 49.42529%;
     float: right;
     margin-right: 0;
   }
 
-  /* line 671, ../sass/_grids.scss */
+  /* line 1169, ../sass/_grids.scss */
   footer .footer_contacts p {
     font-size: 1.3em;
   }
 
-  /* line 675, ../sass/_grids.scss */
+  /* line 1173, ../sass/_grids.scss */
   footer .footer_contacts :last-child {
     margin-top: 36.78161%;
     margin-bottom: 11.49425%;
     font-size: 1em;
   }
 
-  /* line 680, ../sass/_grids.scss */
+  /* line 1178, ../sass/_grids.scss */
   .transfer .transfer_div {
     width: 100%;
     float: left;
@@ -957,7 +1683,7 @@ footer .footer_contacts a {
     margin-right: 0;
   }
 
-  /* line 686, ../sass/_grids.scss */
+  /* line 1185, ../sass/_grids.scss */
   .transfer .transfer_div :first-child {
     margin-left: 20.18349%;
     width: 59.63303%;
@@ -965,7 +1691,7 @@ footer .footer_contacts a {
     margin-right: 0.91743%;
   }
 
-  /* line 691, ../sass/_grids.scss */
+  /* line 1190, ../sass/_grids.scss */
   .transfer .transfer_div .transfer_img {
     width: 100%;
     float: left;
@@ -974,30 +1700,202 @@ footer .footer_contacts a {
     margin-bottom: 10px;
   }
 
-  /* line 698, ../sass/_grids.scss */
+  /* line 1197, ../sass/_grids.scss */
   .transfer .transfer_div .transfer_img img {
     width: 100%;
     margin-left: 0;
   }
 
-  /* line 703, ../sass/_grids.scss */
+  /* line 1202, ../sass/_grids.scss */
   .transfer .transfer_div :last-child {
     margin-left: 10.09174%;
     width: 79.81651%;
     float: left;
     margin-right: 0.91743%;
   }
+
+  /*-----------Booking Responsive--------------------*/
+  /* line 1211, ../sass/_grids.scss */
+  .booking_car .booking_car_div form p {
+    font-size: 1em;
+  }
+
+  /* line 1215, ../sass/_grids.scss */
+  .booking_car .booking_car_div form .left_form {
+    margin-left: 7.23684%;
+    width: 85.52632%;
+    float: left;
+    margin-right: 1.31579%;
+  }
+
+  /* line 1220, ../sass/_grids.scss */
+  .left_form .city_div {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 1224, ../sass/_grids.scss */
+  .left_form .city_div .city {
+    width: 93.23077%;
+    float: left;
+    margin-right: 1.53846%;
+    padding-right: 23px;
+  }
+
+  /* line 1230, ../sass/_grids.scss */
+  .left_form .city_div .city_logo {
+    width: 4.38462%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 1238, ../sass/_grids.scss */
+  .left_form .date {
+    width: 45.84615%;
+    float: left;
+    margin-right: 1.53846%;
+    margin-right: 1.84615%;
+  }
+
+  /* line 1245, ../sass/_grids.scss */
+  .left_form .time {
+    width: 45.84615%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 1252, ../sass/_grids.scss */
+  .left_form .avto {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 1256, ../sass/_grids.scss */
+  .choose_avto {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 1260, ../sass/_grids.scss */
+  .booking_car .booking_car_div form .right_form {
+    margin-left: 7.23684%;
+    width: 85.52632%;
+    float: left;
+    margin-right: 1.31579%;
+  }
+
+  /* line 1264, ../sass/_grids.scss */
+  .right_form input {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 1268, ../sass/_grids.scss */
+  .show_avto {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+    display: none;
+  }
+
+  /* line 1274, ../sass/_grids.scss */
+  .show_avto_img {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 1278, ../sass/_grids.scss */
+  .show_avto_img img {
+    width: 98.55263%;
+    float: left;
+    margin-right: 1.31579%;
+  }
+
+  /* line 1284, ../sass/_grids.scss */
+  .show_avto_charact {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  /* line 1289, ../sass/_grids.scss */
+  .sum {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  /* line 1296, ../sass/_grids.scss */
+  .booking_car .booking_car_div form button {
+    margin-left: 7.23684%;
+    width: 85.52632%;
+    float: left;
+    margin-right: 1.31579%;
+  }
+
+  /* line 1301, ../sass/_grids.scss */
+  .location .location_info {
+    font-size: 0.9em;
+  }
+
+  /* line 1305, ../sass/_grids.scss */
+  .feedback .feedback_form p {
+    font-size: 1em;
+  }
+
+  /* line 1311, ../sass/_grids.scss */
+  .feedback .feedback_form form input {
+    height: 25px;
+  }
+
+  /* line 1316, ../sass/_grids.scss */
+  .feedback .feedback_form form textarea {
+    height: 120px;
+    margin-bottom: 10px;
+  }
+
+  /* line 1321, ../sass/_grids.scss */
+  .feedback .feedback_form form button {
+    height: 30px;
+  }
+
+  /* line 1325, ../sass/_grids.scss */
+  .about_header div :first-child {
+    font-size: 2.1em;
+  }
+
+  /* line 1331, ../sass/_grids.scss */
+  .about_header div :last-child {
+    font-size: 1em;
+    margin-top: 135px;
+  }
 }
 /*!!!!!!!!!!!!!!!!!!!   669  !!!!!!!!!!!!!!!!*/
 @media screen and (max-width: 669px) {
-  /* line 712, ../sass/_grids.scss */
+  /* line 1338, ../sass/_grids.scss */
   .head_menu .logo {
     width: 59.63303%;
     float: left;
     margin-right: 0.91743%;
   }
 
-  /* line 716, ../sass/_grids.scss */
+  /* line 1342, ../sass/_grids.scss */
   .logo p {
     margin-left: 6.76923%;
     width: 8.61538%;
@@ -1005,7 +1903,7 @@ footer .footer_contacts a {
     margin-right: 1.53846%;
   }
 
-  /* line 721, ../sass/_grids.scss */
+  /* line 1347, ../sass/_grids.scss */
   .logo h1 {
     margin-left: 5.07692%;
     width: 49.23077%;
@@ -1013,7 +1911,7 @@ footer .footer_contacts a {
     margin-right: 1.53846%;
   }
 
-  /* line 727, ../sass/_grids.scss */
+  /* line 1353, ../sass/_grids.scss */
   .booking {
     margin-left: 10.09174%;
     width: 79.81651%;
@@ -1021,36 +1919,183 @@ footer .footer_contacts a {
     margin-right: 0.91743%;
   }
 
-  /* line 733, ../sass/_grids.scss */
+  /* line 1359, ../sass/_grids.scss */
   footer .footer_name {
     width: 36.78161%;
     float: left;
     margin-right: 1.14943%;
   }
 
-  /* line 737, ../sass/_grids.scss */
+  /* line 1363, ../sass/_grids.scss */
   footer .footer_name :last-child {
     margin-top: 57.01149%;
   }
 
-  /* line 742, ../sass/_grids.scss */
+  /* line 1368, ../sass/_grids.scss */
   .transfer .transfer_div :first-child {
     margin-left: 10.09174%;
     width: 79.81651%;
     float: left;
     margin-right: 0.91743%;
   }
+
+  /* line 1372, ../sass/_grids.scss */
+  .left_form .city_div .city {
+    width: 90.69231%;
+    float: left;
+    margin-right: 1.53846%;
+    padding-right: 23px;
+  }
+
+  /* line 1378, ../sass/_grids.scss */
+  .left_form .city_div .city_logo {
+    width: 10.30769%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 1384, ../sass/_grids.scss */
+  .sum p {
+    margin-left: 7.23684%;
+    width: 56.57895%;
+    float: left;
+    margin-right: 1.31579%;
+  }
+
+  /* line 1389, ../sass/_grids.scss */
+  .choose_city {
+    height: 68px;
+  }
+
+  /* line 1392, ../sass/_grids.scss */
+  .location .location_info {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 20px;
+    font-size: 1.5em;
+  }
+
+  /* line 1399, ../sass/_grids.scss */
+  .location .ofice {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 1404, ../sass/_grids.scss */
+  .location .ofice img {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 1407, ../sass/_grids.scss */
+  .feedback .intourist {
+    display: none;
+  }
+
+  /* line 1413, ../sass/_grids.scss */
+  .feedback .feedback_form {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 1416, ../sass/_grids.scss */
+  .feedback .feedback_form p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  /* line 1423, ../sass/_grids.scss */
+  .feedback .feedback_form form input {
+    height: 35px;
+    margin-bottom: 23px;
+  }
+
+  /* line 1431, ../sass/_grids.scss */
+  .feedback .feedback_form form textarea {
+    margin-bottom: 23px;
+    height: 180px;
+  }
+
+  /* line 1436, ../sass/_grids.scss */
+  .feedback .feedback_form form button {
+    height: 35px;
+    margin-bottom: 20px;
+  }
+
+  /* line 1443, ../sass/_grids.scss */
+  .about_header div :first-child {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3em;
+    margin-bottom: 15px;
+  }
+
+  /* line 1450, ../sass/_grids.scss */
+  .about_header div :last-child {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.3em;
+  }
+
+  /* line 1459, ../sass/_grids.scss */
+  .about_location {
+    height: 250px;
+    background: url("/Content/img/intourist_small.jpg") no-repeat;
+    padding-bottom: 20px;
+  }
+
+  /* line 1465, ../sass/_grids.scss */
+  .about_location :first-child {
+    font-size: 2em;
+    padding-top: 35px;
+  }
+
+  /* line 1471, ../sass/_grids.scss */
+  .about_location :last-child {
+    font-size: 1.2em;
+    padding-top: 10px;
+    margin-bottom: 0;
+  }
+
+  /* line 1479, ../sass/_grids.scss */
+  .about_main div {
+    margin-left: 10.09174%;
+    width: 79.81651%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 1484, ../sass/_grids.scss */
+  .avtopark .charact .charact_list {
+    font-size: 1em;
+  }
 }
 /*!!!!!!!!!!!!!!!!!!!   450  !!!!!!!!!!!!!!!!*/
 @media screen and (max-width: 450px) {
-  /* line 750, ../sass/_grids.scss */
+  /* line 1492, ../sass/_grids.scss */
   .head_menu .logo {
     width: 79.81651%;
     float: left;
     margin-right: 0.91743%;
   }
 
-  /* line 754, ../sass/_grids.scss */
+  /* line 1496, ../sass/_grids.scss */
   .logo p {
     margin-left: 5.05747%;
     width: 8.96552%;
@@ -1058,12 +2103,127 @@ footer .footer_contacts a {
     margin-right: 1.14943%;
   }
 
-  /* line 760, ../sass/_grids.scss */
+  /* line 1502, ../sass/_grids.scss */
   .logo h1 {
     margin-left: 3.7931%;
     width: 49.42529%;
     float: left;
     margin-right: 1.14943%;
+  }
+
+  /* line 1507, ../sass/_grids.scss */
+  footer .footer_name {
+    width: 36.78161%;
+    float: left;
+    margin-right: 1.14943%;
+  }
+
+  /* line 1510, ../sass/_grids.scss */
+  footer .footer_name :first-child {
+    font-size: 1.5em;
+  }
+
+  /* line 1514, ../sass/_grids.scss */
+  footer .footer_name :nth-child(2) {
+    font-size: 1em;
+    transform: translateY(-6px) skewY(-13deg);
+  }
+
+  /* line 1520, ../sass/_grids.scss */
+  footer .footer_name :last-child {
+    margin-top: 67.12644%;
+    margin-bottom: 11.49425%;
+    font-size: 0.8em;
+  }
+
+  /* line 1526, ../sass/_grids.scss */
+  footer .footer_contacts {
+    width: 62.06897%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 1529, ../sass/_grids.scss */
+  footer .footer_contacts p {
+    font-size: 1em;
+  }
+
+  /* line 1533, ../sass/_grids.scss */
+  footer .footer_contacts :last-child {
+    margin-top: 36.78161%;
+    margin-bottom: 11.49425%;
+    font-size: 1em;
+  }
+
+  /* line 1538, ../sass/_grids.scss */
+  .transfer .transfer_div :first-child {
+    margin-left: 10.09174%;
+    width: 79.81651%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 1542, ../sass/_grids.scss */
+  .left_form .city_div .city {
+    width: 90.69231%;
+    float: left;
+    margin-right: 1.53846%;
+    padding-right: 23px;
+  }
+
+  /* line 1548, ../sass/_grids.scss */
+  .left_form .city_div .city_logo {
+    width: 10.30769%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 1554, ../sass/_grids.scss */
+  .booking_car .booking_car_div {
+    margin-left: 5.04587%;
+    width: 89.90826%;
+    float: left;
+    margin-right: 0.91743%;
+  }
+
+  /* line 1560, ../sass/_grids.scss */
+  .booking_car .booking_car_div .car_name {
+    font-family: 'Lobster';
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 1.5em;
+    color: #fff;
+  }
+
+  /* line 1568, ../sass/_grids.scss */
+  .booking_car .booking_car_div form {
+    margin-left: 5.61224%;
+    width: 88.77551%;
+    float: left;
+    margin-right: 1.02041%;
+  }
+
+  /* line 1572, ../sass/_grids.scss */
+  .location .location_info {
+    font-size: 1.2em;
+  }
+
+  /* line 1577, ../sass/_grids.scss */
+  .language li a {
+    padding-right: 5px;
+  }
+
+  /* line 1580, ../sass/_grids.scss */
+  .about_header div :first-child {
+    font-size: 2.5em;
+  }
+
+  /* line 1585, ../sass/_grids.scss */
+  .about_header div :last-child {
+    font-size: 1.2em;
   }
 }
 /* line 45, ../sass/_normalizer.scss */
@@ -1365,4 +2525,15 @@ input[type="checkbox"], input[type="radio"] {
 /* line 19, ../sass/_jquery.scss */
 .ui-widget-header .ui-state-hover, .ui-widget-header .ui-state-focus {
   background: #85db18;
+}
+
+/* line 22, ../sass/_jquery.scss */
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+  background: #85db18;
+}
+
+/* line 25, ../sass/_jquery.scss */
+.ui-state-active, .ui-widget-content .ui-state-active {
+  background: #fff;
+  border: 3px solid #85db18;
 }

@@ -135,6 +135,7 @@
     </Compile>
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -168,15 +169,21 @@
     <Content Include="Content\img\date2.png" />
     <Content Include="Content\img\family.jpg" />
     <Content Include="Content\img\index_bg.jpg" />
+    <Content Include="Content\img\intourist.jpg" />
+    <Content Include="Content\img\intourist.png" />
+    <Content Include="Content\img\intourist_small.jpg" />
+    <Content Include="Content\img\keys2.jpg" />
     <Content Include="Content\img\lada.png" />
     <Content Include="Content\img\location.png" />
     <Content Include="Content\img\location2.png" />
+    <Content Include="Content\img\ofice.jpg" />
     <Content Include="Content\img\pexels-photo-109361.jpeg" />
     <Content Include="Content\img\skoda.png" />
     <Content Include="Content\img\smart.png" />
     <Content Include="Content\img\time.png" />
     <Content Include="Content\img\time2.png" />
     <Content Include="Content\img\ui-icons_444444_256x240.png" />
+    <Content Include="Content\img\zp.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -192,6 +199,7 @@
       <LastGenOutput>RentACarDB.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.css" />
     <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Web.config" />
@@ -251,6 +259,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Admin\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Booking.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Orders\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Orders\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Orders\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Orders\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Contacts.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\About.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
