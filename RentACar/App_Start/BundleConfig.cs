@@ -17,11 +17,11 @@ namespace RentACar
            
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                "~/Content/css/jquery-ui.min.css",
-                      "~/Content/css/style.css"));
+                "~/Content/jquery-ui.min.css",
+                      "~/Content/style.css"));
             bundles.Add(new StyleBundle("~/Content/cssAdmin").Include(
-                "~/Content/css/jquery-ui.min.css",
-                      "~/Content/css/styleAdmin.css"));
+                "~/Content/jquery-ui.min.css",
+                      "~/Content/styleAdmin.css"));
         }
     }
 }

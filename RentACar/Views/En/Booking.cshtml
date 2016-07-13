@@ -1,0 +1,284 @@
+﻿@model RentACar.Order
+
+@{
+    ViewBag.Title = "Create Order";
+    Layout = "~/Views/Shared/_LayoutEN.cshtml";
+}
+
+
+<section class="booking_car">
+
+    <div class="booking_car_div">
+
+        <p class="car_name">Booking</p>
+
+        @using (Html.BeginForm("Booking","Home",FormMethod.Post))
+        {
+            <div class="left_form">
+                <p>Pickup place:</p>
+                <div class="city_div">
+                    @Html.EditorFor(model => model.Adress, new { htmlAttributes = new { @class = "city", @placeholder = "Address", @required = "true" } })
+                    <span class="city_logo"></span>
+                </div>
+                <div class="choose_city">
+                    <ul>
+                        <li>г.Запорожье, пр-т Ленина 135 гостиница Интурист</li>
+                        <li>Аэропорт Запорожья</li>
+                    </ul>
+                </div>
+                <p>Pickup date:</p>
+                @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "date", @id = "begin_datepicker", @placeholder = "Date", @required = "true" } })
+                @Html.EditorFor(model => model.StartTime, new { htmlAttributes = new { @class = "time begin_time", @placeholder = "Time", @required = "true" } })
+                <div class="choose_time">
+                    <ul>
+                        <li>6:00</li>
+                        <li>6:30</li>
+                        <li>7:00</li>
+                        <li>7:30</li>
+                        <li>8:00</li>
+                        <li>8:30</li>
+                        <li>9:00</li>
+                        <li>9:30</li>
+                        <li>10:00</li>
+                        <li>10:30</li>
+                        <li>11:00</li>
+                        <li>11:30</li>
+                        <li>12:00</li>
+                        <li>12:30</li>
+                        <li>13:00</li>
+                        <li>13:30</li>
+                        <li>14:00</li>
+                        <li>14:30</li>
+                        <li>15:00</li>
+                        <li>15:30</li>
+                        <li>16:00</li>
+                        <li>16:30</li>
+                        <li>17:00</li>
+                        <li>17:30</li>
+                        <li>18:00</li>
+                        <li>18:30</li>
+                        <li>19:00</li>
+                        <li>19:30</li>
+                        <li>20:00</li>
+                        <li>20:30</li>
+                        <li>21:00</li>
+                        <li>21:30</li>
+                        <li>22:00</li>
+                        <li>22:30</li>
+                        <li>23:00</li>
+                        <li>23:30</li>
+                        <li>24:00</li>
+                        <li>24:30</li>
+                        <li>01:00</li>
+                        <li>01:30</li>
+                        <li>02:00</li>
+                        <li>02:30</li>
+                        <li>03:00</li>
+                        <li>03:30</li>
+                        <li>04:00</li>
+                        <li>04:30</li>
+                        <li>05:00</li>
+                        <li>05:30</li>
+                    </ul>
+                </div>
+                <p>Return date:</p>
+                @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "date", @id = "end_datepicker2", @placeholder = "Date", @required = "true" } })
+                @Html.EditorFor(model => model.EndTime, new { htmlAttributes = new { @class = "time end_time", @placeholder = "Time", @required = "true" } })
+                <div class="choose_time2">
+                    <ul>
+                        <li>6:00</li>
+                        <li>6:30</li>
+                        <li>7:00</li>
+                        <li>7:30</li>
+                        <li>8:00</li>
+                        <li>8:30</li>
+                        <li>9:00</li>
+                        <li>9:30</li>
+                        <li>10:00</li>
+                        <li>10:30</li>
+                        <li>11:00</li>
+                        <li>11:30</li>
+                        <li>12:00</li>
+                        <li>12:30</li>
+                        <li>13:00</li>
+                        <li>13:30</li>
+                        <li>14:00</li>
+                        <li>14:30</li>
+                        <li>15:00</li>
+                        <li>15:30</li>
+                        <li>16:00</li>
+                        <li>16:30</li>
+                        <li>17:00</li>
+                        <li>17:30</li>
+                        <li>18:00</li>
+                        <li>18:30</li>
+                        <li>19:00</li>
+                        <li>19:30</li>
+                        <li>20:00</li>
+                        <li>20:30</li>
+                        <li>21:00</li>
+                        <li>21:30</li>
+                        <li>22:00</li>
+                        <li>22:30</li>
+                        <li>23:00</li>
+                        <li>23:30</li>
+                        <li>24:00</li>
+                        <li>24:30</li>
+                        <li>01:00</li>
+                        <li>01:30</li>
+                        <li>02:00</li>
+                        <li>02:30</li>
+                        <li>03:00</li>
+                        <li>03:30</li>
+                        <li>04:00</li>
+                        <li>04:30</li>
+                        <li>05:00</li>
+                        <li>05:30</li>
+                    </ul>
+                </div>
+                <p>Wish:</p>
+                @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "wish", @required = "true" } })
+            </div>
+
+            <div class="right_form">
+                <p>Full name:</p>
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @required = "true" } })
+                <p>Phone:</p>
+                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "phone", @required = "true" } })
+                <p>E-mail:</p>
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "email", @required = "true" } })
+                <p>Vehicle:</p>
+                @Html.DropDownListFor(model => model.CarId, new SelectList(ViewBag.CarId, "Id", "ModelName"), new { @class = "avto", @required = "true" })
+            </div>
+            @*@Html.Partial("ShowCarInfo");*@
+            <div class="show_avto">
+                <div class="show_avto_img">
+                    <img src="/Content/img/smart.png" alt="">
+                </div>
+                <div class="show_avto_charact">
+                    <p>Transmission type:Автоматическая</p>
+                    <p>Number of doors:3</p>
+                    <p>Passengers count:2</p>
+                    <p>Capacity of the trunk:1 Сумка</p>
+                    <p>Engine displacements:0.6</p>
+                </div>
+            </div>
+            <div class="sum">
+                <p>Sum:</p>
+            </div>
+            <button>Submit</button>
+        }
+
+    </div>
+</section>
+
+
+    @*@Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Order</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.OrderId, "OrderId", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("OrderId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.OrderId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CarId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CarId, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CarId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                //name
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                
+                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                
+                @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Adress, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                
+                @Html.ValidationMessageFor(model => model.Adress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.StartDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                
+                @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EndDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+               
+                @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.StartTime, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                
+                @Html.ValidationMessageFor(model => model.StartTime, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EndTime, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                
+                @Html.ValidationMessageFor(model => model.EndTime, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

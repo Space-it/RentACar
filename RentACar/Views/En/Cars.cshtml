@@ -1,0 +1,12 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutEN.cshtml";
+    ViewBag.Title = "Our cars";
+}
+@model IEnumerable<RentACar.Car>
+<section class="avtopark">
+    <h1>Our cars</h1>
+
+    @Html.Partial("CarsList",Model)
+
+</section>

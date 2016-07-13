@@ -19,13 +19,13 @@
         <a class="toggle_nav" href="#">&#9776;</a>
         <nav class="navigation">
             <ul class="active">
-                <li class="current-item">@Html.ActionLink("Главная", "Index", "Home")</li>
-                <li>@Html.ActionLink("О нас", "About", "Home")</li>
-                <li>@Html.ActionLink("Автомобили","Cars", "Home")</li>
-                <li>@Html.ActionLink("Трансфер", "Transfer", "Home")</li>
-                <li>@Html.ActionLink("Бронирование", "Booking", "Home")</li>
-                <li>@Html.ActionLink("Контакты", "Contacts","Home")</li>
-                <li class="language"><a href="">RU |</a><a href=""> EN</a></li>
+                <li class="current-item">@Html.ActionLink("Home", "Index", "EN")</li>
+                <li>@Html.ActionLink("Our Cars", "Cars", "EN")</li>
+                <li>@Html.ActionLink("Transfer", "Transfer", "EN")</li>
+                <li>@Html.ActionLink("Booking", "Booking", "EN")</li>
+                <li>@Html.ActionLink("О нас", "About", "EN")</a></li>
+                <li>@Html.ActionLink("Contacts", "Contacts", "EN")</li>
+                <li class="language">@Html.ActionLink("RU", "Index", "Home") | @Html.ActionLink("EN", "Index", "En")</li>
             </ul>
         </nav>
     </section>
@@ -38,13 +38,13 @@
         <footer>
             <div class="footer_menu">
                 <ul>
-                    <li>@Html.ActionLink("Главная", "Index", "Home")</li>
-                    <li>@Html.ActionLink("О нас", "About", "Home")</a></li>
-                    <li>@Html.ActionLink("Автомобили", "Cars", "Home")</li>
-                    <li>@Html.ActionLink("Трансфер", "Transfer", "Home")</li>
-                    <li>@Html.ActionLink("Бронирование", "Booking", "Home")</li>
-                    <li>@Html.ActionLink("Контакты", "Contacts", "Home")</li>
-                    <li>@Html.ActionLink("Администратор", "Index", "Admin")</li>
+                    <li>@Html.ActionLink("Home", "Index", "EN")</li>
+                    <li>@Html.ActionLink("Our Cars", "Cars", "EN")</li>
+                    <li>@Html.ActionLink("Transfer", "Transfer", "EN")</li>
+                    <li>@Html.ActionLink("Booking", "Booking", "EN")</li>
+                    <li>@Html.ActionLink("О нас", "About", "EN")</a></li>
+                    <li>@Html.ActionLink("Contacts", "Contacts", "EN")</li>
+                    <li>@Html.ActionLink("Administrator", "Index", "Admin")</li>
                 </ul>
             </div>
             <div class="footer_name">

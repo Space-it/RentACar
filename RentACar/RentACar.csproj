@@ -135,6 +135,7 @@
     </Compile>
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CarsController.cs" />
+    <Compile Include="Controllers\EnController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -161,9 +162,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\css\jquery-ui.min.css" />
-    <Content Include="Content\css\style.css" />
-    <Content Include="Content\css\styleAdmin.css" />
+    <Content Include="Content\jquery-ui.min.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\styleAdmin.css" />
     <Content Include="Content\img\arrow-right.png" />
     <Content Include="Content\img\cars.png" />
     <Content Include="Content\img\date.png" />
@@ -213,12 +214,13 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LayoutEN.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Class\" />
+    <Folder Include="Content\css\" />
     <Folder Include="Content\img\Cars\" />
     <Folder Include="Models\" />
   </ItemGroup>
@@ -291,6 +293,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\ShowCarInfo.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\rentacar - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\rentacar - Web Deploy.pubxml" />
+    <Content Include="Views\En\About.cshtml" />
+    <Content Include="Views\En\Booking.cshtml" />
+    <Content Include="Views\En\Cars.cshtml" />
+    <Content Include="Views\En\CarsList.cshtml" />
+    <Content Include="Views\En\Contacts.cshtml" />
+    <Content Include="Views\En\Index.cshtml" />
+    <Content Include="Views\En\ShowCarInfo.cshtml" />
+    <Content Include="Views\En\Transfer.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
