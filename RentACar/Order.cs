@@ -15,17 +15,16 @@ namespace RentACar
     public partial class Order
     {
         public int OrderId { get; set; }
-        public int CarId { get; set; }
+        public string CarId { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Message { get; set; }
         public string Adress { get; set; }
-        public System.DateTime StartDate { get; set; }
-        public System.DateTime EndDate { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
         public string StartTime { get; set; }
         public string EndTime { get; set; }
-    
-        public virtual Car Car { get; set; }
+        public string IsOpen { get; set; }
     }
 }

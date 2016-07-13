@@ -134,6 +134,7 @@
       <DependentUpon>RentACarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CarsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -228,13 +229,6 @@
     <Content Include="packages.config" />
     <Content Include="Views\Home\CarsList.cshtml" />
     <Content Include="Views\Home\Cars.cshtml" />
-    <EntityDeploy Include="RentACarDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>RentACarDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="RentACarDB.edmx.diagram">
-      <DependentUpon>RentACarDB.edmx</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -246,19 +240,19 @@
     <Content Include="Views\Shared\_Layout_Admin.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Admin\Create.cshtml" />
+    <Content Include="Views\Cars\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Admin\Delete.cshtml" />
+    <Content Include="Views\Cars\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Admin\Details.cshtml" />
+    <Content Include="Views\Cars\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Cars\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Cars\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Booking.cshtml" />
@@ -280,6 +274,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\About.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="RentACarDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RentACarDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RentACarDB.edmx.diagram">
+      <DependentUpon>RentACarDB.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\ShowCarInfo.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

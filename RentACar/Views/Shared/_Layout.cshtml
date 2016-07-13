@@ -18,12 +18,12 @@
         <a class="toggle_nav" href="#">&#9776;</a>
         <nav class="navigation">
             <ul class="active">
-                <li class="current-item">@Html.ActionLink("Главная", "Index")</li>
-                <li><a href="#">О нас</a></li>
-                <li>@Html.ActionLink("Автомобили","Cars")</li>
-                <li>@Html.ActionLink("Трансфер", "Transfer")</li>
-                <li><a href="#">Бронирование</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li class="current-item">@Html.ActionLink("Главная", "Index", "Home")</li>
+                <li>@Html.ActionLink("О нас", "About", "Home")</li>
+                <li>@Html.ActionLink("Автомобили","Cars", "Home")</li>
+                <li>@Html.ActionLink("Трансфер", "Transfer", "Home")</li>
+                <li>@Html.ActionLink("Бронирование", "Booking", "Home")</li>
+                <li>@Html.ActionLink("Контакты", "Contacts","Home")</li>
             </ul>
         </nav>
     </section>
@@ -31,15 +31,17 @@
     @RenderBody()
 
     <section class="footer">
+
+
         <footer>
             <div class="footer_menu">
                 <ul>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Автомобили</a></li>
-                    <li><a href="#">Трансфер</a></li>
-                    <li><a href="#">Бронирование</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li>@Html.ActionLink("Главная", "Index", "Home")</li>
+                    <li>@Html.ActionLink("О нас", "About", "Home")</a></li>
+                    <li>@Html.ActionLink("Автомобили", "Cars", "Home")</li>
+                    <li>@Html.ActionLink("Трансфер", "Transfer", "Home")</li>
+                    <li>@Html.ActionLink("Бронирование", "Booking", "Home")</li>
+                    <li>@Html.ActionLink("Контакты", "Contacts", "Home")</li>
                 </ul>
             </div>
             <div class="footer_name">
@@ -48,8 +50,8 @@
                 <p>Запорожье 2016</p>
             </div>
             <div class="footer_contacts">
-                <p>+38(063)455 93 61</p>
-                <p>+38(063)455 93 61</p>
+                <p>+38(068)551 04 47</p>
+                <p>rent_a_car.zp@mail.ru</p>
                 <p><a href="#">Space-IT</a></p>
             </div>
         </footer>

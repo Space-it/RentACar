@@ -1,0 +1,15 @@
+﻿@model RentACar.Car
+
+
+<div class="show_avto">
+    <div class="show_avto_img">
+        <img src="@Html.DisplayFor(model => model.ImageUrl)" alt="">
+    </div>
+    <div class="show_avto_charact">
+        <p>Тип трансмиссии: @Html.DisplayFor(model => model.TransmissionType)</p>
+        <p>Количество дверей: @Html.DisplayFor(model => model.NumberOfDoors)</p>
+        <p>Количество пассажиров: @Html.DisplayFor(model => model.NumberOfPassengers)</p>
+        <p>Объем багажника: @Html.DisplayFor(model => model.TrunkVolume)</p>
+        <p>Объем двигателя: @Html.DisplayFor(model => model.EngineCapacity)</p>
+    </div>
+</div>

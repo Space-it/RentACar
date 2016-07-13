@@ -12,7 +12,7 @@
 
         <p class="car_name">Бронирование автомобиля</p>
 
-        @using (Html.BeginForm())
+        @using (Html.BeginForm("Booking","Home",FormMethod.Post))
         {
             <div class="left_form">
                 <p>Место подбора:</p>
@@ -147,20 +147,13 @@
                 @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "phone", @required = "true" } })
                 <p>E-mail:</p>
                 @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "email", @required = "true" } })
-                <p>Автомобиль:</p>
-                <input type="text" class="avto" required="true">
-                <div class="choose_avto">
-                    <ul>
-                        <li>Mercedes Smart</li>
-                        <li>Lada Granta</li>
-                        <li>Skoda Fabia Combi</li>
-                        <li>Kia Rio</li>
-                        <li>Folkswagen Polo</li>
-                        <li>Nissan Sunny</li>
-                    </ul>
-                </div>
+                
+
+                    <p>Автомобиль:</p>
+                    @Html.DropDownListFor(model => model.CarId, new SelectList(ViewBag.CarId, "Id", "ModelName"), new { @class = "avto", @required = "true" })
 
             </div>
+            @*@Html.Partial("ShowCarInfo");*@
             <div class="show_avto">
                 <div class="show_avto_img">
                     <img src="/Content/img/smart.png" alt="">

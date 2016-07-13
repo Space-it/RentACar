@@ -6,115 +6,127 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.IO;
 using RentACar;
 
 namespace RentACar.Controllers
 {
-    public class OrdersController : Controller
+    public class CarsController : Controller
     {
         private rentacarEntities db = new rentacarEntities();
 
-        // GET: Orders
+        // GET: Admin
         public ActionResult Index()
         {
-            return View(db.Orders.ToList());
+            return View(db.Cars.ToList());
         }
 
-        // GET: Orders/Details/5
+        // GET: Admin/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Order order = db.Orders.Find(id);
-            if (order == null)
+            Car car = db.Cars.Find(id);
+            if (car == null)
             {
                 return HttpNotFound();
             }
-            return View(order);
+            return View(car);
         }
 
-        // GET: Orders/Create
+        // GET: Admin/Create
         public ActionResult Create()
         {
-            ViewBag.OrderId = new SelectList(db.Cars, "Id", "ModelName");
+            ViewBag.Id = new SelectList(db.Orders, "OrderId", "Name");
             return View();
         }
 
-        // POST: Orders/Create
+        // POST: Admin/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "OrderId,CarId,Name,Phone,Email,Message,Adress,StartDate,EndDate,StartTime,EndTime")] Order order)
+        public ActionResult Create([Bind(Include = "TransmissionType,NumberOfDoors,NumberOfPassengers,TrunkVolume,EngineCapacity,Id,ImageUrl,ModelName,Price")] Car car, HttpPostedFileBase upload)
         {
-            if (ModelState.IsValid)
+            if (upload != null)
             {
-                db.Orders.Add(order);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                // получаем имя файла
+                string fileName = System.IO.Path.GetFileName(upload.FileName);
+                // сохраняем файл в папку Files в проекте
+                upload.SaveAs(Server.MapPath("~/Content/img/Cars/" + fileName));
+                
+                if (ModelState.IsValid)
+                {
+                    car.ImageUrl = "/Content/img/Cars/" + fileName;
+                    db.Cars.Add(car);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
+            
 
-            ViewBag.OrderId = new SelectList(db.Cars, "Id","ModelName", order.OrderId);
-            return View(order);
+            ViewBag.Id = new SelectList(db.Orders, "OrderId", "Name", car.Id);
+            return View(car);
         }
 
-        // GET: Orders/Edit/5
+        // GET: Admin/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Order order = db.Orders.Find(id);
-            if (order == null)
+            Car car = db.Cars.Find(id);
+            if (car == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.OrderId = new SelectList(db.Cars, "Id", "ModelName", order.OrderId);
-            return View(order);
+            ViewBag.Id = new SelectList(db.Orders, "OrderId", "Name", car.Id);
+            return View(car);
         }
 
-        // POST: Orders/Edit/5
+        // POST: Admin/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "OrderId,CarId,Name,Phone,Email,Message,Adress,StartDate,EndDate,StartTime,EndTime")] Order order)
+        public ActionResult Edit([Bind(Include = "TransmissionType,NumberOfDoors,NumberOfPassengers,TrunkVolume,EngineCapacity,Id,ImageUrl,ModelName,Price")] Car car)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(order).State = EntityState.Modified;
+                db.Entry(car).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.OrderId = new SelectList(db.Cars, "Id", "ModelName", order.OrderId);
-            return View(order);
+            ViewBag.Id = new SelectList(db.Orders, "OrderId", "Name", car.Id);
+            return View(car);
         }
 
-        // GET: Orders/Delete/5
+        // GET: Admin/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Order order = db.Orders.Find(id);
-            if (order == null)
+            Car car = db.Cars.Find(id);
+            if (car == null)
             {
                 return HttpNotFound();
             }
-            return View(order);
+            return View(car);
         }
 
-        // POST: Orders/Delete/5
+        // POST: Admin/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Order order = db.Orders.Find(id);
-            db.Orders.Remove(order);
+            Car car = db.Cars.Find(id);
+            System.IO.File.Delete(Server.MapPath("~/" + car.ImageUrl));
+            db.Cars.Remove(car);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

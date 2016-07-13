@@ -1,15 +1,21 @@
-﻿@{
+﻿
+@model RentACar.Order
+@{
     ViewBag.Title = "Home Page";
 }
-
 <section class="header">
+
     <div class="booking">
         <div class="book_name">
             <p>Бронирование:</p>
         </div>
-        <form action="">
+        @using (Html.BeginForm())
+        {
             <p>Место подбора:</p>
-            <input type="text" class="city" value="Введите или выберите адрес">
+            <div class="city_div">
+                @Html.EditorFor(model => model.Adress, new { htmlAttributes = new { @class = "city", @placeholder = "Введите или выберите адрес", @required = "true" } })
+                <span class="city_logo"></span>
+            </div>
             <div class="choose_city">
                 <ul>
                     <li>г.Запорожье, пр-т Ленина 135 гостиница Интурист</li>
@@ -17,8 +23,8 @@
                 </ul>
             </div>
             <p>Начало аренды:</p>
-            <input type="text" class="date" id="begin_datepicker" value="Дата">
-            <input type="text" class="time begin_time" value="Время">
+            @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "date", @id = "begin_datepicker", @placeholder = "Дата", @required = "true" } })
+            @Html.EditorFor(model => model.StartTime, new { htmlAttributes = new { @class = "time begin_time", @placeholder = "Время", @required = "true" } })
             <div class="choose_time">
                 <ul>
                     <li>6:00</li>
@@ -72,8 +78,8 @@
                 </ul>
             </div>
             <p>Конец аренды:</p>
-            <input type="text" class="date" id="end_datepicker2" value="Дата">
-            <input type="text" class="time end_time" value="Дата">
+            @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "date", @id = "end_datepicker2", @placeholder = "Дата", @required = "true" } })
+            @Html.EditorFor(model => model.EndTime, new { htmlAttributes = new { @class = "time end_time", @placeholder = "Время", @required = "true" } })
             <div class="choose_time2">
                 <ul>
                     <li>6:00</li>
@@ -126,15 +132,15 @@
                     <li>5:30</li>
                 </ul>
             </div>
-            <button>Отправить</button>
-        </form>
+            <button type="submit" >Отправить</button>
+        }
 
     </div>
     <div class="header_welcome">
         <p>
             Добро пожаловать на веб-сайт компании ZP rent a car, предоставляющей услуги проката и трансфера авто
         </p>
-        <button>Узнать больше</button>
+        <button>@Html.ActionLink("Узнать больше", "About", "Home")</button>
     </div>
 </section>
 
