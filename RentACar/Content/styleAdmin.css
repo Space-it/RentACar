@@ -24,3 +24,49 @@ body {
 .form-group p{
     font-weight:bold;
 }
+
+h2{
+ text-align: center;
+}
+
+.order{
+ float: left;
+ width: 50%;
+ margin-left: 25%;
+ margin-bottom: 30px;
+}
+.order h4{
+ text-align: center;
+}
+.links a{
+ 
+ color: #000;
+}
+.links a:hover{
+ color: #85db18;
+}
+.links{
+     margin-top: 45px;
+h2{
+ text-align: center;
+}
+
+.order{
+ float: left;
+ width: 50%;
+ margin-left: 25%;
+ margin-bottom: 30px;
+}
+.order h4{
+ text-align: center;
+}
+.links a{
+ 
+ color: #000;
+}
+.links a:hover{
+ color: #85db18;
+}
+.links{
+     margin-top: 45px;
+}

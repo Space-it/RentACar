@@ -102,6 +102,9 @@
 .navigation a:hover, .navigation .current-item a {
   color: #85db18;
 }
+.navigation a:hover, .navigation li .current-item {
+  color: #85db18;
+}
 
 /*------------------ Section Header ----------*/
 /* line 101, ../sass/_grids.scss */
@@ -737,7 +740,7 @@ footer .footer_contacts a {
 
 /* line 531, ../sass/_grids.scss */
 .booking_car .booking_car_div .car_name {
-  font-family: 'Roboto';
+  font-family: 'Roboto Condensed';
   text-align: center;
   width: 100%;
   float: left;
@@ -1389,7 +1392,6 @@ footer .footer_contacts a {
     margin-right: 0;
     position: relative;
     display: inline-block;
-    margin-left: -50px;
   }
 
   /* line 968, ../sass/_grids.scss */

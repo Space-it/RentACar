@@ -19,13 +19,13 @@
         <a class="toggle_nav" href="#">&#9776;</a>
         <nav class="navigation">
             <ul class="active">
-                <li class="current-item">@Html.ActionLink("Главная", "Index", "Home")</li>
-                <li>@Html.ActionLink("О нас", "About", "Home")</li>
+                <li>@Html.ActionLink("Главная", "Index", "Home")</li>
                 <li>@Html.ActionLink("Автомобили","Cars", "Home")</li>
                 <li>@Html.ActionLink("Трансфер", "Transfer", "Home")</li>
                 <li>@Html.ActionLink("Бронирование", "Booking", "Home")</li>
+                <li>@Html.ActionLink("О нас", "About", "Home")</li>
                 <li>@Html.ActionLink("Контакты", "Contacts","Home")</li>
-                <li class="language"><a href="">RU |</a><a href=""> EN</a></li>
+                <li class="language">@Html.ActionLink("RU", "Index", "Home") | @Html.ActionLink("EN", "Index", "En")</li>
             </ul>
         </nav>
     </section>
@@ -38,11 +38,11 @@
         <footer>
             <div class="footer_menu">
                 <ul>
-                    <li>@Html.ActionLink("Главная", "Index", "Home")</li>
-                    <li>@Html.ActionLink("О нас", "About", "Home")</a></li>
+                    <li>@Html.ActionLink("Главная", "Index", "Home")</li> 
                     <li>@Html.ActionLink("Автомобили", "Cars", "Home")</li>
                     <li>@Html.ActionLink("Трансфер", "Transfer", "Home")</li>
                     <li>@Html.ActionLink("Бронирование", "Booking", "Home")</li>
+                    <li>@Html.ActionLink("О нас", "About", "Home")</li>
                     <li>@Html.ActionLink("Контакты", "Contacts", "Home")</li>
                     <li>@Html.ActionLink("Администратор", "Index", "Admin")</li>
                 </ul>
@@ -59,7 +59,8 @@
             </div>
         </footer>
     </section>
-    @Scripts.Render("~/bundles/scripts")
+   
+    @Scripts.Render("~/bundles/scriptsRu")
     @RenderSection("scripts", required: false)
 </body>
 </html>

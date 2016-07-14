@@ -55,19 +55,16 @@ namespace RentACar.Controllers
                 // получаем имя файла
                 string fileName = System.IO.Path.GetFileName(upload.FileName);
                 // сохраняем файл в папку Files в проекте
-                upload.SaveAs(Server.MapPath("~/Content/img/Cars/" + fileName));
+                upload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\" + fileName);
                 
                 if (ModelState.IsValid)
                 {
-                    car.ImageUrl = "/Content/img/Cars/" + fileName;
+                    car.ImageUrl = "/Content/" + fileName;
                     db.Cars.Add(car);
                     db.SaveChanges();
                     return RedirectToAction("Index");
                 }
             }
-            
-
-            ViewBag.Id = new SelectList(db.Orders, "OrderId", "Name", car.Id);
             return View(car);
         }
 
@@ -83,7 +80,6 @@ namespace RentACar.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.Id = new SelectList(db.Orders, "OrderId", "Name", car.Id);
             return View(car);
         }
 
@@ -92,15 +88,23 @@ namespace RentACar.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "TransmissionType,NumberOfDoors,NumberOfPassengers,TrunkVolume,EngineCapacity,Id,ImageUrl,ModelName,Price")] Car car)
+        public ActionResult Edit([Bind(Include = "TransmissionType,NumberOfDoors,NumberOfPassengers,TrunkVolume,EngineCapacity,ImageUrl,ModelName,Price")] Car car, HttpPostedFileBase upload)
         {
-            if (ModelState.IsValid)
+            if (upload != null)
             {
-                db.Entry(car).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                System.IO.File.Delete(Server.MapPath("~/" + car.ImageUrl));
+                // получаем имя файла
+                string fileName = System.IO.Path.GetFileName(upload.FileName);
+                // сохраняем файл в папку Files в проекте
+                upload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\" + fileName);
+
+                if (ModelState.IsValid)
+                {
+                    db.Entry(car).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
-            ViewBag.Id = new SelectList(db.Orders, "OrderId", "Name", car.Id);
             return View(car);
         }
 

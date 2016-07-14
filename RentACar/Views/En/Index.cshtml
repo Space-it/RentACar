@@ -10,7 +10,7 @@
         <div class="book_name">
             <p>Booking:</p>
         </div>
-        @using (Html.BeginForm())
+        @using (Html.BeginForm("Index","En",FormMethod.Post))
         {
             <p>Pickup place:</p>
             <div class="city_div">
@@ -19,8 +19,8 @@
             </div>
             <div class="choose_city">
                 <ul>
-                    <li>г.Запорожье, пр-т Ленина 135 гостиница Интурист</li>
-                    <li>Аэропорт Запорожья</li>
+                    <li>Zaporozhye, Sobornyi ave, 135, hotel "Intourist", off. 3</li>
+                    <li>Zaporizhia International Airport</li>
                 </ul>
             </div>
             <p>Pickup date:</p>
@@ -133,7 +133,7 @@
                     <li>5:30</li>
                 </ul>
             </div>
-            <button type="submit" >Отправить</button>
+            <button type="submit" >Submit</button>
         }
 
     </div>
@@ -141,7 +141,7 @@
         <p>
             Welcome to the web-site of the "ZP rent a car" company, which provides car rental and transfers.
         </p>
-        <button>@Html.ActionLink("Learn more", "About", "Home")</button>
+        <button>@Html.ActionLink("Learn more", "About", "En")</button>
     </div>
 </section>
 
@@ -157,11 +157,11 @@
         <div class="condition">
             <p>Necessary conditions and documents</p>
             <ol>
-                <li>1.Passport.</li>
-                <li>2.Driver`s license and not less then two years driving experience.</li>
-                <li>3.VAT identification number for citizens of Ukraine.</li>
-                <li>4.Credit Card.</li>
-                <li>5.Driver`s age must be not less than 21.</li>
+                <li>Passport.</li>
+                <li>Driver`s license (not less then two years driving experience).</li>
+                <li>VAT identification number for citizens of Ukraine.</li>
+                <li>Credit Card.</li>
+                <li>Driver`s age must be not less than 21.</li>
             </ol>
         </div>
         <div class="condition">

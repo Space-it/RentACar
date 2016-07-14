@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title Rent A Car Zaporozhye</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/Content/style.css">
     <link rel="stylesheet" href="~/Content/styleAdmin.css">
     <link rel="stylesheet" href="~/Content/jquery-ui.min.css">
 </head>
 <body>
     <section class="head_menu">
-        <div class="logo">
 
+        <div class="logo">
             <p>ZP</p>
             <h1>rent a car</h1>
-        </div>
+        </div>w
 
         <a class="toggle_nav" href="#">&#9776;</a>
         <nav class="navigation">
@@ -23,7 +24,6 @@
                 <li>@Html.ActionLink("Панель Администратора", "Index", "Admin")</a></li>
                 <li>@Html.ActionLink("Управление Автопарком", "Index", "Cars")</a></li>
                 <li>@Html.ActionLink("Управление Заказами", "Index", "Orders")</li>
-
             </ul>
         </nav>
     </section>

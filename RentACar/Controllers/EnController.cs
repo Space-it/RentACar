@@ -25,24 +25,13 @@ namespace RentACar.Controllers
                 model.EndTime != null)
             {
                 ActiveOrder = model;
-                return RedirectToAction("BookingContinue", "Home", model);
+                return RedirectToAction("BookingContinue", "En", model);
             }
             return View();
         }
         public ActionResult Cars()
         {
             rentacarEntities db = new rentacarEntities();
-            db.Cars.Add(new Car()
-            {
-                EngineCapacity = "3",
-                ImageUrl = "test",
-                ModelName = "shkoda",
-                NumberOfDoors = "4",
-                NumberOfPassengers = "3",
-                Price = "200",
-                TransmissionType = "Автомат",
-                TrunkVolume = "3сумки"
-            });
             db.SaveChanges();
             return View(db.Cars);
         }
