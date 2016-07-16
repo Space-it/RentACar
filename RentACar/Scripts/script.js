@@ -33,23 +33,31 @@ $(document).ready(function() {
 
 
 
-  $( "#end_datepicker2" ).datepicker();
- 
 
 
 
-  $( "#begin_datepicker" ).datepicker({
+  var date1;
+  var date2;
+  $("#begin_datepicker" ).datepicker({
  
     minDate: 0,
     hideIfNoPrevNext: true,
     onSelect: function(date){            
-      var date1 = $('#begin_datepicker').datepicker('getDate');           
+        date1 = $('#begin_datepicker').datepicker('getDate');
       var date = new Date( Date.parse( date1 ) );        
       var newDate = date.toDateString(); 
       newDate = new Date( Date.parse( newDate ) );                      
-      $('#end_datepicker2').datepicker("option","minDate",newDate);            
+      $('#end_datepicker2').datepicker("option", "minDate", newDate);
+      
     }
   });
+
+  $("#end_datepicker2").datepicker({
+      onSelect: function (date) {
+          date2 = $('#end_datepicker2').datepicker('getDate');
+      }
+  });
+
 
 $('.begin_time').click(function() {
   $('.choose_time').toggle();
@@ -101,6 +109,11 @@ $('.avto').on('change', function () {
         success:
             function(data) {
                 $('#result').html(data);
+                var price = $('#price').val();
+                var newDate = (((((date2 - date1) / 60) / 60) / 24) / 1000);
+                var avg = newDate * price;
+                $('#avg').html(avg +"$");
+                
             }
     });
 
