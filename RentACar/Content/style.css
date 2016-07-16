@@ -12,6 +12,7 @@
 /* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
 .head_menu:after {
   content: " ";
+
   display: block;
   clear: both;
 }
