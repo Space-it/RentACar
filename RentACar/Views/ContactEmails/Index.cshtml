@@ -1,0 +1,35 @@
+﻿@model IEnumerable<RentACar.ContactEmail>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h2>Електронная почта адреса:</h2>
+<section class="carsTable">
+    <p>
+        @Html.ActionLink("Добавить новый", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                Електронная почта
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+    </section >
