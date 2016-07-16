@@ -2148,6 +2148,8 @@ footer .footer_contacts a {
   }
   .header{
           background: url("/Content/img/index_bg_small.jpg");
+              min-height: 400px;
+    max-height: 500px;
   }
 
   /* line 1536, ../sass/_grids.scss */
