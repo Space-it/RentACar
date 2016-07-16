@@ -1,0 +1,35 @@
+﻿@model IEnumerable<RentACar.Contact>
+
+@{
+    ViewBag.Title = "Контакты";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h2>Контакты</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            <p>Мобильный телефон</p>
+        </th>
+        <th>
+            <p>Електронная почта</p>
+</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Изменить контакты", "Edit", new { id=item.Id }) |
+        </td>
+    </tr>
+}
+
+</table>

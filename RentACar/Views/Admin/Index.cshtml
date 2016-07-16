@@ -6,11 +6,11 @@
 
 <h2>Панель Администратора</h2>
 
-<h2>Последний заказ</h2>
+<h2 style="color:green;">Последний заказ</h2>
 
 <div class="order">
-    <h4>Order</h4>
     <hr />
+
     <dl class="dl-horizontal">
         
         <dt>
@@ -94,6 +94,5 @@
     </dl>
 </div>
 <p class="links">
-    @Html.ActionLink("Edit", "Edit","Orders", new { id = Model.OrderId },new {@style="color:red;"}) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Изменить запись", "Edit","Orders", new { id = Model.OrderId }) |
 </p>

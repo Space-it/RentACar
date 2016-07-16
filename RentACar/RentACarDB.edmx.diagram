@@ -7,6 +7,7 @@
       <Diagram DiagramId="f0df596fc14d43b08df445158ef7b352" Name="Diagram1">
         <EntityTypeShape EntityType="rentacarModel.Car" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="rentacarModel.Order" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="rentacarModel.Contact" Width="1.5" PointX="4.75" PointY="0.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
