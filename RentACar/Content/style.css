@@ -2146,6 +2146,9 @@ footer .footer_contacts a {
     float: right;
     margin-right: 0;
   }
+  .header{
+          background: url("/Content/img/index_bg_small.jpg");
+  }
 
   /* line 1536, ../sass/_grids.scss */
   footer .footer_contacts {
