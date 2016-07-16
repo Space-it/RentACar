@@ -712,7 +712,7 @@ footer .footer_contacts a {
 }
 
 /* line 517, ../sass/_grids.scss */
-.transfer .transfer_div :last-child {
+.transfer .transfer_div .transfer_p {
   width: 100%;
   float: left;
   margin-left: 0;
@@ -1719,7 +1719,7 @@ footer .footer_contacts a {
   }
 
   /* line 1211, ../sass/_grids.scss */
-  .transfer .transfer_div :last-child {
+  .transfer .transfer_div .transfer_p {
     margin-left: 10.09174%;
     width: 79.81651%;
     float: left;
