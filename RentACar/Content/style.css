@@ -1465,20 +1465,17 @@ footer .footer_contacts a {
 
   /* line 1022, ../sass/_grids.scss */
   .toggle_nav {
-    width: 9.17431%;
+    padding-right: 25px;
+    width: 4.17431%;
     float: right;
-    margin-right: 0;
+  
     padding-top: 20px;
     display: inline-block;
-    color: #fff;
-    font-size: 30px;
-    transition: color linear 0.15s;
-    right: 0;
-    text-decoration: none;
+   
   }
 
   /* line 1033, ../sass/_grids.scss */
-  .toggle_nav:hover, .toggle-nav.active {
+   .toggle-nav.active {
     text-decoration: none;
     color: #85db18;
   }
@@ -1593,6 +1590,9 @@ footer .footer_contacts a {
 }
 /*!!!!!!!!!!!!!!!!!!!   860  !!!!!!!!!!!!!!!!*/
 @media screen and (max-width: 860px) {
+    .toggle_nav{
+           width: 5.17431%;
+    }
   /* line 1123, ../sass/_grids.scss */
   .header {
     min-height: 600px;
@@ -1929,7 +1929,12 @@ footer .footer_contacts a {
     margin-right: 1.53846%;
     font-size: 1.4em;
   }
-
+   .toggle_nav {
+    padding-right: 25px;
+        width: 6.17431%;
+  
+   
+  }
   /* line 1371, ../sass/_grids.scss */
   .booking {
     margin-left: 10.09174%;
@@ -2142,9 +2147,10 @@ footer .footer_contacts a {
 
   /* line 1531, ../sass/_grids.scss */
   .toggle_nav {
-    width: 14.22018%;
+        width: 8.22018%;
     float: right;
     margin-right: 0;
+        padding-top: 20px;
   }
   .header{
           background: url("/Content/img/index_bg_small.jpg");
