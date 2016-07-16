@@ -9,9 +9,7 @@
 		<div class="transfer_img">
 		<img src="/Content/img/cars.png" alt="">
 		</div>
-		<p>Для того, чтобы заказать авто с водителем, обращайтесь по телефону</p>
-        @{Html.RenderAction("Phone", "Home");}
-        @{Html.RenderAction("Email", "Home");}
+		<p>Для того, чтобы заказать авто с водителем, обращайтесь по телефону <span>@{Html.RenderAction("Phone", "Home");}</span></p>
 	</div>
 
 </section>
