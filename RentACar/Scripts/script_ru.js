@@ -78,16 +78,18 @@ return datepicker.regional.ru;
 } ) );
 
 
-
+var date1;
+var date2;
 
 $( "#end_datepicker2" ).datepicker({
     dateFormat: "dd/mm/yy",
- 
+    onSelect: function (date) {
+        date2 = $('#end_datepicker2').datepicker('getDate');
+    }
     
 
 
-  }
-  );
+  });
  
  
 
@@ -98,7 +100,7 @@ $( "#end_datepicker2" ).datepicker({
     minDate: 0,
     hideIfNoPrevNext: true,
     onSelect: function(date){            
-      var date1 = $('#begin_datepicker').datepicker('getDate');           
+       date1 = $('#begin_datepicker').datepicker('getDate');           
       var date = new Date( Date.parse( date1 ) );        
       var newDate = date.toDateString(); 
       newDate = new Date( Date.parse( newDate ) );                      
@@ -149,13 +151,18 @@ $('.avto').on('change', function () {
     var id = $('.avto').val();
     $.ajax({
         type: "POST",
-        url: "../Home/ShowCarInfo",
+        url: "../EN/ShowCarInfo",
         data: id,
         contentType: "text/plain; charset=utf-8",
         datatype: "text",
         success:
             function (data) {
                 $('#result').html(data);
+                var price = $('#price').val();
+                var newDate = (((((date2 - date1) / 60) / 60) / 24) / 1000);
+                var avg = newDate * price;
+                $('#avg').html(avg + "$");
+
             }
     });
 
