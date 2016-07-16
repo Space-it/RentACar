@@ -8,28 +8,23 @@
     <h2>Список доступных машин</h2>
 
     <p>
-        @Html.ActionLink("Create New", "Create")
+        @Html.ActionLink("Добавить автомобиль", "Create")
     </p>
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ImageUrl)
+                Модель автомобиля
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ModelName)
+                Цена за сутки
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th></th>
+            <th>Управление</th>
         </tr>
 
         @foreach (var item in Model)
         {
             <tr>
-                <td>
-                   @Html.DisplayFor(modelItem => item.ImageUrl)
-                </td>
+
                 <td>
                     @Html.DisplayFor(modelItem => item.ModelName)
                 </td>

@@ -137,7 +137,7 @@
                     </ul>
                 </div>
                 <p>Wish:</p>
-                @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "wish", @required = "true" } })
+                @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "wish" } })
             </div>
 
             <div class="right_form">
@@ -150,18 +150,7 @@
                 <p>Vehicle:</p>
                 @Html.DropDownListFor(model => model.CarId, new SelectList(ViewBag.CarId, "Id", "ModelName"), new { @class = "avto", @required = "true" })
             </div>
-            @*@Html.Partial("ShowCarInfo");*@
-            <div class="show_avto">
-                <div class="show_avto_img">
-                    <img src="/Content/img/smart.png" alt="">
-                </div>
-                <div class="show_avto_charact">
-                    <p>Transmission type:Автоматическая</p>
-                    <p>Number of doors:3</p>
-                    <p>Passengers count:2</p>
-                    <p>Capacity of the trunk:1 Сумка</p>
-                    <p>Engine displacements:0.6</p>
-                </div>
+            <div id="result" class="show_avto">
             </div>
             <div class="sum">
                 <p>Total price:</p>

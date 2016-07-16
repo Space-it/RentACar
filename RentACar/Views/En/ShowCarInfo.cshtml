@@ -1,9 +1,5 @@
 ﻿@model RentACar.Car
-@{
-    Layout = "~/Views/Shared/_LayoutEN.cshtml";
-}
 
-<div class="show_avto">
     <div class="show_avto_img">
         <img src="@Html.DisplayFor(model => model.ImageUrl)" alt="">
     </div>
@@ -14,4 +10,3 @@
         <p>Объем багажника: @Html.DisplayFor(model => model.TrunkVolume)</p>
         <p>Объем двигателя: @Html.DisplayFor(model => model.EngineCapacity)</p>
     </div>
-</div>

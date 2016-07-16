@@ -88,7 +88,7 @@ namespace RentACar.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "TransmissionType,NumberOfDoors,NumberOfPassengers,TrunkVolume,EngineCapacity,ImageUrl,ModelName,Price")] Car car, HttpPostedFileBase upload)
+        public ActionResult Edit([Bind(Include = "TransmissionType,NumberOfDoors,NumberOfPassengers,TrunkVolume,EngineCapacity,Id,ImageUrl,ModelName,Price")] Car car, HttpPostedFileBase upload)
         {
             if (upload != null)
             {
@@ -97,16 +97,40 @@ namespace RentACar.Controllers
                 string fileName = System.IO.Path.GetFileName(upload.FileName);
                 // сохраняем файл в папку Files в проекте
                 upload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\" + fileName);
-
-                if (ModelState.IsValid)
-                {
-                    db.Entry(car).State = EntityState.Modified;
-                    db.SaveChanges();
-                    return RedirectToAction("Index");
-                }
+                car.ImageUrl = "/Content/" + fileName;
+            }
+            if (ModelState.IsValid)
+            {
+                db.Entry(car).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
             }
             return View(car);
         }
+        //public ActionResult Edit([Bind(Include = "TransmissionType,NumberOfDoors,NumberOfPassengers,TrunkVolume,EngineCapacity,Id,ImageUrl,ModelName,Price")] Car car, HttpPostedFileBase upload)
+        //{
+        //    if (upload != null)
+        //    {
+        //        System.IO.File.Delete(Server.MapPath("~/" + car.ImageUrl));
+        //        // получаем имя файла
+        //        string fileName = System.IO.Path.GetFileName(upload.FileName);
+        //        // сохраняем файл в папку Files в проекте
+        //        upload.SaveAs(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "Content\\" + fileName);
+        //        car.ImageUrl = "/Content/" + fileName;
+        //    }
+        //    else
+        //    {
+        //        car.ImageUrl = db.Cars.Where(x => x.ModelName == car.ModelName).ToList().First().ImageUrl;
+        //    }
+        //    if (ModelState.IsValid)
+        //        {
+        //            db.Entry(car).State = EntityState.Modified;
+        //            db.SaveChanges();
+        //            return RedirectToAction("Index");
+        //        }
+            
+        //    return View(car);
+        //}
 
         // GET: Admin/Delete/5
         public ActionResult Delete(int? id)
@@ -128,7 +152,11 @@ namespace RentACar.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            
             Car car = db.Cars.Find(id);
+            var ReferenceOrders = db.Orders.Where(x => x.CarId == car.Id.ToString()).ToList();
+            foreach (var order in ReferenceOrders)
+                order.CarId = "NoCar";
             System.IO.File.Delete(Server.MapPath("~/" + car.ImageUrl));
             db.Cars.Remove(car);
             db.SaveChanges();

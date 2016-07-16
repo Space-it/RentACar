@@ -1,9 +1,5 @@
 $(document).ready(function() {
 
-
-
-
-
   $('.toggle_nav').click(function(e) {
     $(this).toggleClass('active');
     $('.navigation ul').toggleClass('active');
@@ -16,7 +12,13 @@ $(document).ready(function() {
  });
 
 
-
+  $('.navigation>ul li a').each(function () {
+      var location = window.location.href;
+      var link = this.href;
+      if (location == link) {
+          $(this).addClass('current-item');
+      }
+  });
 
 
   $('.city').click(function() {
@@ -86,20 +88,23 @@ $(function(){
 });
 
 
-$('.avto').on('change',function() {
-  $('.show_avto').hide();
+$('.avto').on('change', function () {
 
-
+    $('.show_avto').hide();
+    var id = $('.avto').val();
+    $.ajax({
+        type: "POST",
+        url: "../EN/ShowCarInfo",
+        data: id,
+        contentType: "text/plain; charset=utf-8",
+        datatype: "text",
+        success:
+            function(data) {
+                $('#result').html(data);
+            }
+    });
 
   $('.show_avto').show(100);
 
-
-
-
-
 });
-
-
-
-
 });

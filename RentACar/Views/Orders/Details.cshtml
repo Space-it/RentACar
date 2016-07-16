@@ -5,22 +5,15 @@
     Layout = "~/Views/Shared/_Layout_Admin.cshtml";
 }
 
-<h2>Details</h2>
+<h2>Детальная информация о заказе:</h2>
 
-<div>
+<div class="order">
     <h4>Order</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.CarId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CarId)
-        </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            <p>ФИО Клиента</p>
         </dt>
 
         <dd>
@@ -28,7 +21,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Phone)
+            <p>Мобильный телефон</p>
         </dt>
 
         <dd>
@@ -36,7 +29,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Email)
+            <p>Электронная почта</p>
         </dt>
 
         <dd>
@@ -44,7 +37,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Message)
+            <p>Сообщение(Пожелание)</p>
         </dt>
 
         <dd>
@@ -52,7 +45,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Adress)
+            <p>Адресс</p>
         </dt>
 
         <dd>
@@ -60,7 +53,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.StartDate)
+            <p>Начальная дата</p>
         </dt>
 
         <dd>
@@ -68,7 +61,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.EndDate)
+            <p>Конечная дата</p>
         </dt>
 
         <dd>
@@ -76,7 +69,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.StartTime)
+            <p>Начальное время</p>
         </dt>
 
         <dd>
@@ -84,23 +77,22 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.EndTime)
+            <p>Конечное время</p>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.EndTime)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.IsOpen)
+            <p>Статус заказа</p>
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.IsOpen)
+            @Html.DisplayFor(model => model.EndTime)
         </dd>
-
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.OrderId }) |
-    @Html.ActionLink("Back to List", "Index")
+<p class="links">
+    @Html.ActionLink("Изменить", "Edit", "Orders", new { id = Model.OrderId }, new { @style = "color:red;" }) |
+    @Html.ActionLink("Вернутся к списку", "Index")
 </p>

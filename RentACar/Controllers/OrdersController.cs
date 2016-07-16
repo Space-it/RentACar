@@ -17,6 +17,14 @@ namespace RentACar.Controllers
         // GET: Orders
         public ActionResult Index()
         {
+             var dict = new Dictionary<string, string>();
+            foreach (var item in db.Cars)
+                dict.Add(item.Id.ToString(), item.ModelName);
+            // say that car deleted
+            dict.Add("NoCar", "NoCar");
+
+
+            ViewBag.CarsDict = dict;
             return View(db.Orders.ToList());
         }
 
@@ -72,7 +80,7 @@ namespace RentACar.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.OrderId = new SelectList(db.Cars, "Id", "ModelName", order.OrderId);
+            ViewBag.CarId = db.Cars.ToList();
             return View(order);
         }
 
@@ -81,7 +89,7 @@ namespace RentACar.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IsOpen,CarId,Name,Phone,Email,Message,Adress,StartDate,EndDate,StartTime,EndTime")] Order order)
+        public ActionResult Edit([Bind(Include = "OrderId,IsOpen,CarId,Name,Phone,Email,Message,Adress,StartDate,EndDate,StartTime,EndTime")] Order order)
         {
             if (ModelState.IsValid)
             {
@@ -108,7 +116,7 @@ namespace RentACar.Controllers
                 }
                 return RedirectToAction("Index");
             }
-            ViewBag.OrderId = new SelectList(db.Cars, "Id", "ModelName", order.OrderId);
+            
             return View(order);
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -101,10 +102,17 @@ namespace RentACar.Controllers
         {
             return View();
         }
-
-        public ActionResult ShowCarInfo(string carId)
+        [AcceptVerbs(HttpVerbs.Post)]
+        [HttpPost]
+        public PartialViewResult ShowCarInfo()
         {
-            return PartialView("ShowCarInfo", db.Cars.First(x => x.Id == int.Parse(carId)));
+            string idval;
+            using (var reader = new StreamReader(Request.InputStream))
+            {
+                idval = reader.ReadToEnd();
+            }
+            int id = int.Parse(idval);
+            return PartialView("ShowCarInfo", db.Cars.First(x => x.Id == id));
         }
     }
 }

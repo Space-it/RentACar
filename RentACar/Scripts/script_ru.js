@@ -2,7 +2,13 @@ $(document).ready(function() {
 
 
 
-
+    $('.navigation>ul li a').each(function () {
+        var location = window.location.href;
+        var link = this.href;
+        if (location == link) {
+            $(this).addClass('current-item');
+        }
+    });
 
   $('.toggle_nav').click(function(e) {
     $(this).toggleClass('active');
@@ -137,50 +143,27 @@ $(function(){
 });
 
 
-$('.avto').on('change',function() {
-  $('.show_avto').hide();
+$('.avto').on('change', function () {
 
+    $('.show_avto').hide();
+    var id = $('.avto').val();
+    $.ajax({
+        type: "POST",
+        url: "../Home/ShowCarInfo",
+        data: id,
+        contentType: "text/plain; charset=utf-8",
+        datatype: "text",
+        success:
+            function (data) {
+                $('#result').html(data);
+            }
+    });
 
-
-  $('.show_avto').show(100);
-
-
-
-
+    $('.show_avto').show(100);
 
 });
 
-
-
-
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  $( "#begin_datepicker" ).datepicker({
-    dateFormat: "dd/mm/yy",
-           
-    }
-  });
+  
 

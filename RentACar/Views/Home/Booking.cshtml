@@ -146,25 +146,12 @@
                 <p>Телефон:</p>
                 @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "phone", @required = "true" } })
                 <p>E-mail:</p>
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "email", @required = "true" } })
-                
-
-                    <p>Автомобиль:</p>
-                    @Html.DropDownListFor(model => model.CarId, new SelectList(ViewBag.CarId, "Id", "ModelName"), new { @class = "avto", @required = "true" })
-
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "email", @required = "true" } }) 
+                <p>Автомобиль:</p>
+                @Html.DropDownListFor(model => model.CarId, new SelectList(ViewBag.CarId, "Id", "ModelName"), new { @class = "avto", @required = "true" })
             </div>
             @*@Html.Partial("ShowCarInfo");*@
-            <div class="show_avto">
-                <div class="show_avto_img">
-                    <img src="/Content/img/smart.png" alt="">
-                </div>
-                <div class="show_avto_charact">
-                    <p>Тип трансмиссии:Автоматическая</p>
-                    <p>Количество дверей:3</p>
-                    <p>Количество пассажиров:2</p>
-                    <p>Объем багажника:1 Сумка</p>
-                    <p>Объем двигателя:0.6</p>
-                </div>
+            <div id="result" class="show_avto">  
             </div>
             <div class="sum">
                 <p>Итоговая сумма:</p>
