@@ -17,7 +17,8 @@
             <h1 class="logo_prokat">прокат авто</h1>
         </div>
 
-        <a class="toggle_nav" href="#">&#9776;</a>
+        <img src="/Content/img/mobile_menu.png" alt="Mobile Menu" class="toggle_nav" />
+      
         <nav class="navigation">
             <ul class="active">
                 <li>@Html.ActionLink("Главная", "Index", "Home")</li>
@@ -56,7 +57,7 @@
             <div class="footer_contacts">
                 @{Html.RenderAction("Phone", "Home");}
                 @{Html.RenderAction("Email", "Home");}
-                <p><a href="#">Space-IT</a></p>
+                <p><a href="http://space-it.xyz">Space-IT</a></p>
             </div>
         </footer>
     </section>
