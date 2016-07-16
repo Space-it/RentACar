@@ -133,12 +133,16 @@
     <Compile Include="Car.cs">
       <DependentUpon>RentACarDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Contact.cs">
+    <Compile Include="ContactEmail.cs">
+      <DependentUpon>RentACarDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContactPhone.cs">
       <DependentUpon>RentACarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CarsController.cs" />
-    <Compile Include="Controllers\ContactsController.cs" />
+    <Compile Include="Controllers\ContactEmailsController.cs" />
+    <Compile Include="Controllers\ContactPhonesController.cs" />
     <Compile Include="Controllers\EnController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
@@ -303,10 +307,18 @@
     <Content Include="Views\En\ShowCarInfo.cshtml" />
     <Content Include="Views\En\Transfer.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Contacts\Edit.cshtml" />
-    <Content Include="Views\Contacts\Index.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\En\Contact.cshtml" />
+    <Content Include="Views\ContactEmails\Create.cshtml" />
+    <Content Include="Views\ContactEmails\Delete.cshtml" />
+    <Content Include="Views\ContactEmails\Edit.cshtml" />
+    <Content Include="Views\ContactEmails\Index.cshtml" />
+    <Content Include="Views\ContactPhones\Create.cshtml" />
+    <Content Include="Views\ContactPhones\Delete.cshtml" />
+    <Content Include="Views\ContactPhones\Edit.cshtml" />
+    <Content Include="Views\ContactPhones\Index.cshtml" />
+    <Content Include="Views\Home\Phone.cshtml" />
+    <Content Include="Views\Home\Email.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

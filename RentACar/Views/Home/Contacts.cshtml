@@ -8,8 +8,8 @@
         <p>Наше расположение:</p>
         <p>Главный офис компании Zp rent a car находится в городе Запорожье по адресу пр-т Соборный, 135, гостиница "Интурист", оф.3.</p>
         <p>Контакты:</p>
-        <p>+38 068 551 04 47</p>
-        <p>rent_a_car.zp@mail.ru</p>
+        @{Html.RenderAction("Phone", "Home");}
+        @{Html.RenderAction("Email", "Home");}
     </div>
     <div class="ofice">
         <img src="/Content/img/ofice.jpg" alt="">

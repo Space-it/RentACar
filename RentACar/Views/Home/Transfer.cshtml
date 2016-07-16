@@ -9,7 +9,9 @@
 		<div class="transfer_img">
 		<img src="/Content/img/cars.png" alt="">
 		</div>
-		<p>Для того, чтобы заказать авто с водителем, обращайтесь по телефону +38 068 551 04 47</p>
+		<p>Для того, чтобы заказать авто с водителем, обращайтесь по телефону</p>
+        @{Html.RenderAction("Phone", "Home");}
+        @{Html.RenderAction("Email", "Home");}
 	</div>
 
 </section>

@@ -10,107 +10,107 @@ using RentACar;
 
 namespace RentACar.Controllers
 {
-    public class ContactsController : Controller
+    public class ContactEmailsController : Controller
     {
         private rentacarEntities db = new rentacarEntities();
 
-        // GET: Contacts
+        // GET: ContactEmails
         public ActionResult Index()
         {
-            return View(db.Contacts.ToList());
+            return View(db.ContactEmails.ToList());
         }
 
-        // GET: Contacts/Details/5
+        // GET: ContactEmails/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Contact contact = db.Contacts.Find(id);
-            if (contact == null)
+            ContactEmail contactEmail = db.ContactEmails.Find(id);
+            if (contactEmail == null)
             {
                 return HttpNotFound();
             }
-            return View(contact);
+            return View(contactEmail);
         }
 
-        // GET: Contacts/Create
+        // GET: ContactEmails/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Contacts/Create
+        // POST: ContactEmails/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,PhoneNumber,Email")] Contact contact)
+        public ActionResult Create([Bind(Include = "Id,Email")] ContactEmail contactEmail)
         {
             if (ModelState.IsValid)
             {
-                db.Contacts.Add(contact);
+                db.ContactEmails.Add(contactEmail);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(contact);
+            return View(contactEmail);
         }
 
-        // GET: Contacts/Edit/5
+        // GET: ContactEmails/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Contact contact = db.Contacts.Find(id);
-            if (contact == null)
+            ContactEmail contactEmail = db.ContactEmails.Find(id);
+            if (contactEmail == null)
             {
                 return HttpNotFound();
             }
-            return View(contact);
+            return View(contactEmail);
         }
 
-        // POST: Contacts/Edit/5
+        // POST: ContactEmails/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,PhoneNumber,Email")] Contact contact)
+        public ActionResult Edit([Bind(Include = "Id,Email")] ContactEmail contactEmail)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(contact).State = EntityState.Modified;
+                db.Entry(contactEmail).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(contact);
+            return View(contactEmail);
         }
 
-        // GET: Contacts/Delete/5
+        // GET: ContactEmails/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Contact contact = db.Contacts.Find(id);
-            if (contact == null)
+            ContactEmail contactEmail = db.ContactEmails.Find(id);
+            if (contactEmail == null)
             {
                 return HttpNotFound();
             }
-            return View(contact);
+            return View(contactEmail);
         }
 
-        // POST: Contacts/Delete/5
+        // POST: ContactEmails/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Contact contact = db.Contacts.Find(id);
-            db.Contacts.Remove(contact);
+            ContactEmail contactEmail = db.ContactEmails.Find(id);
+            db.ContactEmails.Remove(contactEmail);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -8,8 +8,8 @@
         <p>Our location:</p>
         <p>Main office of the company Zp rent a car is located in 135, Sobornyi ave, Intourist Hotel, of.3, Zaporizhia</p>
         <p>Contacts:</p>
-        <p>+38 068 551 04 47</p>
-        <p>rent_a_car.zp@mail.ru</p>
+        @{Html.RenderAction("Phone", "Home");}
+        @{Html.RenderAction("Email", "Home");}
     </div>
     <div class="ofice">
         <img src="/Content/img/ofice.jpg" alt="">

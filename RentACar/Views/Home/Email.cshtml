@@ -1,0 +1,6 @@
+﻿@model IEnumerable<RentACar.ContactEmail>
+
+@foreach (var item in Model)
+{
+    <p>@Html.DisplayFor(modelItem => item.Email)</p>
+}

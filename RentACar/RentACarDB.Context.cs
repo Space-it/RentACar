@@ -27,6 +27,7 @@ namespace RentACar
     
         public virtual DbSet<Car> Cars { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
-        public virtual DbSet<Contact> Contacts { get; set; }
+        public virtual DbSet<ContactEmail> ContactEmails { get; set; }
+        public virtual DbSet<ContactPhone> ContactPhones { get; set; }
     }
 }

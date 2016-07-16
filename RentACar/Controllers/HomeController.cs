@@ -113,9 +113,13 @@ namespace RentACar.Controllers
             int id = int.Parse(idval);
             return PartialView("ShowCarInfo", db.Cars.First(x => x.Id == id));
         }
-        public PartialViewResult Contact()
+        public PartialViewResult Email()
         {
-            return PartialView("Contact", db.Contacts.First());
+            return PartialView("Email", db.ContactEmails);
+        }
+        public PartialViewResult Phone()
+        {
+            return PartialView("Phone", db.ContactPhones);
         }
 
     }

@@ -12,10 +12,9 @@ namespace RentACar
     using System;
     using System.Collections.Generic;
     
-    public partial class Contact
+    public partial class ContactEmail
     {
         public int Id { get; set; }
-        public string PhoneNumber { get; set; }
         public string Email { get; set; }
     }
 }
