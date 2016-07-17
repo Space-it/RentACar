@@ -1,0 +1,98 @@
+﻿@model RentACar.Order
+@{
+    ViewBag.Title = "Панель Администратора";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h2>Панель Администратора</h2>
+
+<h2 style="color:green;">Последний заказ</h2>
+
+<div class="order">
+    <hr />
+
+    <dl class="dl-horizontal">
+
+        <dt>
+            <p>ФИО Клиента</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            <p>Мобильный телефон</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            <p>Электронная почта</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            <p>Сообщение(Пожелание)</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+
+        <dt>
+            <p>Адресс</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adress)
+        </dd>
+
+        <dt>
+            <p>Начальная дата</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            <p>Конечная дата</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+        <dt>
+            <p>Начальное время</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+
+        <dt>
+            <p>Конечное время</p>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndTime)
+        </dd>
+        <dt>
+            <p>Статус заказа</p>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndTime)
+        </dd>
+
+    </dl>
+</div>
+<p class="links">
+    @Html.ActionLink("Изменить запись", "Edit", "Orders", new { id = Model.OrderId }) |
+</p>
