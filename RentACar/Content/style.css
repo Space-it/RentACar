@@ -1,5 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Lobster);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
+@font-face {
+    font-family: Lobster; /* Гарнитура шрифта */
+    src: url(Fonts/Lobster.ttf); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: Roboto Condensed; /* Гарнитура шрифта */
+    src: url(Fonts/Roboto_Condensed.ttf); /* Путь к файлу со шрифтом */
+   }
 /*------------------ Section Menu ----------*/
 /* line 25, ../sass/_grids.scss */
 .head_menu {
@@ -31,7 +37,7 @@
   width: 73.80952%;
   float: left;
   margin-right: 4.7619%;
-  color: #85db18;
+
   font-size: 2.5em;
   transform: skewY(-10deg);
   margin-top: 0;
@@ -59,12 +65,19 @@
   float: left;
   margin-right: 4.7619%;
   text-align: center;
-  color: #fff;
   margin-top: -7px;
-  margin-bottom: 0;
+  margin-bottom: 3px;
   font-size: 2em;
 }
-
+.logo a{
+    text-decoration:none;
+}
+.logo .logo_prokat a,.logo .logo_rent a{
+    color:#fff;
+}
+.logo p a{
+    color: #85db18;
+}
 /*----- Mobile Menu -----*/
 /* line 65, ../sass/_grids.scss */
 .toggle_nav {
@@ -199,7 +212,7 @@
   height: 27px;
   padding-bottom: 2px;
   padding-left: 5px;
-  padding-right: 38px;
+      padding-right: 32px;
 }
 
 /* line 161, ../sass/_grids.scss */
@@ -1401,9 +1414,10 @@ footer .footer_contacts a {
     float: left;
     margin-right: 2.32558%;
     text-align: left;
-    font-size: 2em;
+ 
+        font-size: 1.7em;
     margin-top: 0;
-    padding-top: 20px;
+    padding-top: 21px;
   }
 
   /* line 979, ../sass/_grids.scss */
@@ -1413,9 +1427,9 @@ footer .footer_contacts a {
     float: left;
     margin-right: 2.32558%;
     text-align: left;
-    font-size: 1.5em;
+    font-size: 1.7em;
     margin-top: 0;
-    padding-top: 20px;
+    padding-top: 21px;
   }
 
   /* line 987, ../sass/_grids.scss */
@@ -1923,11 +1937,12 @@ footer .footer_contacts a {
 
   /* line 1365, ../sass/_grids.scss */
   .logo .logo_prokat {
-    margin-left: 5.07692%;
+       margin-left: 3.07692%;
     width: 49.23077%;
     float: left;
     margin-right: 1.53846%;
     font-size: 1.4em;
+        padding-top: 24px;
   }
    .toggle_nav {
     padding-right: 25px;

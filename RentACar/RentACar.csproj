@@ -321,6 +321,8 @@
     <Content Include="Views\Home\Email.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Fonts\Lobster.ttf" />
+    <Content Include="Fonts\Roboto_Condensed.ttf" />
     <None Include="Properties\PublishProfiles\rentacar - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\rentacar - Web Deploy.pubxml" />
   </ItemGroup>
