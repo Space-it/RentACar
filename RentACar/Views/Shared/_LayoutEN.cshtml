@@ -12,11 +12,11 @@
 <body>
     <section class="head_menu">
         <div class="logo">
-            <p>Zp</p>
-            <h1 class="logo_rent">rent a car</h1>
+            <p>@Html.ActionLink("Zp", "Index", "EN")</p>
+            <h1 class="logo_rent">@Html.ActionLink("rent a car","Index","EN")</h1>
         </div>
 
-        <a class="toggle_nav" href="#">&#9776;</a>
+        <img src="/Content/img/mobile_menu.png" alt="Mobile Menu" class="toggle_nav" />
         <nav class="navigation">
             <ul class="active">
                 <li>@Html.ActionLink("Home", "Index", "EN")</li>
