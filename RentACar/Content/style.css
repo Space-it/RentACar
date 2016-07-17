@@ -952,6 +952,8 @@ footer .footer_contacts a {
   width: 49.23077%;
   float: left;
   margin-right: 1.53846%;
+      height: 300px;
+      padding-top:20px;
 }
 
 /* line 675, ../sass/_grids.scss */
