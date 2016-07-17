@@ -110,9 +110,13 @@ $('.avto').on('change', function () {
             function(data) {
                 $('#result').html(data);
                 var price = $('#price').val();
-                var newDate = (((((date2 - date1) / 60) / 60) / 24) / 1000);
-                var avg = newDate * price;
-                $('#avg').html(avg +"$");
+                if (date1 !== undefined && date2 !== undefined && date1 !== null && date2 !== null) {
+                    var newDate = (((((date2 - date1) / 60) / 60) / 24) / 1000);
+                    var avg = newDate * price;
+                    $('#avg').html(avg + "$");
+                } else {
+                    $('#avg').html("");
+                }
                 
             }
     });
