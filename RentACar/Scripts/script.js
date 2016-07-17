@@ -1,4 +1,4 @@
-$(document).ready(function() {
+﻿$(document).ready(function() {
 
   $('.toggle_nav').click(function(e) {
     $(this).toggleClass('active');
@@ -35,7 +35,8 @@ $(document).ready(function() {
 
 
 
-
+  var time1;
+  var time2;
   var date1;
   var date2;
   $("#begin_datepicker" ).datepicker({
@@ -62,7 +63,9 @@ $(document).ready(function() {
 $('.begin_time').click(function() {
   $('.choose_time').toggle();
   $('.choose_time ul li').click(function() {
-    var choose = $(this).text();
+      var choose = $(this).text();
+      time1 = $(this).text;
+      calcSum();
     $('.begin_time').val(choose);
     $('.choose_time').hide();
   });
@@ -81,7 +84,9 @@ $(function(){
 $('.end_time').click(function() {
   $('.choose_time2').toggle();
   $('.choose_time2 ul li').click(function() {
-    var choose = $(this).text();
+      var choose = $(this).text();
+      time1 = $(this).text;
+      calcSum();
     $('.end_time').val(choose);
     $('.choose_time2').hide();
   });
@@ -96,32 +101,44 @@ $(function(){
 });
 
 
-$('.avto').on('change', function () {
-
+function calcSum() {
     $('.show_avto').hide();
     var id = $('.avto').val();
-    $.ajax({
-        type: "POST",
-        url: "../EN/ShowCarInfo",
-        data: id,
-        contentType: "text/plain; charset=utf-8",
-        datatype: "text",
-        success:
-            function(data) {
-                $('#result').html(data);
-                var price = $('#price').val();
-                if (date1 !== undefined && date2 !== undefined && date1 !== null && date2 !== null) {
-                    var newDate = (((((date2 - date1) / 60) / 60) / 24) / 1000);
-                    var avg = newDate * price;
-                    $('#avg').html(avg + "$");
-                } else {
-                    $('#avg').html("");
+    // Проверка на нулевой автомобиль
+    if (id !== undefined && id != null && id != 9999) {
+        $.ajax({
+            type: "POST",
+            url: "../EN/ShowCarInfo",
+            data: id,
+            contentType: "text/plain; charset=utf-8",
+            datatype: "text",
+            success:
+                function (data) {
+                    $('#result').html(data);
+                    var price = $('#price').val();
+                    if (date1 !== undefined && date2 !== undefined && date1 !== null && date2 !== null && time1 !== undefined && time1 !== undefined && time2 !== null && time2 !== null) {
+                        var newDate = (((((date2 - date1) / 60) / 60) / 24) / 1000);
+                        var tempArray = time1.split(':');
+                        var startTime = tempArray[0];
+                        tempArray = null;
+                        tempArray = time2.split(':');
+                        var endTime = tempArray[0];
+                        if (endTime > startTime)
+                            newDate = newDate + 1;
+                        var avg = newDate * price;
+                        $('#avg').html(avg + "$");
+                    } else {
+                        $('#avg').html("");
+                    }
+
                 }
-                
-            }
-    });
+        });
 
-  $('.show_avto').show(100);
+        $('.show_avto').show(100);
+    }
+}
 
-});
+
+$('.avto').on('change', calcSum());
+
 });

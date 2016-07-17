@@ -1,0 +1,5 @@
+﻿@model IEnumerable<RentACar.ContactPhone>
+@foreach (var item in Model)
+{
+    <span>@Html.DisplayFor(modelItem => item.PhoneNumber)</span>
+}
