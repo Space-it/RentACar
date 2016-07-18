@@ -73,7 +73,13 @@ namespace RentACar.Controllers
         [HttpGet]
         public ActionResult Booking()
         {
-            ViewBag.CarId = db.Cars.ToList();
+            var CarList = db.Cars.ToList();
+            CarList.Add(new Car()
+            {
+                Id = 9999,
+                ModelName = ""
+            });
+            ViewBag.CarId = CarList;
             return View();
         }
         // POST: Orders/Create

@@ -149,6 +149,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Order.cs">
       <DependentUpon>RentACarDB.tt</DependentUpon>
     </Compile>
@@ -228,7 +229,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\css\" />
     <Folder Include="Content\img\Cars\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -325,6 +325,8 @@
     <Content Include="Fonts\Roboto_Condensed.ttf" />
     <None Include="Properties\PublishProfiles\rentacar - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\rentacar - Web Deploy.pubxml" />
+    <Content Include="Views\Home\PhoneTransfer.cshtml" />
+    <Content Include="Views\Admin\AdminPanel.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
