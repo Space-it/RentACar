@@ -1,10 +1,10 @@
 @font-face {
     font-family: Lobster; /* ֳאנםטעףנא רנטפעא */
-    src: url(Fonts/Lobster.ttf); /* ֿףעü ך פאיכף סמ רנטפעמל */
+    src: url(/Fonts/Lobster.ttf); /* ֿףעü ך פאיכף סמ רנטפעמל */
    }
 @font-face {
     font-family: Roboto Condensed; /* ֳאנםטעףנא רנטפעא */
-    src: url(Fonts/Roboto_Condensed.ttf); /* ֿףעü ך פאיכף סמ רנטפעמל */
+    src: url(/Fonts/Roboto_Condensed.ttf); /* ֿףעü ך פאיכף סמ רנטפעמל */
    }
 /*------------------ Section Menu ----------*/
 /* line 25, ../sass/_grids.scss */
@@ -28,7 +28,7 @@
   width: 19.26606%;
   float: left;
   margin-right: 0.91743%;
-  font-family: 'Lobster';
+  font-family: Lobster;
 }
 
 /* line 34, ../sass/_grids.scss */
@@ -91,7 +91,7 @@
   float: left;
   margin-right: 0.91743%;
   margin-top: 15px;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: Roboto Condensed, sans-serif;
 }
 
 /* line 78, ../sass/_grids.scss */
@@ -157,7 +157,7 @@
   background: rgba(200, 200, 194, 0.8);
   margin-top: 4.5283%;
   padding-bottom: 4.5283%;
-  font-family: 'Roboto Condensed',Arial;
+  font-family: Roboto Condensed,Arial;
 }
 
 /* line 125, ../sass/_grids.scss */
@@ -317,7 +317,7 @@
   float: left;
   margin-right: 0.91743%;
   margin-top: 12%;
-  font-family: 'Roboto Condensed',Arial;
+  font-family: Roboto Condensed,Arial;
 }
 
 /* line 243, ../sass/_grids.scss */
@@ -325,7 +325,7 @@
   color: #fff;
   text-align: center;
   font-size: 1.3em;
-  font-family: 'Roboto Condensed',Arial;
+  font-family: Roboto Condensed,Arial;
 }
 
 /* line 251, ../sass/_grids.scss */
@@ -381,7 +381,7 @@
   margin-right: 0.91743%;
   border-bottom: 1px solid #d2d0d0;
   text-align: center;
-  font-family: 'Roboto Condensed',Arial;
+  font-family: Roboto Condensed,Arial;
 }
 
 /* line 284, ../sass/_grids.scss */
@@ -471,7 +471,7 @@ footer .footer_menu {
   float: left;
   margin-right: 1.14943%;
   font-size: 1.2em;
-  font-family: 'Roboto Condensed',Arial;
+  font-family: Roboto Condensed,Arial;
 }
 
 /* line 337, ../sass/_grids.scss */
@@ -502,7 +502,7 @@ footer .footer_name {
 /* line 353, ../sass/_grids.scss */
 footer .footer_name :first-child {
   color: #fff;
-  font-family: 'Lobster';
+  font-family: Lobster;
   font-size: 3em;
   margin-top: 0;
   margin-bottom: 0;
@@ -513,7 +513,7 @@ footer .footer_name :nth-child(2) {
   color: #85db18;
   font-size: 2.5em;
   transform: translateY(-13px) skewY(-13deg);
-  font-family: 'Lobster';
+  font-family: Lobster;
   margin-top: 0;
 }
 
@@ -523,7 +523,7 @@ footer .footer_name :last-child {
   margin-top: 30.45977%;
   margin-bottom: 5.17241%;
   font-size: 1.2em;
-  font-family: 'Roboto Condensed',Arial;
+  font-family: Roboto Condensed,Arial;
 }
 
 /* line 376, ../sass/_grids.scss */
@@ -533,7 +533,7 @@ footer .footer_contacts {
   margin-right: 0;
   text-align: right;
   color: #85db18;
-  font-family: 'Lobster';
+  font-family: Lobster;
 }
 
 /* line 383, ../sass/_grids.scss */
@@ -583,7 +583,7 @@ footer .footer_contacts a {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-family: 'Roboto Condensed',Arial;
+  font-family: Roboto Condensed,Arial;
 }
 
 /* line 420, ../sass/_grids.scss */
@@ -596,7 +596,7 @@ footer .footer_contacts a {
   background: #f4f4f4;
   margin-bottom: 40px;
   margin-right: 20px;
-  font-family: 'Roboto Condensed',Arial;
+  font-family: Roboto Condensed,Arial;
 }
 
 /* line 430, ../sass/_grids.scss */
@@ -609,7 +609,7 @@ footer .footer_contacts a {
   margin-right: 0;
   background: #85db18;
   margin-top: 0;
-  font-family: 'Roboto Condensed',Arial;
+  font-family: Roboto Condensed,Arial;
   font-weight: bold;
 }
 
@@ -636,7 +636,7 @@ footer .footer_contacts a {
   float: left;
   margin-right: 0.91743%;
   margin-bottom: 40px;
-  font-family: 'Roboto Condensed',Arial;
+  font-family: Roboto Condensed,Arial;
 }
 
 /* line 457, ../sass/_grids.scss */
@@ -695,7 +695,7 @@ footer .footer_contacts a {
   float: left;
   margin-right: 0.91743%;
   margin-top: 20px;
-  font-family: 'Roboto Condensed',Arial;
+  font-family: Roboto Condensed,Arial;
   font-size: 1.2em;
 }
 
@@ -765,7 +765,7 @@ footer .footer_contacts a {
 
 /* line 541, ../sass/_grids.scss */
 .booking_car .booking_car_div .car_name {
-  font-family: 'Roboto';
+  font-family:Roboto Condensed;
   text-align: center;
   width: 100%;
   float: left;
@@ -773,6 +773,8 @@ footer .footer_contacts a {
   margin-right: 0;
   font-size: 1.5em;
   color: #fff;
+
+
 }
 
 /* line 549, ../sass/_grids.scss */
@@ -781,7 +783,7 @@ footer .footer_contacts a {
   width: 87.35632%;
   float: left;
   margin-right: 1.14943%;
-  font-family: 'Roboto Condensed',Arial;
+  font-family: Roboto Condensed,Arial;
 }
 
 /* line 554, ../sass/_grids.scss */
@@ -1033,7 +1035,7 @@ footer .footer_contacts a {
   background: #000;
   color: #fff;
   text-align: center;
-  font-family: 'Roboto Condensed',Arial;
+  font-family: Roboto Condensed,Arial;
   padding-top: 50px;
   margin-right: 0;
   font-size: 1.5em;
@@ -1115,7 +1117,7 @@ footer .footer_contacts a {
 
 /* line 763, ../sass/_grids.scss */
 .feedback .feedback_form p {
-  font-family: 'Roboto Condensed',Arial;
+  font-family: Roboto Condensed,Arial;
   text-align: center;
   color: #fff;
   font-size: 1.5em;
@@ -1202,7 +1204,7 @@ footer .footer_contacts a {
   width: 32.98851%;
   float: left;
   margin-right: 1.14943%;
-  font-family: 'Lobster';
+  font-family: Lobster;
   font-size: 4em;
   margin-top: 115px;
 }
@@ -1212,7 +1214,7 @@ footer .footer_contacts a {
   width: 62.06897%;
   float: left;
   margin-right: 1.14943%;
-  font-family: 'Roboto',Arial;
+  font-family: Roboto Condensed,Arial;
   font-size: 1.5em;
   margin-top: 150px;
   margin-right: 0;
@@ -1239,7 +1241,7 @@ footer .footer_contacts a {
   float: left;
   margin-right: 0.91743%;
   text-align: left;
-  font-family: 'Roboto',Arial;
+  font-family: Roboto Condensed,Arial;
   padding-top: 25px;
   padding-bottom: 25px;
   font-size: 1.3em;
@@ -1258,7 +1260,7 @@ footer .footer_contacts a {
   background: url("/Content/img/intourist.jpg");
   height: 400px;
   background-position: 60% 60%;
-  font-family: 'Roboto',Arial;
+  font-family: Roboto Condensed,Arial;
   color: #fff;
 }
 /* line 12, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
@@ -2575,7 +2577,7 @@ input[type="checkbox"], input[type="radio"] {
 /* line 1, ../sass/_jquery.scss */
 .ui-datepicker .ui-datepicker-header {
   background: #85db18;
-  font-family: 'Lobster';
+  font-family: Lobster;
 }
 
 /* line 6, ../sass/_jquery.scss */
