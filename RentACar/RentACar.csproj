@@ -174,7 +174,9 @@
     <Content Include="Content\img\favicon.png" />
     <Content Include="Content\img\index_bg_small.jpg" />
     <Content Include="Content\img\keys4.jpg" />
+    <Content Include="Content\img\keys_small.jpg" />
     <Content Include="Content\img\mobile_menu.png" />
+    <Content Include="Content\img\zp_small.jpg" />
     <Content Include="Content\jquery-ui.min.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\styleAdmin.css" />
