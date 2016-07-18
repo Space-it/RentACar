@@ -138,7 +138,7 @@ $(document).ready(function () {
         $('.choose_time2').toggle();
         $('.choose_time2 ul li').click(function () {
             var choose = $(this).text();
-            time1 = $(this).text();
+            time2 = $(this).text();
             calcSum();
             $('.end_time').val(choose);
             $('.choose_time2').hide();

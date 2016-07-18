@@ -123,11 +123,9 @@ function calcSum() {
                         var tempArray = time1.split(':');
 
                         var startTime = tempArray[0];
-                        alert(startTime);
                         tempArray = null;
                         tempArray = time2.split(':');
                         var endTime = tempArray[0];
-                        alert(endTime);
                         if (endTime > startTime)
                             newDate = newDate + 1;
                         var avg = newDate * price;

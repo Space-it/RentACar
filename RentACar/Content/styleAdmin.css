@@ -1,7 +1,6 @@
 /* line 23, ../sass/_grids.scss */
 body {
 }
-
 /* line 26, ../sass/_grids.scss */
 .carsTable {
   margin-left: 10.09174%;
@@ -69,7 +68,4 @@ h2{
 }
 .links{
      margin-top: 45px;
-}
-.navigation{
-    width:100% !important;
 }
