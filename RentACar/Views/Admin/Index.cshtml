@@ -11,11 +11,11 @@
         {
             <p>Введите логин</p>
             <p>
-                @Html.EditorFor(model => model.Username, new { @class = "", @placeholder = "Логин", @required = "true" })
+                @Html.EditorFor(model => model.Username, new { @class = "", @required = "true" })
             </p>
             <p>Введите пароль</p>
             <p>
-                @Html.EditorFor(model => model.Password, new { @class = "", @placeholder = "Пароль", @required = "true" })
+                @Html.PasswordFor(model => model.Password, new { @class = "", @required = "true"})
             </p>
             <p>
                 <input type="submit" value="Вход" />

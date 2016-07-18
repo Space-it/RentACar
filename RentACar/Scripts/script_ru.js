@@ -175,9 +175,9 @@ $(document).ready(function () {
                             tempArray = null;
                             tempArray = time2.split(':');
                             var endTime = tempArray[0];
-                            if (endTime > startTime){
-                                newDate = newDate + 1;
-                            }
+                            alert(endTime > startTime);
+                            if (endTime > startTime)
+                            { newDate = newDate + 1; }
                             var avg = newDate * price;
                             $('#avg').html(avg + "$");
                         } else {

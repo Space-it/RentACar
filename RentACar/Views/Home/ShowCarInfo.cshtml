@@ -5,7 +5,7 @@
         <img src="@Html.DisplayFor(model => model.ImageUrl)" alt="">
     </div>
     <div class="show_avto_charact">
-        @Html.HiddenFor(model => model.Price,new { @id = "price" });
+        @Html.HiddenFor(model => model.Price,new { @id = "price" })
         <p>Тип трансмиссии: @Html.DisplayFor(model => model.TransmissionType)</p>
         <p>Количество дверей: @Html.DisplayFor(model => model.NumberOfDoors)</p>
         <p>Количество пассажиров: @Html.DisplayFor(model => model.NumberOfPassengers)</p>
