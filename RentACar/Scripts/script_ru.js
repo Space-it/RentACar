@@ -104,6 +104,7 @@ $(document).ready(function () {
         hideIfNoPrevNext: true,
         onSelect: function (date) {
             date1 = $('#begin_datepicker').datepicker('getDate');
+            calcSum();
             var date = new Date(Date.parse(date1));
             var newDate = date.toDateString();
             newDate = new Date(Date.parse(newDate));
@@ -116,7 +117,7 @@ $(document).ready(function () {
         $('.choose_time').toggle();
         $('.choose_time ul li').click(function () {
             var choose = $(this).text();
-            time1 = $(this).text;
+            time1 = $(this).text();
             calcSum();
             $('.begin_time').val(choose);
             $('.choose_time').hide();
@@ -137,7 +138,7 @@ $(document).ready(function () {
         $('.choose_time2').toggle();
         $('.choose_time2 ul li').click(function () {
             var choose = $(this).text();
-            time1 = $(this).text;
+            time1 = $(this).text();
             calcSum();
             $('.end_time').val(choose);
             $('.choose_time2').hide();
@@ -181,16 +182,19 @@ $(document).ready(function () {
                         } else {
                             $('#avg').html("");
                         }
+                        $('.show_avto').show(100);
 
                     }
             });
 
-            $('.show_avto').show(100);
+            
         }
     }
 
 
-    $('.avto').on('change', calcSum());
+    $('.avto').on('change', function () {
+        calcSum();
+    });
 });
 
 

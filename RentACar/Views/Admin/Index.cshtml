@@ -5,21 +5,21 @@
 }
 
 <h2>Авторизация</h2>
+    <section class="order">
 
-<section class="carsTable">
-
-    @using(Html.BeginForm("Index", "Admin", FormMethod.Post)
-    {
-    <p>
-    <p>
-        @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "", @placeholder = "Логин", @required = "true" })
-    </p>
-        <p>
-        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "", @placeholder = "Пароль", @required = "true" })
-    </p>
-    <p>
-        <input type="submit" value="Вход" />
-    </p>
+        @using (Html.BeginForm("Index", "Admin", FormMethod.Post))
+        {
+            <p>Введите логин</p>
+            <p>
+                @Html.EditorFor(model => model.Username, new { @class = "", @placeholder = "Логин", @required = "true" })
+            </p>
+            <p>Введите пароль</p>
+            <p>
+                @Html.EditorFor(model => model.Password, new { @class = "", @placeholder = "Пароль", @required = "true" })
+            </p>
+            <p>
+                <input type="submit" value="Вход" />
+            </p>
         }
 
-</section>
+    </section>

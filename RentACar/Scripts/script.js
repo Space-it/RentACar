@@ -45,6 +45,7 @@
     hideIfNoPrevNext: true,
     onSelect: function(date){            
         date1 = $('#begin_datepicker').datepicker('getDate');
+        calcSum();
       var date = new Date( Date.parse( date1 ) );        
       var newDate = date.toDateString(); 
       newDate = new Date( Date.parse( newDate ) );                      
@@ -56,6 +57,7 @@
   $("#end_datepicker2").datepicker({
       onSelect: function (date) {
           date2 = $('#end_datepicker2').datepicker('getDate');
+          calcSum();
       }
   });
 
@@ -64,7 +66,7 @@ $('.begin_time').click(function() {
   $('.choose_time').toggle();
   $('.choose_time ul li').click(function() {
       var choose = $(this).text();
-      time1 = $(this).text;
+      time1 = $(this).text();
       calcSum();
     $('.begin_time').val(choose);
     $('.choose_time').hide();
@@ -85,7 +87,7 @@ $('.end_time').click(function() {
   $('.choose_time2').toggle();
   $('.choose_time2 ul li').click(function() {
       var choose = $(this).text();
-      time1 = $(this).text;
+      time2 = $(this).text();
       calcSum();
     $('.end_time').val(choose);
     $('.choose_time2').hide();
@@ -119,10 +121,13 @@ function calcSum() {
                     if (date1 !== undefined && date2 !== undefined && date1 !== null && date2 !== null && time1 !== undefined && time1 !== undefined && time2 !== null && time2 !== null) {
                         var newDate = (((((date2 - date1) / 60) / 60) / 24) / 1000);
                         var tempArray = time1.split(':');
+
                         var startTime = tempArray[0];
+                        alert(startTime);
                         tempArray = null;
                         tempArray = time2.split(':');
                         var endTime = tempArray[0];
+                        alert(endTime);
                         if (endTime > startTime)
                             newDate = newDate + 1;
                         var avg = newDate * price;
@@ -130,15 +135,18 @@ function calcSum() {
                     } else {
                         $('#avg').html("");
                     }
+                    $('.show_avto').show(100);
 
                 }
         });
 
-        $('.show_avto').show(100);
+        
     }
 }
 
 
-$('.avto').on('change', calcSum());
+$('.avto').on('change', function () {
+    calcSum();
+});
 
 });
