@@ -58,14 +58,22 @@ namespace RentACar.Controllers
         [HttpGet]
         public ActionResult BookingContinue(Order model)
         {
-            ViewBag.OrderId = new SelectList(db.Cars, "Id", "ModelName");
+            var CarList = new List<Car>();
+            CarList.Add(new Car()
+            {
+                Id = 9999,
+                ModelName = ""
+            });
+            foreach (var item in db.Cars.ToList())
+                CarList.Add(item);
+
+            ViewBag.CarId = CarList;
             Order o = new Order();
             o.Adress = model.Adress;
             o.StartDate = model.StartDate;
             o.EndDate = model.EndDate;
             o.StartTime = model.StartTime;
             o.EndTime = model.EndTime;
-            ViewBag.CarId = db.Cars.ToList();
             return View("Booking", o);
         }
 
