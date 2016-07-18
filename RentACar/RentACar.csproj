@@ -196,7 +196,6 @@
     <Content Include="Content\img\ui-icons_444444_256x240.png" />
     <Content Include="Content\img\zp.jpg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="RentACarDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>RentACarDB.edmx</DependentUpon>
@@ -325,6 +324,7 @@
   <ItemGroup>
     <Content Include="Fonts\Lobster.ttf" />
     <Content Include="Fonts\Roboto_Condensed.ttf" />
+    <Content Include="Content\style.min.css" />
     <None Include="Properties\PublishProfiles\rentacar - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\rentacar - Web Deploy.pubxml" />
     <Content Include="Views\Home\PhoneTransfer.cshtml" />
