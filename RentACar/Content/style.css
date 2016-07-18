@@ -722,6 +722,7 @@ footer .footer_contacts a {
 .transfer .transfer_div .transfer_img img {
   width: 100%;
   height: initial;
+  margin-left:0;
 }
 
 /* line 517, ../sass/_grids.scss */
@@ -954,7 +955,8 @@ footer .footer_contacts a {
   width: 49.23077%;
   float: left;
   margin-right: 1.53846%;
-      height: 300px;
+  min-height:200px;
+      max-height: 300px;
       padding-top:20px;
 }
 
@@ -1258,7 +1260,7 @@ footer .footer_contacts a {
   margin-left: auto;
   margin-right: auto;
   background: url("/Content/img/intourist.jpg");
-  height: 400px;
+  min-height: 400px;
   background-position: 60% 60%;
   font-family: Roboto Condensed,Arial;
   color: #fff;
@@ -1828,6 +1830,7 @@ footer .footer_contacts a {
     float: left;
     margin-left: 0;
     margin-right: 0;
+        max-height: 200px;
   }
 
   /* line 1281, ../sass/_grids.scss */
@@ -1961,7 +1964,11 @@ footer .footer_contacts a {
     float: left;
     margin-right: 0.91743%;
   }
-
+   .show_avto_img {
+       min-height:120px;
+     max-height: 170px;
+        
+  }
   /* line 1377, ../sass/_grids.scss */
   footer .footer_name {
     width: 36.78161%;
@@ -2074,7 +2081,9 @@ footer .footer_contacts a {
     height: 35px;
     margin-bottom: 20px;
   }
-
+  .about_header{
+      background:url('/Content/img/zp_small.jpg') no-repeat;
+  }
   /* line 1463, ../sass/_grids.scss */
   .about_header div :first-child {
     width: 100%;
@@ -2225,7 +2234,10 @@ footer .footer_contacts a {
     float: right;
     margin-right: 0;
   }
-
+  .booking_car{
+      background:url('/Content/img/keys_small.jpg') no-repeat;
+      background-size:cover;
+  }
   /* line 1568, ../sass/_grids.scss */
   .booking_car .booking_car_div {
     margin-left: 5.04587%;
@@ -2249,7 +2261,11 @@ footer .footer_contacts a {
     float: left;
     margin-right: 1.02041%;
   }
-
+     .show_avto_img {
+       min-height:50px;
+     max-height: 100px;
+        
+  }
   /* line 1584, ../sass/_grids.scss */
   .location .location_info {
     font-size: 1.2em;
