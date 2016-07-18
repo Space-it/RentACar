@@ -2589,7 +2589,7 @@ input[type="checkbox"], input[type="radio"] {
 
 /* line 14, ../sass/_jquery.scss */
 .ui-widget-header .ui-icon {
-  background-image: url("/Content/img/ui-icons_444444_256x240.png");
+  background-image: url('/Content/img/ui-icons_444444_256x240.png');
 }
 
 /* line 19, ../sass/_jquery.scss */
