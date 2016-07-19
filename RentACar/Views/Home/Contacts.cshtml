@@ -1,4 +1,4 @@
-﻿
+﻿@model RentACar.Models.EmailModel
 @{
     ViewBag.Title = "About";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -24,12 +24,16 @@
     </div>
     <div class="feedback_form">
         <p>Обратная связь</p>
-        <form action="">
-            <input type="text" placeholder="Имя" required="true">
+        @using (Html.BeginForm("SendEmail", "En", FormMethod.Post))
+        {
+            @Html.EditorFor(model=>model.Name,new { @required="true"})
+            @Html.EditorFor(model=>model.Email, new { @required = "true" })
+            @Html.TextAreaFor(model=>model.Message, new { @required = "true" })
+            <button type="submit">Отправить</button>
+        }
+            @*@<input type="text" placeholder="Имя" required="true">
             <input type="email" placeholder="Электронная почта" required="true">
-            <textarea placeholder="Сообщение" rows="1" required="true"></textarea>
-            <button>Отправить</button>
-        </form>
+            <textarea placeholder="Сообщение" rows="1" required="true"></textarea>*@
     </div>
 </section>
 

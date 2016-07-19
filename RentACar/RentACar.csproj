@@ -143,13 +143,13 @@
     <Compile Include="Controllers\CarsController.cs" />
     <Compile Include="Controllers\ContactEmailsController.cs" />
     <Compile Include="Controllers\ContactPhonesController.cs" />
-    <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\EnController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\EmailModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Order.cs">
       <DependentUpon>RentACarDB.tt</DependentUpon>

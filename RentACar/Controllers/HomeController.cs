@@ -1,7 +1,10 @@
-﻿using System;
+﻿using RentACar.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 
@@ -118,6 +121,27 @@ namespace RentACar.Controllers
         public ActionResult About()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult SendEmail(EmailModel model)
+        {
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 465);
+            smtp.Credentials = new NetworkCredential("login", "password");
+            smtp.EnableSsl = true;
+
+            MailMessage emailMes = new MailMessage("loin", "rent_a_car.zp@mail.ru", "RentACar Contact message from " + model.Name, model.Message);
+
+            try
+            {
+                smtp.Send(emailMes);
+            }
+            catch (SmtpException smtpEx)
+            {
+
+                return RedirectToAction("Contacts", "Home");
+            }
+            return RedirectToAction("Contacts", "Home");
         }
 
         public ActionResult ShowCarInfo(string input)
