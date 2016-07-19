@@ -267,7 +267,28 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>*@
+<script type="text/javascript">
+    var time1;
+    var time2;
+    var date1;
+    var date2;
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    function Init() {
+        var query = window.location.href.split("?")[1]; // результат - строка запроса без адреса страницы "id=someName&userMail=some@mail.com&usText=MemoText"
+        var params = query.split("&");  // результат - массив строк из пар "id=someName", "userMail=some@mail.com", "usText=MemoText"
+        // теперь брать по очереди
+        date1 = params[2].split("=")[1];
+        date1 = date1.replace(/%2F/g, "/");
+        date1 = new Date( Date.parse( date1 ) );
+        date2 = params[3].split("=")[1];
+        date2 = date2.replace(/%2F/g, "/");
+        date2 = new Date(Date.parse(date1));
+        
+        time1 = params[4].split("=")[1];
+        time1 = time1.replace(/%3A/g, ":");
+        time2 = params[5].split("=")[1];
+        time2 = time2.replace(/%3A/g, ":");
+    }
+    Init();
+</script>
+

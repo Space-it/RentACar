@@ -143,6 +143,7 @@
     <Compile Include="Controllers\CarsController.cs" />
     <Compile Include="Controllers\ContactEmailsController.cs" />
     <Compile Include="Controllers\ContactPhonesController.cs" />
+    <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\EnController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
@@ -230,6 +231,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\css\" />
     <Folder Include="Content\img\Cars\" />
+    <Folder Include="Views\Email\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
