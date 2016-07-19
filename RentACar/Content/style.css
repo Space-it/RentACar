@@ -67,7 +67,7 @@
   text-align: center;
   margin-top: -7px;
   margin-bottom: 3px;
-  font-size: 2em;
+  font-size: 1.9em;
 }
 .logo a{
     text-decoration:none;
@@ -827,7 +827,7 @@ footer .footer_contacts a {
   height: 35px;
   padding-bottom: 2px;
   padding-left: 5px;
-  padding-right: 38px;
+  padding-right: 27px;
 }
 
 /* line 583, ../sass/_grids.scss */
@@ -1570,11 +1570,14 @@ footer .footer_contacts a {
     float: left;
     margin-right: 0.91743%;
   }
-
+  .avtopark .charact .charact_name{
+      padding-left:0;
+  }
   /* line 1088, ../sass/_grids.scss */
   .avtopark .charact .charact_list {
     height: 150px;
     text-align: center;
+    padding-left:0;
   }
 
   /* line 1092, ../sass/_grids.scss */
@@ -1884,7 +1887,9 @@ footer .footer_contacts a {
   .location .location_info {
     font-size: 0.9em;
   }
-
+  .map iframe{
+      height:200px;
+  }
   /* line 1317, ../sass/_grids.scss */
   .feedback .feedback_form p {
     font-size: 1em;
