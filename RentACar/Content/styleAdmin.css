@@ -3,15 +3,17 @@ body {
 }
 /* line 26, ../sass/_grids.scss */
 .carsTable {
-  margin-left: 10.09174%;
-  width: 79.81651%;
+  margin-left:25%;
+  width:50%;
   float: left;
-  margin-right: 0.91743%;
+ 
+  
 }
 
 /* line 30, ../sass/_grids.scss */
 .carsTable table {
   width: 100%;
+padding-left:10%;
 }
 
 /* line 33, ../sass/_grids.scss */

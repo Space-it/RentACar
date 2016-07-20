@@ -27,8 +27,8 @@
         @using (Html.BeginForm("SendEmail", "En", FormMethod.Post))
         {
             @Html.EditorFor(model=>model.Name, new { htmlAttributes = new {  @placeholder = "Имя", @required = "true" } })
-            @Html.EditorFor(model=>model.Email, new { htmlAttributes = new { @placeholder = "Имя", @required = "true" } })
-            @Html.TextAreaFor(model=>model.Message, new { htmlAttributes = new { @placeholder = "Имя", @required = "true" } })
+            @Html.EditorFor(model=>model.Email, new { htmlAttributes = new { @placeholder = "Электронная почта", @required = "true", @type = "email" } })
+            @Html.TextAreaFor(model=>model.Message, new { @placeholder = "Сообщение", @required = "true"  })
             <button type="submit">Отправить</button>
         }
             @*@<input type="text" placeholder="Имя" required="true">
