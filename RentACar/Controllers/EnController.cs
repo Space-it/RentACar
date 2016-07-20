@@ -123,10 +123,10 @@ namespace RentACar.Controllers
         public ActionResult SendEmail(EmailModel model)
         {
             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 465);
-            smtp.Credentials = new NetworkCredential("login", "password");
+            smtp.Credentials = new NetworkCredential("zprentacar.info@gmail.com", "05190713car");
             smtp.EnableSsl = true;
 
-            MailMessage emailMes = new MailMessage("loin", "rent_a_car.zp@mail.ru", "RentACar Contact message from " + model.Name, model.Message);
+            MailMessage emailMes = new MailMessage("zprentacar.info@gmail.com", "urusay95@gmail.com", "RentACar Contact message from " + model.Name, model.Message);
 
             try
             {

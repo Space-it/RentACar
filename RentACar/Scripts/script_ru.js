@@ -78,11 +78,6 @@ $(document).ready(function () {
 
     }));
 
-    var time1;
-    var time2;
-    var date1;
-    var date2;
-
     $("#end_datepicker2").datepicker({
         dateFormat: "dd/mm/yy",
         onSelect: function (date) {
@@ -160,7 +155,7 @@ $(document).ready(function () {
         if (id !== undefined && id != null && id != 9999) {
             $.ajax({
                 type: "POST",
-                url: "../EN/ShowCarInfo",
+                url: "../Home/ShowCarInfo",
                 data: id,
                 contentType: "text/plain; charset=utf-8",
                 datatype: "text",

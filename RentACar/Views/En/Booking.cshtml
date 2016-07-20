@@ -268,6 +268,25 @@
     @Html.ActionLink("Back to List", "Index")
 </div>*@
 <script type="text/javascript">
+    function stringToDate(_date, _format, _delimiter) {
+        var formatLowerCase = _format.toLowerCase();
+        var formatItems = formatLowerCase.split(_delimiter);
+        var dateItems = _date.split(_delimiter);
+        var monthIndex = formatItems.indexOf("mm");
+        var dayIndex = formatItems.indexOf("dd");
+        var yearIndex = formatItems.indexOf("yyyy");
+        var month = parseInt(dateItems[monthIndex]);
+        month -= 1;
+        var formatedDate = new Date(dateItems[yearIndex], month, dateItems[dayIndex]);
+        return formatedDate;
+    }
+
+    stringToDate("17/9/2014", "dd/MM/yyyy", "/");
+    stringToDate("9/17/2014", "mm/dd/yyyy", "/")
+    stringToDate("9-17-2014", "mm-dd-yyyy", "-")
+
+
+
     var time1;
     var time2;
     var date1;
@@ -279,11 +298,12 @@
         // теперь брать по очереди
         date1 = params[2].split("=")[1];
         date1 = date1.replace(/%2F/g, "/");
-        date1 = new Date( Date.parse( date1 ) );
+        date1 = stringToDate(date1, "mm/dd/yyyy", "/");
+
         date2 = params[3].split("=")[1];
         date2 = date2.replace(/%2F/g, "/");
-        date2 = new Date(Date.parse(date1));
-        
+        date2 = stringToDate(date2, "mm/dd/yyyy", "/");
+
         time1 = params[4].split("=")[1];
         time1 = time1.replace(/%3A/g, ":");
         time2 = params[5].split("=")[1];
