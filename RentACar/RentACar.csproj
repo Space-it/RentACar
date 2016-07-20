@@ -327,6 +327,9 @@
     <Content Include="Fonts\Lobster.ttf" />
     <Content Include="Fonts\Roboto_Condensed.ttf" />
     <Content Include="Content\style.min.css" />
+    <Content Include="Fonts\Lobster.eot" />
+    <Content Include="Fonts\Lobster.otf" />
+    <Content Include="Fonts\Lobster.woff" />
     <None Include="Properties\PublishProfiles\rentacar - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\rentacar - Web Deploy.pubxml" />
     <Content Include="Views\Home\PhoneTransfer.cshtml" />

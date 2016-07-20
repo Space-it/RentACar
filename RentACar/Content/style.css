@@ -1,10 +1,14 @@
 @font-face {
-    font-family: Lobster; /* Гарнитура шрифта */
-    src: url(/Fonts/Lobster.ttf); /* Путь к файлу со шрифтом */
+    font-family: Lobster; 
+    src: url(/Fonts/Lobster.ttf); 
+    src: url(/Fonts/Lobster.eot) format('embedded-opentype'),
+            url(/Fonts/Lobster.otf) format('opentype'),
+        url(/Fonts/Lobster.woff) format('woff');
    }
+
 @font-face {
-    font-family: Roboto Condensed; /* Гарнитура шрифта */
-    src: url(/Fonts/Roboto_Condensed.ttf); /* Путь к файлу со шрифтом */
+    font-family: Roboto Condensed; 
+    src: url(/Fonts/Roboto_Condensed.ttf); 
    }
 /*------------------ Section Menu ----------*/
 /* line 25, ../sass/_grids.scss */
