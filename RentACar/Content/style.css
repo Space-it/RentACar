@@ -1,10 +1,14 @@
 @font-face {
-    font-family: Lobster; /* Гарнитура шрифта */
-    src: url(/Fonts/Lobster.ttf); /* Путь к файлу со шрифтом */
+    font-family: Lobster; 
+    src: url(/Fonts/Lobster.ttf); 
+    src: url(/Fonts/Lobster.eot) format('embedded-opentype'),
+            url(/Fonts/Lobster.otf) format('opentype'),
+        url(/Fonts/Lobster.woff) format('woff');
    }
+
 @font-face {
-    font-family: Roboto Condensed; /* Гарнитура шрифта */
-    src: url(/Fonts/Roboto_Condensed.ttf); /* Путь к файлу со шрифтом */
+    font-family: Roboto Condensed; 
+    src: url(/Fonts/Roboto_Condensed.ttf); 
    }
 /*------------------ Section Menu ----------*/
 /* line 25, ../sass/_grids.scss */
@@ -2240,7 +2244,7 @@ footer .footer_contacts a {
     margin-right: 0;
   }
   .booking_car{
-      background:url('/Content/img/keys_small.jpg') no-repeat;
+      background:url('/Content/img/keys_small.jpg') ;
       background-size:cover;
   }
   /* line 1568, ../sass/_grids.scss */
