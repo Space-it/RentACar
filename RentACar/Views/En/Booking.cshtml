@@ -146,7 +146,7 @@
                 <p>Phone:</p>
                 @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "phone", @required = "true" } })
                 <p>E-mail:</p>
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "email", @required = "true" } })
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "email", @required = "true", @type = "email" } })
                 <p>Vehicle:</p>
                 @Html.DropDownListFor(model => model.CarId, new SelectList(ViewBag.CarId, "Id", "ModelName"), new { @class = "avto", @required = "true" })
             </div>
