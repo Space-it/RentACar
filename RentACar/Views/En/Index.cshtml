@@ -14,7 +14,7 @@
         {
             <p>Pickup place:</p>
             <div class="city_div">
-                @Html.EditorFor(model => model.Adress, new { htmlAttributes = new { @class = "city", @placeholder = "Address", @required = "true" } })
+                @Html.EditorFor(model => model.Adress, new { htmlAttributes = new { @class = "city", @placeholder = "Address", @required = "true", @autocomplete = "off" } })
                 <span class="city_logo"></span>
             </div>
             <div class="choose_city">
@@ -24,8 +24,8 @@
                 </ul>
             </div>
             <p>Pickup date:</p>
-            @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "date", @id = "begin_datepicker", @placeholder = "Date", @required = "true" } })
-            @Html.EditorFor(model => model.StartTime, new { htmlAttributes = new { @class = "time begin_time", @placeholder = "Time", @required = "true" } })
+            @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "date", @id = "begin_datepicker", @placeholder = "Date", @required = "true", @autocomplete = "off" } })
+            @Html.EditorFor(model => model.StartTime, new { htmlAttributes = new { @class = "time begin_time", @placeholder = "Time", @required = "true", @autocomplete = "off" } })
             <div class="choose_time">
                 <ul>
                     <li>06:00</li>
@@ -79,8 +79,8 @@
                 </ul>
             </div>
             <p>Return date:</p>
-            @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "date", @id = "end_datepicker2", @placeholder = "Date", @required = "true" } })
-            @Html.EditorFor(model => model.EndTime, new { htmlAttributes = new { @class = "time end_time", @placeholder = "Time", @required = "true" } })
+            @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "date", @id = "end_datepicker2", @placeholder = "Date", @required = "true", @autocomplete = "off" } })
+            @Html.EditorFor(model => model.EndTime, new { htmlAttributes = new { @class = "time end_time", @placeholder = "Time", @required = "true", @autocomplete = "off" } })
             <div class="choose_time2">
                 <ul>
                     <li>06:00</li>
