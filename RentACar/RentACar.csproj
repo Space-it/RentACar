@@ -230,7 +230,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\css\" />
-    <Folder Include="Content\img\Cars\" />
     <Folder Include="Views\Email\" />
   </ItemGroup>
   <ItemGroup>

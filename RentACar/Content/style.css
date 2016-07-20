@@ -2244,7 +2244,7 @@ footer .footer_contacts a {
     margin-right: 0;
   }
   .booking_car{
-      background:url('/Content/img/keys_small.jpg') no-repeat;
+      background:url('/Content/img/keys_small.jpg') ;
       background-size:cover;
   }
   /* line 1568, ../sass/_grids.scss */
