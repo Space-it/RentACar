@@ -1,11 +1,15 @@
 @font-face {
     font-family: Lobster; 
-    src: url(/Fonts/Lobster.ttf); 
-    src: url(/Fonts/Lobster.eot) format('embedded-opentype'),
-            url(/Fonts/Lobster.otf) format('opentype'),
-        url(/Fonts/Lobster.woff) format('woff');
+    src: url(/Fonts/Lobster.ttf);
    }
-
+@font-face {
+    font-family: Lobster; 
+    src: url(/Fonts/Lobster.otf);
+   }
+@font-face {
+    font-family: Lobster; 
+   src: url(/Fonts/Lobster.woff);
+   }
 @font-face {
     font-family: Roboto Condensed; 
     src: url(/Fonts/Roboto_Condensed.ttf); 
