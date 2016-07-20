@@ -22,13 +22,12 @@
     </div>
     <div class="feedback_form">
         <p>Contact us</p>
-        <<p>Обратная связь</p>
         @using (Html.BeginForm("SendEmail", "En", FormMethod.Post))
         {
             @Html.EditorFor(model => model.Name, new { @required = "true" })
             @Html.EditorFor(model => model.Email, new { @required = "true" })
             @Html.TextAreaFor(model => model.Message, new { @required = "true" })
-            <button type="submit">Отправить</button>
+            <button type="submit">Send</button>
         }
     </div>
 </section>

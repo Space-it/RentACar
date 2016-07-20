@@ -111,7 +111,6 @@ namespace RentACar.Controllers
                 // TODO REDIRET TO CONFIRM PAGE !!!!!!!!!!
             }
 
-            ViewBag.CarId = new SelectList(db.Cars, "Id", "ModelName", order.OrderId);
             return View(order);
         }
         public ActionResult Contacts()
@@ -126,21 +125,13 @@ namespace RentACar.Controllers
         [HttpPost]
         public ActionResult SendEmail(EmailModel model)
         {
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 465);
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
             smtp.Credentials = new NetworkCredential("zprentacar.info@gmail.com", "05190713car");
             smtp.EnableSsl = true;
 
-            MailMessage emailMes = new MailMessage("zprentacar.info@gmail.com", "urusay95@gmail.com", "RentACar Contact message from " + model.Name, model.Message);
+            MailMessage emailMes = new MailMessage("zprentacar.info@gmail.com", "urusay95@gmail.com", "RentACar Contact message from " + model.Name, model.Message + "Мой почтовый адресс: " + model.Email);
+            smtp.Send(emailMes);
 
-            try
-            {
-                smtp.Send(emailMes);
-            }
-            catch (SmtpException smtpEx)
-            {
-
-                return RedirectToAction("Contacts", "Home");
-            }
             return RedirectToAction("Contacts", "Home");
         }
 
