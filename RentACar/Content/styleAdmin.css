@@ -22,6 +22,16 @@ padding-left:10%;
   font-size: 1.1em;
   width: 100%;
 }
+.form-group{
+    padding-left:10%;
+}
+.create_button{
+     padding-left:10%;
+     padding-top:10px;
+}
+.create_link{
+    margin-left:90%;
+}
 .form-group p{
     font-weight:bold;
 }
@@ -39,11 +49,11 @@ h2{
 .order h4{
  text-align: center;
 }
-.links a{
+ a{
  
  color: #000;
 }
-.links a:hover{
+ a:hover{
  color: #85db18;
 }
 .links{
