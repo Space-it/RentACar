@@ -157,7 +157,7 @@ namespace RentACar.Controllers
             }
             db.Configuration.AutoDetectChangesEnabled = true;
             db.SaveChanges();
-            return View("AdminPanel");
+            return RedirectToAction("AdminPanel", "Admin");
         }
 
         protected override void Dispose(bool disposing)
