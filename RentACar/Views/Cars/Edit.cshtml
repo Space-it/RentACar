@@ -8,7 +8,7 @@
 @using (Html.BeginForm("Edit", "Cars", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-<h2>Автомобиль номер @Html.EditorFor(model => model.Id)</h2>
+<h2>Автомобиль номер @Html.DisplayFor(model => model.Id)</h2>
 
     <section class="create_div">
             <hr />

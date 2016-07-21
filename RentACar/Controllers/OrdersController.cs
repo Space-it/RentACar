@@ -146,6 +146,19 @@ namespace RentACar.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult DeleteAllOrders()
+        {
+            var rows = from o in db.Orders
+                       select o;
+            db.Configuration.AutoDetectChangesEnabled = false;
+            foreach (var row in rows)
+            {
+                db.Orders.Remove(row);
+            }
+            db.Configuration.AutoDetectChangesEnabled = true;
+            db.SaveChanges();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

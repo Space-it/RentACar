@@ -35,7 +35,10 @@ namespace RentACar.Controllers
         }
         public ActionResult AdminPanel()
         {
-            return View(db.Orders.OrderByDescending(x => x.OrderId).First());
+            if (db.Orders.ToList().Count != 0)
+                return View(db.Orders.OrderByDescending(x => x.OrderId).First());
+            else
+                return View(new Order() { Adress = "Нету адреса", CarId = "0", Email = "Нету адреса", EndDate = "Нету", EndTime = "Нету", StartDate = "Нету", StartTime = "Нету", IsOpen = "Нету", Message = "Нету", Name = "Нету", OrderId = 0, Phone = "Нету" });
         }
     }
 }
