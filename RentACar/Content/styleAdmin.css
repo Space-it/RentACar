@@ -1,47 +1,6 @@
 
-
-.carsTable {
-  margin-left:25%;
-  width:50%;
-  float: left;
- 
-  
-}
-
-.carsTable table {
-  width: 100%;
-padding-left:10%;
-font-family: Roboto;
-  font-size: 1.1em;
-}
-
-
-.form-group{
-    padding-left:10%;
-}
-.create_button{
-     padding-left:10%;
-     padding-top:10px;
-}
-.create_link{
-    margin-left:67%;
-}
-.form-group p{
-    font-weight:bold;
-}
-
 h2{
- text-align: center;
-}
-
-.order{
- float: left;
- width: 50%;
- margin-left: 25%;
- margin-bottom: 30px;
-}
-.order h4{
- text-align: center;
+    text-align:center;
 }
  a{
  
@@ -50,17 +9,50 @@ h2{
  a:hover{
  color: #85db18;
 }
-.links{
-     margin-top: 45px;
-h2{
- text-align: center;
+/*Панель администратора*/
+.center_div{
+ float: left;
+ width: 50%;
+ margin-left: 25%;
+ margin-bottom: 30px;
 }
 
 
-.order h4{
- text-align: center;
+.links a{
+    margin-left:10px;
+}
+/*Управление автопарком*/
+
+.table td{
+    padding-right:10px;
+
+}
+.table tr{
+    padding-bottom:20px;
 }
 
-.links{
-     margin-top: 45px;
+/*Управление заказами*/
+.orders_table{
+    padding-left:50px;
+}
+
+
+
+.create_div{
+     float: left;
+ width: 30%;
+ margin-left: 35%;
+ margin-bottom: 30px;
+
+}
+.create_button{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.back_to_list{
+    float:right;
+}
+
+.create_link a{
+    padding-left:10px;
 }

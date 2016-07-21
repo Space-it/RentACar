@@ -5,35 +5,35 @@
     Layout = "~/Views/Shared/_Layout_Admin.cshtml";
 }
 
-<section class="carsTable">
+<section class="orders_table">
 
 
     <h2>Список заказов:</h2>
 
     <table class="table">
-        <tr>
-            <th>
+        <tr style="font-weight:bold">
+            <td>
                 Автомобиль
-            </th>
-            <th>
-                Адресс
-            </th>
-            <th>
+            </td>
+            <td>
+                Адрес
+            </td>
+            <td>
                 Начало аренды
-            </th>
-            <th>
+            </td>
+            <td>
                 Конец аренды
-            </th>
-            <th>
+            </td>
+            <td>
                 Начальное время
-            </th>
-            <th>
+            </td>
+            <td>
                 Конечное время
-            </th>
-            <th>
+            </td>
+            <td>
                 Статус заказа
-            </th>
-            <th></th>
+            </td>
+            
         </tr>
 
         @foreach (var item in Model)

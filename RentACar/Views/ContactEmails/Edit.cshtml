@@ -6,7 +6,7 @@
 }
 
 <h2>Редактирование адреса</h2>
-<section class="carsTable">
+<section class="center_div">
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
@@ -16,7 +16,7 @@
         @Html.HiddenFor(model => model.Id)
 
         <div class="form-group">
-            <p>Електронная почта</p>
+            <p>Электронная почта</p>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })

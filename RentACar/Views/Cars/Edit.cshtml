@@ -10,7 +10,7 @@
     @Html.AntiForgeryToken()
 <h2>Автомобиль номер @Html.EditorFor(model => model.Id)</h2>
 
-    <section class="carsTable">
+    <section class="create_div">
             <hr />
             <dl class="dl-horizontal">
                 <dt>
@@ -59,7 +59,7 @@
                 </dd>
 
                 <dt>
-                    <p>Адресс картинки</p>
+                    <p>Адрес картинки</p>
                 </dt>
 
                 <dd>
@@ -90,11 +90,11 @@
                     @* null *@
                 </dt>
                 <dd>
-                    <input type="submit" value="Save" class="btn btn-default" />
+                    <input type="submit" value="Cохранить" class="btn btn-default create_button" />
 
                 </dd>
             </dl>
-        <p>
+        <p style="float:right">
             @Html.ActionLink("Вернутся к списку", "Index")
         </p>
       

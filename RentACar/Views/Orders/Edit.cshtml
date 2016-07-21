@@ -9,7 +9,7 @@
 
 
 
-<div class="order">
+<div class="create_div">
     <h4>Заказ номер: @Html.DisplayFor(model => model.OrderId)</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -106,14 +106,14 @@
                 @Html.EditorFor(model => model.IsOpen)
             </dd>
             <dd>
-                <input type="submit" value="Сохранить" class="btn btn-default" />
+                <input type="submit" value="Сохранить" class="btn btn-default create_button" />
             </dd>
 
         }
     </dl>
 </div>
-<p class="links">
-    @Html.ActionLink("Изменить", "Edit", "Orders", new { id = Model.OrderId }, new { @style = "color:red;" }) |
+<p >
+ 
     @Html.ActionLink("Вернутся к списку", "Index")
 </p>
 

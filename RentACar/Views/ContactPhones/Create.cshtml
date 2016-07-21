@@ -6,7 +6,7 @@
 }
 
 <h2>Добавить телефон</h2>
-<section class="carsTable">
+<section class="create_div">
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
@@ -22,13 +22,13 @@
                 </div>
             </div>
 
-            <div class="col-md-offset-2 col-md-10" style="margin-top: 10px;margin-left: 30%;">
+            <div class="col-md-offset-2 col-md-10 create_button" >
                 <input type="submit" value="Создать" class="btn btn-default" />
             </div>
         </div>
     }
 
-    <div style="margin-left:87%">
+    <div class="back_to_list">
         @Html.ActionLink("Вернуться к списку", "Index")
     </div>
     </section>
