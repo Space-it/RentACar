@@ -1,10 +1,5 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-	<meta charset="utf-8" />
-</head>
-<body>
+﻿User-Agent: *
+Allow: /
 
-</body>
-</html>
+User-Agent: Googlebot
+Allow: /
