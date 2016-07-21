@@ -208,6 +208,7 @@
       <DependentUpon>RentACarDB.edmx</DependentUpon>
       <LastGenOutput>RentACarDB.cs</LastGenOutput>
     </Content>
+    <Content Include="robots.txt" />
     <Content Include="Scripts\jquery-ui.min.css" />
     <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\jquery.min.js" />
