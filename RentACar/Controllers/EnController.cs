@@ -105,8 +105,30 @@ namespace RentACar.Controllers
             order.IsOpen = "Open";
             if (ModelState.IsValid)
             {
+                if (string.IsNullOrEmpty(order.Message))
+                    order.Message = "Пусто";
                 db.Orders.Add(order);
-                db.SaveChanges();
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+                {
+                    Exception raise = dbEx;
+                    foreach (var validationErrors in dbEx.EntityValidationErrors)
+                    {
+                        foreach (var validationError in validationErrors.ValidationErrors)
+                        {
+                            string message = string.Format("{0}:{1}",
+                                validationErrors.Entry.Entity.ToString(),
+                                validationError.ErrorMessage);
+                            // raise a new exception nesting
+                            // the current instance as InnerException
+                            raise = new InvalidOperationException(message, raise);
+                        }
+                    }
+                    throw raise;
+                }
                 ViewBag.Message = "Request for successfuly send! Redirect to Home at 5 sec...";
                 return View("InfoMessage");
             }
