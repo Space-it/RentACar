@@ -38,7 +38,7 @@ namespace RentACar.Controllers
             if (db.Orders.ToList().Count != 0)
                 return View(db.Orders.OrderByDescending(x => x.OrderId).First());
             else
-                return View(new Order() { Adress = "Нету адреса", CarId = "0", Email = "Нету адреса", EndDate = "Нету", EndTime = "Нету", StartDate = "Нету", StartTime = "Нету", IsOpen = "Нету", Message = "Нету", Name = "Нету", OrderId = 0, Phone = "Нету" });
+                return View(new Order() { Adress = "Нет адреса", CarId = "0", Email = "Нет адреса", EndDate = "Нет", EndTime = "Нет", StartDate = "Нет", StartTime = "Нет", IsOpen = "Нет", Message = "Нет", Name = "Нет", OrderId = 0, Phone = "Нет" });
         }
     }
 }
