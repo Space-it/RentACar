@@ -1972,6 +1972,9 @@ footer .footer_contacts a {
   
    
   }
+   .header{
+       background:url('img/index_bg_small.jpg');
+   }
   /* line 1371, ../sass/_grids.scss */
   .booking {
     margin-left: 10.09174%;
@@ -2196,7 +2199,7 @@ footer .footer_contacts a {
         padding-top: 20px;
   }
   .header{
-          background: url("/Content/img/index_bg_small.jpg");
+         
               min-height: 400px;
     max-height: 500px;
   }
