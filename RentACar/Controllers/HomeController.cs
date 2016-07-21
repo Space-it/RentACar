@@ -107,8 +107,8 @@ namespace RentACar.Controllers
             { 
                 db.Orders.Add(order);
                 db.SaveChanges();
-                return RedirectToAction("Index");
-                // TODO REDIRET TO CONFIRM PAGE !!!!!!!!!!
+                ViewBag.Message = "Запрос успешно отправлен! Возврат на главную через 5 секунд...";
+                return View("InfoMessage");
             }
 
             return View(order);
