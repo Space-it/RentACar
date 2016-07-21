@@ -172,11 +172,11 @@ namespace RentACar.Controllers
         }
         public PartialViewResult Email()
         {
-            return PartialView("Contact", db.ContactEmails);
+            return PartialView("Email", db.ContactEmails);
         }
         public PartialViewResult Phone()
         {
-            return PartialView("Contact", db.ContactPhones);
+            return PartialView("Phone", db.ContactPhones);
         }
     }
 }

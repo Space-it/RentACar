@@ -157,6 +157,7 @@ namespace RentACar.Controllers
             }
             db.Configuration.AutoDetectChangesEnabled = true;
             db.SaveChanges();
+            return View("Index");
         }
 
         protected override void Dispose(bool disposing)
