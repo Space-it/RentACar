@@ -128,7 +128,7 @@ namespace RentACar.Controllers
 
             MailMessage emailMes = new MailMessage("zprentacar.info@gmail.com", "maxim.tis96@gmail.com", "RentACar Contact message from " + model.Name, model.Message + "\n Мой почтовый адрес: "+model.Email);
            smtp.Send(emailMes);
-            ViewBag.Message = "Contact for successful send! <br> Redirect to Home at 5 sec...";
+            ViewBag.Message = "Contact for successful send! Redirect to Home at 5 sec...";
             return View("InfoMessage");
         }
 
