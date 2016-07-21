@@ -126,12 +126,13 @@ namespace RentACar.Controllers
         public ActionResult SendEmail(EmailModel model)
         {
             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            smtp.UseDefaultCredentials = false;
             smtp.Credentials = new NetworkCredential("zprentacar.info@gmail.com", "05190713car");
             smtp.EnableSsl = true;
 
-            MailMessage emailMes = new MailMessage("zprentacar.info@gmail.com", "urusay95@gmail.com", "RentACar Contact message from " + model.Name, model.Message + "Мой почтовый адресс: " + model.Email);
+            MailMessage emailMes = new MailMessage("zprentacar.info@gmail.com", "maxim.tis96@gmail.com", "RentACar Contact message from " + model.Name, model.Message + "\nМой почтовый адрес: " + model.Email);
             smtp.Send(emailMes);
-
+            ViewBag.Message = "Сообщение успешно отправлено! <br> Возврат на главную через 5 секунд...";
             return RedirectToAction("Contacts", "Home");
         }
 

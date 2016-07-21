@@ -1,6 +1,6 @@
 ﻿@model RentACar.Models.EmailModel
 @{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Contacts";
     Layout = "~/Views/Shared/_LayoutEN.cshtml";
 }
 <section class="location">
@@ -27,7 +27,7 @@
             @Html.EditorFor(model => model.Name,  new { htmlAttributes = new { @placeholder = "Name", @required = "true" } })
             @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @type="email", @placeholder = "Email", @required = "true" } })
             @Html.TextAreaFor(model => model.Message, new { @required = "true", @placeholder="Message" })
-            <button type="submit">Send</button>
+            <button  type="submit">Send</button>
         }
     </div>
 </section>

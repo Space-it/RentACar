@@ -1,6 +1,6 @@
 ﻿@model RentACar.Models.EmailModel
 @{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Контакты";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <section class="location">
@@ -29,7 +29,7 @@
             @Html.EditorFor(model=>model.Name, new { htmlAttributes = new {  @placeholder = "Имя", @required = "true" } })
             @Html.EditorFor(model=>model.Email, new { htmlAttributes = new { @placeholder = "Электронная почта", @required = "true", @type = "email" } })
             @Html.TextAreaFor(model=>model.Message, new { @placeholder = "Сообщение", @required = "true"  })
-            <button type="submit">Отправить</button>
+            <button id=sendMail type="submit">Отправить</button>
         }
             @*@<input type="text" placeholder="Имя" required="true">
             <input type="email" placeholder="Электронная почта" required="true">

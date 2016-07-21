@@ -333,6 +333,8 @@
     <None Include="Properties\PublishProfiles\rentacar - Web Deploy.pubxml" />
     <Content Include="Views\Home\PhoneTransfer.cshtml" />
     <Content Include="Views\Admin\AdminPanel.cshtml" />
+    <Content Include="Views\Home\InfoMessage.cshtml" />
+    <Content Include="Views\En\InfoMessage.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

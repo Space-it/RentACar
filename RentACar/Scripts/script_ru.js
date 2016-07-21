@@ -127,7 +127,9 @@ $(document).ready(function () {
         });
     });
 
-
+    $('#sendMail').click(function () {
+        alert("Сообщение успешно отправлено!");
+    });
 
     $('.end_time').click(function () {
         $('.choose_time2').toggle();

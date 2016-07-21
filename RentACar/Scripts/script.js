@@ -99,6 +99,9 @@ $(function(){
   });
 });
 
+$('#sendMail').click(function() {
+    alert("Message have send!");
+});
 
 
 
