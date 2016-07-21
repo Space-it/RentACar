@@ -1,7 +1,5 @@
-/* line 23, ../sass/_grids.scss */
-body {
-}
-/* line 26, ../sass/_grids.scss */
+
+
 .carsTable {
   margin-left:25%;
   width:50%;
@@ -10,18 +8,14 @@ body {
   
 }
 
-/* line 30, ../sass/_grids.scss */
 .carsTable table {
   width: 100%;
 padding-left:10%;
+font-family: Roboto;
+  font-size: 1.1em;
 }
 
-/* line 33, ../sass/_grids.scss */
-.carsTable table {
-  font-family: Roboto;
-  font-size: 1.1em;
-  width: 100%;
-}
+
 .form-group{
     padding-left:10%;
 }
@@ -30,7 +24,7 @@ padding-left:10%;
      padding-top:10px;
 }
 .create_link{
-    margin-left:90%;
+    margin-left:67%;
 }
 .form-group p{
     font-weight:bold;
@@ -62,22 +56,11 @@ h2{
  text-align: center;
 }
 
-.order{
- float: left;
- width: 50%;
- margin-left: 25%;
- margin-bottom: 30px;
-}
+
 .order h4{
  text-align: center;
 }
-.links a{
- 
- color: #000;
-}
-.links a:hover{
- color: #85db18;
-}
+
 .links{
      margin-top: 45px;
 }
