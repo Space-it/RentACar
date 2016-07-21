@@ -197,6 +197,7 @@
     <Content Include="Content\img\ui-icons_444444_256x240.png" />
     <Content Include="Content\img\zp.jpg" />
     <Content Include="Global.asax" />
+    <Content Include="googleb858ac2b29feaa28.html" />
     <Content Include="RentACarDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>RentACarDB.edmx</DependentUpon>
@@ -212,6 +213,7 @@
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Scripts\script_ru.js" />
+    <Content Include="sitemap.xml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -230,7 +232,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\css\" />
-    <Folder Include="Views\Email\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
