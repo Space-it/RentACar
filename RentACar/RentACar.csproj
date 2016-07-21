@@ -210,7 +210,6 @@
     <Content Include="Scripts\jquery-ui.min.css" />
     <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\jquery.min.js" />
-    <Content Include="Scripts\map.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Scripts\script_ru.js" />
     <Content Include="Web.config">

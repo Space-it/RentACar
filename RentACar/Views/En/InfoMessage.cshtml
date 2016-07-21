@@ -3,13 +3,14 @@
     ViewBag.Title = "Message";
     Layout = "~/Views/Shared/_LayoutEN.cshtml";
 }
-<section class="rent_car">
+
+<div style="text-align:center;height:200px;">
     <p>@ViewBag.Message</p>
     <p>@Html.ActionLink("Back to Main Page", "Index")</p>
-</section>
+</div> 
     <script type="text/javascript">
         document.ready = function () {
-            setTimeout('document.location.href="/Home";', 5000);
+            setTimeout('document.location.href="/EN";', 5000);
         }
     </script>
 
