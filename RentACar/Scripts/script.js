@@ -99,11 +99,6 @@ $(function(){
   });
 });
 
-$('#sendMail').click(function() {
-    alert("Message have send!");
-});
-
-
 
 function calcSum() {
     $('.show_avto').hide();
