@@ -129,7 +129,7 @@ namespace RentACar.Controllers
                     }
                     throw raise;
                 }
-                ViewBag.Message = "Запрос успешно отправлен! Возврат на главную через 5 секунд...";
+                ViewBag.Message = "Запрос успешно отправлен!";
                 return View("InfoMessage");
             }
 

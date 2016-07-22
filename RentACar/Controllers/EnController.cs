@@ -58,6 +58,8 @@ namespace RentACar.Controllers
         //    return View("Booking",o);
         //}
         //[HttpPost]
+
+
         [HttpGet]
         public ActionResult BookingContinue(Order model)
         {
@@ -129,7 +131,7 @@ namespace RentACar.Controllers
                     }
                     throw raise;
                 }
-                ViewBag.Message = "Request for successfuly send! Redirect to Home at 5 sec...";
+                ViewBag.Message = "Request for successfuly send!";
                 return View("InfoMessage");
             }
 
