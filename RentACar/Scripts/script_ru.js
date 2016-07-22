@@ -171,7 +171,26 @@ $(document).ready(function () {
                             if (endTime > startTime) {
                                 newDate = newDate + 1;
                             }
-                            var avg = newDate * price;
+                            var avg;
+                          
+                            if (newDate >= 2 && newDate <= 5) {
+                                avg = newDate * (Math.round(price * 0.85));
+                            }
+                            else if (newDate >= 6 && newDate < 30) {
+                                avg = newDate * (Math.round(price * 0.66));
+                            }
+                            else if (newDate >= 30) {
+                                avg = newDate * (Math.round(price * 0.52));
+                            }
+                            else {
+                                avg = newDate * price;
+                            }
+                         
+                            if ($('.city').text() == 'Аэропорт Запорожья')
+                            {
+                                avg = avg+15;
+                            }
+                            
                             $('#avg').html(avg + "$");
                         } else {
                             $('#avg').html("");
