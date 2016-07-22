@@ -183,6 +183,10 @@ namespace RentACar.Controllers
         {
             return PartialView("PhoneTransfer", db.ContactPhones);
         }
+        public ActionResult Error()
+        {
+            return View();
+        }
 
     }
 }

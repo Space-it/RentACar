@@ -198,6 +198,7 @@
     <Content Include="Content\img\zp.jpg" />
     <Content Include="Global.asax" />
     <Content Include="googleb858ac2b29feaa28.html" />
+    <None Include="Views\Home\Error.cshtml" />
     <Content Include="RentACarDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>RentACarDB.edmx</DependentUpon>
