@@ -150,7 +150,7 @@ namespace RentACar.Controllers
             smtp.Credentials = new NetworkCredential("zprentacar.info@gmail.com", "05190713car");
             smtp.EnableSsl = true;
 
-            MailMessage emailMes = new MailMessage("zprentacar.info@gmail.com", "maxim.tis96@gmail.com", "RentACar Contact message from " + model.Name, model.Message + "\n Мой почтовый адрес: "+model.Email);
+            MailMessage emailMes = new MailMessage("zprentacar.info@gmail.com", "rent_a_car.zp@mail.ru", "RentACar Contact message from " + model.Name, model.Message + "\n Мой почтовый адрес: "+model.Email);
            smtp.Send(emailMes);
             ViewBag.Message = "Contact form successfuly send! Redirect to Home at 5 sec...";
             return RedirectToAction("InfoMessage", "En");

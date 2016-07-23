@@ -20,12 +20,12 @@
       }
   });
 
-
+  var chosen_city;
   $('.city').click(function() {
     $('.choose_city').toggle();
     $('.choose_city ul li').click(function() {
-      var choose = $(this).text();
-      $('.city').val(choose);
+        chosen_city = $(this).text();
+        $('.city').val(chosen_city);
       $('.choose_city').hide();
     });
   });
@@ -126,7 +126,23 @@ function calcSum() {
                         var endTime = tempArray[0];
                         if (endTime > startTime)
                         { newDate = newDate + 1; }
-                        var avg = newDate * price;
+                        var avg;
+                          
+                        if (newDate >= 2 && newDate <= 5) {
+                            avg = newDate * (Math.round(price * 0.88));
+                        }
+                        else if (newDate >= 6 && newDate < 30) {
+                            avg = newDate * (Math.round(price * 0.73));
+                        }
+                        else if (newDate >= 30) {
+                            avg = newDate * (Math.round(price * 0.52));
+                        }
+                        else {
+                            avg = newDate * price;
+                        }
+                        if (chosen_city == "Zaporizhia International Airport") {
+                            avg += 15;
+                        }
                         $('#avg').html(avg + "$");
                     } else {
                         $('#avg').html("");
