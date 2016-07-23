@@ -87,8 +87,13 @@
                     @Html.ValidationMessageFor(model => model.Price, "", new { @class = "" })
                 </dd>
                 <dt>
-                    @* null *@
+                    <p>Депозит</p>
                 </dt>
+
+                <dd>
+                    @Html.EditorFor(model => model.Deposite)
+                    @Html.ValidationMessageFor(model => model.Deposite, "", new { @class = "" })
+                </dd>
                 <dd>
                     <input type="submit" value="Cохранить" class="btn btn-default create_button" />
 

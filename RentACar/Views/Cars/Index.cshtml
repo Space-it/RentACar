@@ -18,6 +18,9 @@
             <td style="font-weight:bold">
                 Цена за сутки
             </td>
+            <td style="font-weight:bold">
+                Депозит
+            </td>
             <td style="font-weight:bold">Управление</td>
         </tr>
 
@@ -30,6 +33,9 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Deposite)
                 </td>
                 <td>
                     @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }) |

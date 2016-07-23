@@ -23,5 +23,6 @@ namespace RentACar
         public string ImageUrl { get; set; }
         public string ModelName { get; set; }
         public string Price { get; set; }
+        public string Deposite { get; set; }
     }
 }

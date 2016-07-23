@@ -79,6 +79,13 @@
                     @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
                 </div>
             </div>
+                        <div class="form-group">
+                            <p>Депозит</p>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Deposite, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Deposite, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
 
 
             <div class="create_button">

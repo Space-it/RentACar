@@ -18,6 +18,7 @@
           <Property Name="ImageUrl" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="ModelName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Price" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Deposite" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="ContactEmail">
           <Key>
@@ -73,6 +74,7 @@
           <Property Name="ImageUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ModelName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Deposite" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -120,6 +122,7 @@
           <EntitySetMapping Name="Cars">
             <EntityTypeMapping TypeName="rentacarModel.Car">
               <MappingFragment StoreEntitySet="Car">
+                <ScalarProperty Name="Deposite" ColumnName="Deposite" />
                 <ScalarProperty Name="TransmissionType" ColumnName="TransmissionType" />
                 <ScalarProperty Name="NumberOfDoors" ColumnName="NumberOfDoors" />
                 <ScalarProperty Name="NumberOfPassengers" ColumnName="NumberOfPassengers" />
