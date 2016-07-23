@@ -48,7 +48,7 @@ namespace RentACar.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "TransmissionType,NumberOfDoors,NumberOfPassengers,TrunkVolume,EngineCapacity,Id,ImageUrl,ModelName,Price")] Car car, HttpPostedFileBase upload)
+        public ActionResult Create([Bind(Include = "TransmissionType,NumberOfDoors,NumberOfPassengers,TrunkVolume,EngineCapacity,Id,ImageUrl,ModelName,Price,Deposite")] Car car, HttpPostedFileBase upload)
         {
             if (upload != null)
             {
@@ -88,7 +88,7 @@ namespace RentACar.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "TransmissionType,NumberOfDoors,NumberOfPassengers,TrunkVolume,EngineCapacity,Id,ImageUrl,ModelName,Price")] Car car, HttpPostedFileBase upload)
+        public ActionResult Edit([Bind(Include = "TransmissionType,NumberOfDoors,NumberOfPassengers,TrunkVolume,EngineCapacity,Id,ImageUrl,ModelName,Price,Deposite")] Car car, HttpPostedFileBase upload)
         {
             if (upload != null)
             {
