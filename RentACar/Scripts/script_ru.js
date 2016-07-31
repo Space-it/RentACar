@@ -33,6 +33,9 @@ $(document).ready(function () {
             $('.choose_city').hide();
         });
     });
+
+    chosen_city = $('.city').text();
+
     $(function () {
         $(document).click(function (event) {
             if ($(event.target).closest(".city").length) return;
@@ -146,6 +149,10 @@ $(document).ready(function () {
         });
     });
 
+    $('.choose_city>ul li').click(function () {
+        calcSum();
+    });
+
     function calcSum() {
     
         $('.show_avto').hide();
@@ -162,7 +169,7 @@ $(document).ready(function () {
                     function (data) {
                         $('#result').html(data);
                         var price = $('#price').val();
-                        if (date1 !== undefined && date2 !== undefined && date1 !== null && date2 !== null && time1 !== undefined && time1 !== undefined && time2 !== null && time2 !== null) {
+                        if (chosen_city!=undefined && chosen_city!=null&& date1 !== undefined && date2 !== undefined && date1 !== null && date2 !== null && time1 !== undefined && time1 !== undefined && time2 !== null && time2 !== null) {
                             var newDate = (((((date2 - date1) / 60) / 60) / 24) / 1000);
                             var tempArray = time1.split(':');
                             var startTime = tempArray[0];
