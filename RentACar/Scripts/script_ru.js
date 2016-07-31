@@ -23,8 +23,6 @@ $(document).ready(function () {
 
 
 
-
-    var chosen_city;
     $('.city').click(function () {
         $('.choose_city').toggle();
         $('.choose_city ul li').click(function () {
@@ -33,8 +31,6 @@ $(document).ready(function () {
             $('.choose_city').hide();
         });
     });
-
-    chosen_city = $('.city').text();
 
     $(function () {
         $(document).click(function (event) {
