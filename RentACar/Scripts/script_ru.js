@@ -189,13 +189,18 @@ $(document).ready(function () {
                             else {
                                 avg = newDate * price;
                             }
+                            var additional ="";
                             if (chosen_city == "Аэропорт Запорожья") {
-                                avg += 15;
+                                var additional = 15;
+                                $('#avg').html(avg +"$ + "+ additional + "$");
+                            }
+                            else
+                            {
+                                $('#avg').html(avg + "$");
                             }
                             
                             
                             
-                            $('#avg').html(avg + "$");
                         } else {
                             $('#avg').html("");
                         }

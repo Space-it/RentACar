@@ -138,10 +138,14 @@ function calcSum() {
                         else {
                             avg = newDate * price;
                         }
+                        var additional = "";
                         if (chosen_city == "Zaporizhia International Airport") {
-                            avg += 15;
+                            var additional = 15;
+                            $('#avg').html(avg + "$ + " + additional + "$");
                         }
-                        $('#avg').html(avg + "$");
+                        else {
+                            $('#avg').html(avg + "$");
+                        }
                     } else {
                         $('#avg').html("");
                     }
