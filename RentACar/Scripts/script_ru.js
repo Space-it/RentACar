@@ -192,15 +192,13 @@ $(document).ready(function () {
                             var additional ="";
                             if (chosen_city == "Аэропорт Запорожья") {
                                 var additional = 15;
-                                $('#avg').html(avg +"$ + "+ additional + "$");
+                                $('#avg').html(avg +"$ + "+ additional + "$ (оплата за доставку авто в Аэропорт)");
                             }
                             else
                             {
                                 $('#avg').html(avg + "$");
                             }
-                            
-                            
-                            
+                                                        
                         } else {
                             $('#avg').html("");
                         }

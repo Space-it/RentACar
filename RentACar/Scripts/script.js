@@ -141,7 +141,7 @@ function calcSum() {
                         var additional = "";
                         if (chosen_city == "Zaporizhia International Airport") {
                             var additional = 15;
-                            $('#avg').html(avg + "$ + " + additional + "$");
+                            $('#avg').html(avg + "$ + " + additional + "$ (Airport shipping charge)" );
                         }
                         else {
                             $('#avg').html(avg + "$");
