@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using RentACar;
+using System.Threading.Tasks;
 
 namespace RentACar.Controllers
 {
@@ -15,15 +16,20 @@ namespace RentACar.Controllers
         private rentacarEntities db = new rentacarEntities();
 
         // GET: Orders
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-             var dict = new Dictionary<string, string>();
-            foreach (var item in db.Cars)
+            var dict = new Dictionary<string, string>();
+            var orders = await db.Orders.ToListAsync();
+            var cars = await db.Cars.ToListAsync();
+
+            var carIds = cars.Select(x => x.Id.ToString()).ToList();
+            var missingCarIds = orders.Where(x => !carIds.Contains(x.CarId)).Select(x => x.CarId).Distinct();
+            foreach (var item in cars)
                 dict.Add(item.Id.ToString(), item.ModelName);
+
+            foreach (var missingCar in missingCarIds)
+                dict.Add(missingCar, "*Машина была удалена!");
             // say that car deleted
-            dict.Add("NoCar", "NoCar");
-
-
             ViewBag.CarsDict = dict;
             return View(db.Orders.ToList());
         }

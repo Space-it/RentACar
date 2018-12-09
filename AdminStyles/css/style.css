@@ -1,0 +1,25 @@
+/* line 23, ../sass/_grids.scss */
+body {
+  background-color: #F29A2E;
+}
+
+/* line 26, ../sass/_grids.scss */
+.carsTable {
+  margin-left: 10.09174%;
+  width: 79.81651%;
+  float: left;
+  margin-right: 0.91743%;
+  background-color: #F29A2E;
+}
+
+/* line 31, ../sass/_grids.scss */
+.carsTable table {
+  width: 100%;
+}
+
+/* line 34, ../sass/_grids.scss */
+.carsTable table {
+  font-family: Roboto;
+  font-size: 1.1em;
+  width: 100%;
+}

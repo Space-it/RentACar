@@ -1,0 +1,39 @@
+// Requirements
+// ============
+
+@import "susy";
+
+$susy: (
+ columns: 10,
+ gutters: 1/10,
+ container: 100%,
+ math: fluid,
+ output: float,
+ gutter-position: after,
+ global-box-sizing: border-box,
+ debug: (
+  image: show,
+  color: rgba(#66f, .5),
+  output: background,
+  toggle: top right,
+  )
+ 
+ );
+
+body{
+	background-color:#F29A2E;
+}
+.carsTable{
+	@include push(1);
+	@include span(8);
+	background-color:#F29A2E;
+}
+.carsTable table{
+	width:100%;
+}
+.carsTable table{
+	font-family:Roboto;
+	font-size:1.1em;
+	width:100%;
+}
+
